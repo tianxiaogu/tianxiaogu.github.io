@@ -1,6 +1,41 @@
-<html>
-    <head>
-    </head>
-    <body onload="window.location.replace('http://moon.nju.edu.cn/people/tianxiaogu');">
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tianxiao Gu' Homepage</title>
+    <!-- Styles -->
+    <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
+  </head>
+  <body role="document">
+      <div class="container"></div>
+
+    <!-- jQuery -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Showdown -->
+    <script src="./js/showdown.min.js"></script>
+
+    <script>
+var mdpath = window.location.href;
+if (mdpath.endsWith('/')) {
+    mdpath = mdpath + "index.md";
+} else {
+    mdpath = mdpath.substring(0, url.lastIndexOf('.')) + ".md";
+}
+$.ajax({
+   url: mdpath,
+   dataType: "text",
+   success: function(data) {
+    var converter = new showdown.Converter();
+    var html      = converter.makeHtml(data);
+    $('.container').html(html);
+   }
+});
+    </script>
+  </body>
 </html>
