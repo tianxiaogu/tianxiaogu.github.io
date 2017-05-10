@@ -1,3 +1,5 @@
+title: Homepage
+
 # Tianxiao Gu
 
 
@@ -46,67 +48,90 @@
 ----------------
 ## Publications
 
-<bibtex src="index.bib"></bibtex>
-<div id="bibtex_display">
-<div class="if bibtex_template" style="display: none;">
-<ul>
-    <li>
-        <span class="if journal !nolink">
-            <!--
-            <a class="bibtexVar" href="http://www.cs.cmu.edu/~mmv/papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
-                <span style="text-decoration: underline;" class="title"></span>,
-            </a>
-            -->
-        </span>
-        <span class="if title nolink">
-              <span class="title"></span>,
-        </span>
-        <span class="if title">
-            <span class="title"></span>,
-        </span>
-        <div class="if author">
-            <span class="author"></span>
-        </div>
-        <div>
-            <span class="if journal"><em><span class="journal"></span></em>,</span>
-            <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
-            <span class="if editor"><span class="editor"></span> (editors),</span>
-            <span class="if publisher"><em><span class="publisher"></span></em>,</span>
-            <span class="if !journal number">Technical report <span class="number"></span>,</span>
-            <span class="if institution"><span class="institution"></span>,</span>
-            <span class="if address"><span class="address"></span>,</span>
-            <span class="if volume"><span class="volume"></span><span class="if journal number">(<span class="number"></span>),</span></span>
-            <span class="if pages"> pages <span class="pages"></span>,</span>
-            <span class="if month"><span class="month"></span>,</span>
-            <span class="if year"><span class="year"></span>.</span>
-            <span class="if note"><span class="note"></span>.</span>
-            <span class="if url">
-                <a class="url"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
-            </span>
-        </div>
-</ul>
-</div>
-</div>
-<!-- Bibtex-js-->
-<script src="./js/bibtex_js.js"></script>
-<script>
-var checkReady = function(callback) {
-    if ($('.bibtex_template').size() == 0) {
-        callback();
-    }
-    else {
-        window.setTimeout(function() { checkReady(callback); }, 100);
-    }
-};
-var highlight = function() {
-    $('span.author').each(function(){
-        var o = $(this);
-        o.html(o.text().replace('Tianxiao Gu', '<b>Tianxiao Gu</b>'));
-    });
-};
-checkReady(highlight);
-</script>
+~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{gu_synthesize_2017,
+  author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian L{\"u}},
+  title     = {Synthesizing Object Transformation for Dynamic Software Updating},
+  booktitle = {Proceedings of the 39th International Conference on Software Engineering Companion (ICSE-C 2017)},
+  pages     = {to appear},
+  year      = {2017},
+}
+@inproceedings{gu_precise_2016,
+  author    = {Tianxiao Gu and Ruiqi Liu and Xiaoxing Ma and Zelin Zhao},
+  title     = {Precise Heap Differentiating Using Access Path and Execution Index},
+  booktitle = {Proceedings of the 15th National Software Application Conference (NASAC 2016)},
+  pages     = {133--148},
+  year      = {2016},
+  url       = {http://dx.doi.org/10.1007/978-981-10-3482-4_10},
+}
+@inproceedings{li_effectively_2016,
+  author    = {Qiwei Li and Yanyan Jiang and Tianxiao Gu and Chang Xu and Jun Ma and Xiaoxing Ma and Jian L{\"u}},
+  title     = {Effectively Manifesting Concurrency Bugs in Android Apps},
+  booktitle = {Proceedings of the 23rd Asia-Pacific Software Engineering Conference (APSEC 2016)},
+  pages     = {209--216},
+  year      = {2016},
+  url       = {https://doi.org/10.1109/APSEC.2016.038},
+}
+@inproceedings{gu_improving_2016,
+  author    = {Tianxiao Gu and Zelin Zhao and Xiaoxing Ma and Chang Xu and Chun Cao and Jian L{\"u}},
+  title     = {Improving Reliability of Dynamic Software Updating Using Runtime Recovery},
+  booktitle = {Proceedings of the 23rd Asia-Pacific Software Engineering Conference (APSEC 2016)},
+  pages     = {257--264},
+  year      = {2016},
+  url       = {https://doi.org/10.1109/APSEC.2016.044},
+}
+@inproceedings{zhao_cure_2016,
+  author    = {Zelin Zhao and Tianxiao Gu and Xiaoxing Ma and Chang Xu and Jian L{\"u}},
+  title     = {CURE: Automated Patch Generation for Dynamic Software Update},
+  booktitle = {Proceedings of the 23rd Asia-Pacific Software Engineering Conference (APSEC 2016)},
+  pages     = {249--256},
+  year      = {2016},
+  url       = {https://doi.org/10.1109/APSEC.2016.043},
+}
+@inproceedings{gu_automatic_2016,
+  author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Jian L{\"u} and Zhendong Su},
+  title     = {Automatic Runtime Recovery via Error Handler Synthesis},
+  booktitle = {Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering (ASE 2016)},
+  pages     = {684--695},
+  year      = {2016},
+  url       = {https://doi.org/10.1145/2970276.2970360},
+}
+@article{gu_low-disruptive_2014,
+  author    = {Tianxiao Gu and Chun Cao and Chang Xu and Xiaoxing Ma and Linghao Zhang and Jian L{\"u}},
+  title     = {Low-disruptive Dynamic Updating of Java Applications},
+  journal   = {Information & Software Technology},
+  volume    = {56},
+  number    = {9},
+  pages     = {1086--1098},
+  year      = {2014},
+  url       = {https://doi.org/10.1016/j.infsof.2014.04.003},
+}
+@inproceedings{jiang_care:_2014,
+  author    = {Yanyan Jiang and Tianxiao Gu and Chang Xu and Xiaoxing Ma and Jian L{\"u}},
+  title     = {CARE: Cache Guided Deterministic Replay for Concurrent Java Programs},
+  booktitle = {Proceedings of the 36th International Conference on Software Engineering (ICSE 2014)},
+  pages     = {457--467},
+  year      = {2014},
+  url       = {https://doi.org/10.1145/2568225.2568236},
+}
+@inproceedings{zhang_resynchronizing_2012,
+  author    = {Linghao Zhang and Chang Xu and Xiaoxing Ma and Tianxiao Gu and Xuezhi Hong and Chun Cao and Jian L{\"u}},
+  title     = {Resynchronizing Model-Based Self-Adaptive Systems with Environments},
+  booktitle = {Proceedings of the 19th Asia-Pacific Software Engineering Conference (APSEC 2012)},
+  pages     = {184--193},
+  year      = {2012},
+  url       = {https://doi.org/10.1109/APSEC.2012.62},
+}
+@inproceedings{gu_javelus_2012,
+  author    = {Tianxiao Gu and Chun Cao and Chang Xu and Xiaoxing Ma and Linghao Zhang and Jian L{\"u}},
+  title     = {Javelus: A Low Disruptive Approach to Dynamic Software Updates},
+  booktitle = {Proceedings of the 19th Asia-Pacific Software Engineering Conference (APSEC 2012)},
+  pages     = {527--536},
+  year      = {2012},
+  url       = {https://doi.org/10.1109/APSEC.2012.55},
+}
 
+~~~
 
 ----------------
 ## Projects
@@ -148,7 +173,4 @@ A project may not be publicly available if we are working on a paper about it.
 <div style="width:150px;">
 <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=I1T5oEaSW-FJIJ_bZCvK8XMDQ35ouGHQP_ixsLYwvOo&cl=ffffff&w=a"></script>
 </div>
-
-
-
 
