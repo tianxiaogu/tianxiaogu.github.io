@@ -20,6 +20,7 @@ title: Homepage
   <a href="https://twitter.com/Xiaotiangu"><i class="fa fa-twitter-square"></i></a>
   <a href="https://www.facebook.com/eric.ku.505"><i class="fa fa-facebook-square"></i></a>
   <a href="https://www.bitbucket.org/txgu/"><i class="fa fa-bitbucket"></i></a>
+  <a href="https://github.com/tianxiaogu"><i class="fa fa-github"></i></a>
 </ul>
 </div>
 </div>
