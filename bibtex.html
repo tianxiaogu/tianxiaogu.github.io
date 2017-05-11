@@ -17,8 +17,9 @@
 {%- endmacro %}
 
 {% macro render_entry(entry, hl="") %}
+{% if entry.title %}<div>{% if entry.pdf %}<a href="{{ entry.pdf }}" target="_blank" title="Local copy of this paper"><span class="bibtex title">{{ entry.title }}<i class="fa fa-file-pdf-o" aria-hidden="true"></i></span></a>{% else %}<span class="bibtex title">{{ entry.title }}</span>{% endif %}, </span></div>{% endif %}
 {% if entry.author -%}
-<span class="bibtex author">{% if entry.author|length == 1 -%}
+<div><span class="bibtex author">{% if entry.author|length == 1 -%}
         {{ render_author(entry.author|first, hl) }}{{ ', ' }}
     {%- else -%}
     {% for a in entry.author -%}
@@ -28,8 +29,9 @@
         {{ render_author(a, hl) }}{{ ', ' }}
         {%- endif %}
     {%- endfor %}
-    {%- endif %}</span>{% endif %}
-{% if entry.title %}<span class="bibtex title">“{{ entry.title }}”{% if entry.pdf %}<span><a href="{{ entry.pdf }}" target="_blank" title="Local copy of this paper"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></span>{% endif %}, </span>{% endif %}
+    {%- endif %}
+</span></div>{% endif %}
+<div>
 {% if entry.booktitle %}<span class="bibtex pages">in </span><span class="bibtex booktitle">{{ entry.booktitle }}</span>{% endif %}{% if entry.journal %}<span class="bibtex journal">{{ entry.journal }}</span>{% endif %}
 {% if entry.link %}<span class="bibtex"><a href="{{ entry.link }}" target="_blank" title="Publication site of this paper"> <i class="fa fa-external-link-square" aria-hidden="true"></i></a></span>{% endif %}{% if entry.booktitle or entry.journal %}<span>, </span>{% endif %}
 {% if entry.pages %}<span class="bibtex pages">{{ entry.pages }}, </span>{% endif %}
@@ -37,6 +39,7 @@
 {% if entry.ppt %}<span class="bibtex"><a href="{{ entry.ppt }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></a></span>{% endif %}
 {% if entry.code %}<span class="bibtex"><a href="{{ entry.code }}" target="_blank" title="Code of this paper"> <i class="fa fa-file-code-o" aria-hidden="true"></i></a></span>{% endif %}
 {% if entry.slides %}<span class="bibtex"><a href="{{ entry.slides }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></a></span>{% endif %}
+</div>
 {%- endmacro %}
 
 {% macro render_entries_group_by_year(years, grouped_entries, years2, grouped_entries2, hl="") -%}

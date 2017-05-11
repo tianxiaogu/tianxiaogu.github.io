@@ -137,22 +137,21 @@ title: Homepage
 ----------------
 ## Projects
 
-You can check my profile (only publicly accessible projects) at [here](https://bitbucket.org/txgu/) or [here](https://git.njuics.cn/u/tianxiaogu).
 
-A project may not be publicly available if we are working on a paper about it.
+!!! note:
+    A project may not be publicly available if we are working on a paper about it.
 
 
-* [Javelus](http://bitbucket.org/javelus/)
+* <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
     * A dynamic-updating-enabled JVM built on top the HotSpot JVM in OpenJDK 8
-* [MiniTracing](http://bitbucket.org/javelus/javelus):
-    * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving events in the JVM.
+* <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> MiniTracing
+    * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving, and logging/unlocking events in the JVM.
     * Checkout the branch `mini-tracing` of `javelus`
     * Other tools based on this project:
         * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.
-* [Ares](http://bitbucket.org/txgu/ares)
-    * An automatic-runtime-recovery-enabled JVM
-* [AOTES](https://bitbucket.org/txgu/aotes-asm)
-    * Automating object transformations for dynamic software updating via execution synthesis
+* <a href="https://bitbucket.org/txgu/ares"><i class="fa fa-bitbucket"></i></a> [Ares](./ares/): Automatic Runtime Recovery via Error Handler Synthesis.
+* <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fa fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
+* <a href="https://bitbucket.org/txgu/sata"><i class="fa fa-bitbucket"></i></a> [SATA](./sata/): Steering Android Testing for Android Applications.
 
 --------------------
 
