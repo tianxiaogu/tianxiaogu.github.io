@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Developing Javelus using Visual Studio |  Tianxiao Gu</title>
+
+
+    <!-- Styles -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/moon.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/bibtex.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+  </head>
+  <body role="document">
+      <div class="container">
+          <h1 id="developing-javelus-using-visual-studio">Developing Javelus using Visual Studio</h1>
+<p>Checkout the source code of javelus.
+There is a <code>create.bat</code> at <code>make/windows/</code>.</p>
+<ol>
+<li>Install <a href="https://cygwin.com/">cygwin</a><ol>
+<li>Download the 32-bit <a href="https://cygwin.com/setup-x86.exe">setup-x86.exe</a>.</li>
+<li>Run <code>setup-x86.exe</code>, you had better choose to install at <code>C:/cygwin</code> as this path is hard-coded.</li>
+<li>Select the closest mirror, e.g., http://mirrors.ustc.edu.cn. </li>
+<li>Search and add all packages listed in the <a href="http://hg.openjdk.java.net/jdk8u/jdk8u/file/b77f17326a42/README-builds.html">README-build.html</a>.</li>
+<li>Append <code>C:\cygwin\bin</code> to your <code>PATH</code> environment variable.</li>
+</ol>
+</li>
+<li>Install Visual Studio 2012.<ol>
+<li>The latest supported MSC version is 1700.</li>
+<li><code>create.bat</code> generates a <code>jvm.vcxproj</code> based on the version of your MSC version.
+     This version number is grepped from the output of an English version<code>cl.exe</code>
+     So, if your have installed a Chinese version, set an environment variable <code>set FORCE_MSC_VER=1700</code></li>
+</ol>
+</li>
+<li>Install a JDK 8, suppose that the <code>JDK8_HOME</code> points to the installation folder.<ol>
+<li>Do not include any white space in the path.</li>
+</ol>
+</li>
+<li>Build VS project file.<ol>
+<li>Open a new <code>cmd</code> terminal.</li>
+<li>Change directory to the VC location, e.g., <code>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC</code></li>
+<li>Setup environment variables by invoking <code>vcvarsall.bat amd64</code>.</li>
+<li>Change directory to the source code of this project in the same terminal.</li>
+<li>Change directory to <code>make/windows</code>, and you will find a file named <code>create.bat</code></li>
+<li>Run <code>create.bat %JDK8_HOME%</code></li>
+<li>If there is no error, you will find a <code>jvm.vcxproj</code> in the <code>build/vs-amd64</code>.</li>
+<li>Open this file and click update.</li>
+<li>Select the configuration <code>compiler2-fastdebug</code>, and click build project.</li>
+</ol>
+</li>
+</ol>
+      </div>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>

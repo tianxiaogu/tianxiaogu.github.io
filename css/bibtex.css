@@ -2,9 +2,13 @@
     font-size: 10pt;
 }
 
+.bibtex li {
+    margin-bottom: 5pt;
+}
+
 .bibtex.title {
 //    font-style: italic;
-//    font-weight : bold;
+    font-weight : bold;
 }
 
 .bibtex.author {
