@@ -15,8 +15,8 @@
     <link href="/css/bibtex.css" rel="stylesheet" type="text/css"><!-- Pygments -->
   </head>
   <body role="document">
-      <div class="container">
-          <h1 id="sata-steering-automated-testing-for-android-applications">SATA: Steering Automated Testing for Android Applications</h1>
+    <div class="container">
+    <h1 id="sata-steering-automated-testing-for-android-applications">SATA: Steering Automated Testing for Android Applications</h1>
 <p>A replacement of Monkey.</p>
 <p>Download our model-based automated testing tool <a href="ape-bin.zip">Ape</a>.</p>
 <div class="admonition note">
@@ -24,16 +24,14 @@
 <p>On Android 6 only now. If you need a version for Android 7, please contact me.</p>
 </div>
 <h2 id="install">Install</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /sdcard/
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="linenums">adb push ape.jar /sdcard/</code></pre>
+
 
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run SATA to test the Calculator on a real device connected via <code>adb</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="linenums">./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata</code></pre>
+
 
 <p>Check the <code>ape.py</code> if you want to run SATA with an emulator.
 You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
@@ -46,7 +44,13 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </ul>
 </li>
 </ul>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; 2017 Tianxiao Gu. All rights reserved.</span>
       </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="/js/jquery-3.2.1.min.js"></script>

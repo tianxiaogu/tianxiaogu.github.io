@@ -141,11 +141,10 @@ title: Homepage
 !!! note:
     A project may not be publicly available if we are working on a paper about it.
 
-
 * <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
     * A dynamic-updating-enabled JVM built on top the HotSpot JVM in OpenJDK 8
-* <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> MiniTracing
-    * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving, and logging/unlocking events in the JVM.
+* <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> [MiniTracing](./minitracing/)
+    * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving, and locking/unlocking events in the JVM.
     * Checkout the branch `mini-tracing` of `javelus`
     * Other tools based on this project:
         * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.

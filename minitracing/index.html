@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Whole Program Tracing in JVM |  Tianxiao Gu</title>
+
+
+    <!-- Styles -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/moon.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/bibtex.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+  </head>
+  <body role="document">
+    <div class="container">
+    <h1 id="whole-program-tracing-in-jvm">Whole Program Tracing in JVM</h1>
+<h2 id="source">Source</h2>
+<ol>
+<li>MiniTracing (the <code>mini-tracing</code> branch in the <a href="https://bitbucket.org/javelus/javelus/">Javelus</a>)</li>
+<li><a href="https://bitbucket.org/txgu/phd">PHD</a><ul>
+<li>If you only want to trace locking/unlocking events, only the <a href="https://bitbucket.org/txgu/phd/src/master/concurrent-lock-hooks/">concurrent-lock-hooks</a> is sufficient.</li>
+</ul>
+</li>
+</ol>
+<h2 id="build">Build</h2>
+<p>Checkout the <a href="../javelus/">build instructions</a> of Javelus.</p>
+<h2 id="install">Install</h2>
+<ol>
+<li>Windows<ul>
+<li>Replace the built <code>jvm.dll</code> in your local JDK or JRE installation.</li>
+</ul>
+</li>
+<li>Linux<ul>
+<li>Check the script <code>hotspot</code> in your built directory.</li>
+</ul>
+</li>
+</ol>
+<h2 id="run">Run</h2>
+<h3 id="method-trace">Method Trace</h3>
+<p>To be added.</p>
+<h3 id="lock-trace">Lock Trace</h3>
+<p>We mainly trace locking and unlocking of the following locks.</p>
+<ol>
+<li>Monitors by the <code>synchronized</code> keyword.</li>
+<li>Locks in the package <code>java.util.concurrent.locks</code>.</li>
+</ol>
+<p>The following options should be assigned when starting the JVM (MiniTracing).</p>
+<ol>
+<li>
+<p>Enable MiniTracing</p>
+<p><code>-XX:+EnableMiniTracing
+-XX:+MiniTracingGlobalLogger
+-XX:+MiniTracingLockAcquire
+-XX:+MiniTracingLockRelease
+-XX:+MiniTracingObjectAlloc
+-XX:+MiniTracingForwardPointers</code></p>
+</li>
+<li>
+<p>Disable JVM optimizations</p>
+<p><code>-XX:-TieredCompilation
+-XX:+UseHeavyMonitors
+-XX:EmitSync=5
+-XX:-UseCompressedOops
+-XX:-UseCompressedClassPointers
+-XX:-DoEscapeAnalysis</code></p>
+</li>
+<li>
+<p>Replace the implementation of locks in the package <code>java.util.concurrent.locks</code>.</p>
+<p>For the modified implementation,
+check <a href="https://bitbucket.org/txgu/phd/src/master/concurrent-lock-hooks/">https://bitbucket.org/txgu/phd/src/master/concurrent-lock-hooks/</a>.</p>
+<p><code>-Xbootclasspath/p:&lt;path-to-&gt;</code></p>
+</li>
+</ol>
+<p>Feel free to contact me if you have any problem in running this easy-to-use tracer for locks in the HotSpot JVM.</p>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; 2017 Tianxiao Gu. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+  </body>
+</html>
