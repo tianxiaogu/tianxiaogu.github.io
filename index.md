@@ -41,8 +41,9 @@ title: Homepage
 ## Research Interests
 
 * Java Virtual Machine
-* Android Application Testing
+* Android Security/Testing
 * Dynamic Software Updating
+    * A [list](./javelus/literature) of practical DSU tools.
 * Program Analysis
 * Programming Languages
 
