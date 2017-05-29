@@ -168,9 +168,4 @@ title: Homepage
 
 
 
---------------------
-
-<div style="width:150px;">
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=I1T5oEaSW-FJIJ_bZCvK8XMDQ35ouGHQP_ixsLYwvOo&cl=ffffff&w=a"></script>
-</div>
 
