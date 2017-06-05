@@ -7,7 +7,7 @@ A replacement of Monkey.
 Download our model-based automated testing tool [Ape](ape-bin.zip).
 
 !!! note:
-    On Android 6 only now. If you need a version for Android 7, please contact me.
+    The zip is for Android 6 only now. Click here to get the [ape.jar](ape.jar) for Android 7.
 
 ## Install
 
@@ -35,3 +35,8 @@ Options:
 * `--ape sata`: use the SATA exploration strategy described in the paper.
     * You can also try `orbit`, `wechat`, `random`, and reinforcement learning enhanced random (`satarl`)
 
+## Visualization
+
+We provide a tool to visualize the model.
+
+* [Calculator](./demo/vis.html)
