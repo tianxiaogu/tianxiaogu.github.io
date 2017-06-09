@@ -40,3 +40,4 @@ Options:
 We provide a tool to visualize the model.
 
 * [Calculator](./demo/vis.html)
+* [Meitu](./demo-mtxx/) 1 min.
