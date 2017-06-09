@@ -48,9 +48,25 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </ul>
 <h2 id="visualization">Visualization</h2>
 <p>We provide a tool to visualize the model.</p>
+<ol>
+<li>SATA writes a js file into the output folder for visualization.
+    *. Check the tail of the output to locate the output in the phone.</li>
+<li><code>adb pull /sdcard/your-output-folder</code> to your local directory.</li>
+<li>Copy the following files into the local output directory<ul>
+<li><a href="./demo/vis.html">vis.html</a> (Right click and choose 'save as')</li>
+<li><a href="./demo/vis.min.css">vis.min.css</a></li>
+<li><a href="./demo/vis.min.js">vis.min.js</a></li>
+</ul>
+</li>
+<li>Open the copied <code>vis.html</code> in your browser.<ul>
+<li>You may need to wait for a certain amount of time to let the browser render the model.</li>
+</ul>
+</li>
+</ol>
+<p>Examples:</p>
 <ul>
 <li><a href="./demo/vis.html">Calculator</a></li>
-<li><a href="./demo-mtxx/">Meitu</a> 1 min.</li>
+<li><a href="./demo-mtxx/vis.html">Meitu</a> (1 min).</li>
 </ul>
     </div>
 
