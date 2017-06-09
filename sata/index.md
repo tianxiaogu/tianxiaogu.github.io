@@ -39,5 +39,17 @@ Options:
 
 We provide a tool to visualize the model.
 
+1. SATA writes a js file into the output folder for visualization.
+    *. Check the tail of the output to locate the output in the phone.
+2. `adb pull /sdcard/your-output-folder` to your local directory.
+3. Copy the following files into the local output directory
+    * [vis.html](./demo/vis.html) (Right click and choose 'save as')
+    * [vis.min.css](./demo/vis.min.css)
+    * [vis.min.js](./demo/vis.min.js)
+4. Open the copied `vis.html` in your browser.
+    * You may need to wait for a certain amount of time to let the browser render the model.
+
+Examples:
+
 * [Calculator](./demo/vis.html)
-* [Meitu](./demo-mtxx/) 1 min.
+* [Meitu](./demo-mtxx/vis.html) (1 min).
