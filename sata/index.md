@@ -53,3 +53,5 @@ Examples:
 
 * [Calculator](./demo/vis.html)
 * [Meitu](./demo-mtxx/vis.html) (1 min).
+* [Google Keep](./demo-keep-timeline/vis.html)
+    * [Timeline](./demo-keep-timeline/vis-timeline.html)

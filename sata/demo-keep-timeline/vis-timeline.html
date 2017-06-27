@@ -1,0 +1,87 @@
+<html>
+<head>
+    <script type="text/javascript" src="vis.min.js"></script>
+    <link href="vis.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #screen {
+            /*display: table-cell;*/
+            width: 400px;
+            height: 100%;
+        }
+        #mytimeline {
+            /*display: table-cell;*/
+            width: 100%;
+        }
+        .box {
+            position: absolute;
+            border: 1px solid red;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<div id="contentwrapper">
+    <div id="contentcolumn">
+        <div id="mytimeline"></div>
+        <div style="display:block;margin: 0 auto;width: 400px; position: relative;" id="wrapper">
+        <img id="screenimg" style="display:block;margin: 0 auto;width: 400px;"></img>
+        </div>
+    </div>
+</div>
+<!-- must provide groups and items -->
+<script type="text/javascript" src="sataTimeline.vis.js"></script>
+<script type="text/javascript">
+    // create a timeline
+    var container = document.getElementById('mytimeline');
+
+    var options = {
+        groupOrder: 'content',  // groupOrder can be a property name or a sorting function
+        timeAxis: {scale: 'second', step: 1},
+    };
+
+    // initialize your timeline!
+    var timeline = new vis.Timeline(container);
+    timeline.setOptions(options);
+    timeline.setGroups(groups);
+    timeline.setItems(items);
+
+    timeline.on('doubleClick', function(properties) {
+        var id = properties.item;
+        if (id != null) {
+            var node = items.get(id);
+            if (node.screenURL) {
+                window.open(node.screenURL, '_blank');
+            }
+        }
+    });
+    timeline.on('click', function(properties) {
+        var id = properties.item;
+        if (id != null) {
+            var node = items.get(id);
+            if (node.screenURL) {
+                var img = document.getElementById("screenimg");
+                img.src = node.screenURL;
+                var boxes = document.getElementsByClassName("box");
+                for (var i = 0 ; i < boxes.length; i++) {
+                    boxes[i].parentNode.removeChild(boxes[i]);
+                }
+                if (node.rect != null) {
+                    var scale = img.width / img.naturalWidth;
+                    var r = node.rect;
+                    var wrapper = document.getElementById("wrapper");
+                    var box = document.createElement("div");
+                    box.classList.add("box")
+                    box.style.left = r[0] * scale;
+                    box.style.top = r[1] * scale;
+                    box.style.width = (r[2] - r[0]) * scale;
+                    box.style.height= (r[3] - r[1]) * scale;
+                    box.style.zIndex = 999;
+                    wrapper.appendChild(box);
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
