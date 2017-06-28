@@ -21,13 +21,36 @@
 <p>Download our model-based automated testing tool <a href="ape-bin.zip">Ape</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The zip is for Android 6 only now. Click here to get the <a href="ape.jar">ape.jar</a> for Android 7.</p>
+<p>Ape is the internal name used during developing SATA.</p>
 </div>
+<p>Files inside <code>ape-bin.zip</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
+ape-bin/7/
+ape-bin/7/ape.jar  &lt;--- For Android 7
+ape-bin/ape.jar    &lt;--- For Android 6
+ape-bin/ape.py
+ape-bin/README.md
+</pre></div>
+</td></tr></table>
+
 <h2 id="install">Install</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /sdcard/
 </pre></div>
 </td></tr></table>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Android 7, just use another jar.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb puosh 7/ape.jar /sdcard/
+</pre></div>
+</td></tr></table>
+
+</div>
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run SATA to test the Calculator on a real device connected via <code>adb</code>.</p>
@@ -40,16 +63,24 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 <p>Options:</p>
 <ul>
 <li><code>-p</code>: specify the package name, the same as Monkey</li>
-<li><code>--running-minutes</code>: the total testing time in minutes</li>
+<li><code>--running-minutes</code>: the total testing time in minutes<ul>
+<li>This is the continuous mode, which means SATA does not stop when it triggers a crash.</li>
+</ul>
+</li>
 <li><code>--ape sata</code>: use the SATA exploration strategy described in the paper.<ul>
 <li>You can also try <code>orbit</code>, <code>wechat</code>, <code>random</code>, and reinforcement learning enhanced random (<code>satarl</code>)</li>
 </ul>
 </li>
 </ul>
+<p>You can also specify the total amount of Monkey events. In this mode, SATA will stop by default once there is a crash.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --ape sata 1000
+</pre></div>
+</td></tr></table>
+
 <h2 id="visualization">Visualization</h2>
 <p>We provide a tool to visualize the model.</p>
 <ol>
-<li>SATA writes a js file into the output folder for visualization.<ul>
+<li>SATA writes several js files into the output folder for visualization.<ul>
 <li>Check the tail of the output message to locate the output folder in the phone.</li>
 </ul>
 </li>
@@ -69,11 +100,174 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 <ul>
 <li><a href="./demo/vis.html">Calculator</a></li>
 <li><a href="./demo-mtxx/vis.html">Meitu</a> (1 min).</li>
+</ul>
+<p>Now we can check the timeline.</p>
+<ul>
 <li><a href="./demo-keep-timeline/vis.html">Google Keep</a><ul>
 <li><a href="./demo-keep-timeline/vis-timeline.html">Timeline</a></li>
 </ul>
 </li>
 </ul>
+<h2 id="configuration">Configuration</h2>
+<p>SATA is under developing now. There is no stable documentation right now.</p>
+<p>Put the following content into <code>/sdcard/ape.properties</code> to configure SATA.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape.WebViewActionThreshold = 30
+ape.activityStableRestartThreshold = 200
+ape.alwaysIgnoreWebViewAction = true
+ape.avoidEditText = false
+ape.checkHomogeneous = false
+ape.checkUnsaturatedTrivialState = true
+ape.defaultAlpha = 0.2
+ape.defaultBeta = 0.8
+ape.defaultEpsilon = 0.05
+ape.defaultGUIThrottle = 200
+ape.defaultGamma = 0.8
+ape.defaultMaxDepthEarlyStage = 3
+ape.defaultMaxLengthEarlyStage = 2
+ape.extraBasePriority = 3
+ape.fallbackToGraphTransition = true
+ape.fillTransitionsByHistory = true
+ape.flushImagesThreshold = 10
+ape.generateRandomTextInput = true
+ape.graphStableRestartThreshold = 100
+ape.ignoreEmpty = true
+ape.ignoreEmptyWebViewWidget = true
+ape.ignoreEmptyWidget = false
+ape.ignoreOutOfBounds = true
+ape.ignoreOutOfBoundsWidget = true
+ape.imageWriterCount = 3
+ape.includeFocusable = true
+ape.invalidBackCircleThreshold = 3
+ape.maxAppendThrottle = 3000
+ape.nopActionThrottle = 1000
+ape.onlyAddedActions = true
+ape.randomPickFromStringList = false
+ape.simpleGreedyEarlyStage = false
+ape.sizeOfGuiTreeBuffer = 5
+ape.startActionThrottle = 0
+ape.stateStableCheckWelcomeThreshold = 10
+ape.stateStableRestartThreshold = 50
+ape.stopWhenEqual = true
+ape.takeScreenshot = true
+ape.takeScreenshotForEveryStep = true
+ape.takeScreenshotForNewState = true
+ape.throttleForUnvisitedAction = 500
+ape.throttlePerActivityTransition = 100
+ape.throttlePerTrivialState = 1000
+ape.throttlePerWeakEdge = 500
+ape.trivialStateActionThreshold = 1
+ape.trivialStateUnsaturationActionThreshold = 3
+ape.trivialStateUnsaturationThreshold = 3
+ape.trivialStateWidgetThreshold = 3
+ape.useComplexSPathChildrenThreshold = 5
+ape.useComplexSPathDescendantActionThreshold = 20
+ape.useDynamicSPath = true
+ape.useShortID = false
+ape.useShortestPathForEarlyStage = false
+ape.useSimpleSPath = false
+ape.useSingleScroll = false
+</pre></div>
+</td></tr></table>
+
+<h2 id="trap-detection">Trap Detection</h2>
+<p>SATA will force the app to be restarted if it detects that it stays in a particular activity/state for a certain number of steps.
+In addition, SATA will also restart the app if the graph is not updated for a specific steps.</p>
+<p>Check the following options.</p>
+<ol>
+<li><code>ape.graphStableRestartThreshold</code></li>
+<li><code>ape.stateStableRestartThreshold</code></li>
+<li><code>ape.activityStableRestartThreshold</code></li>
+</ol>
+<h2 id="webview">WebView</h2>
+<p>The <code>uiautomator dump</code> now support dumping contents into WebView.
+But SATA ignores widgets inside a WebView by default.</p>
+<p>Check the following options.</p>
+<ol>
+<li><code>ape.alwaysIgnoreWebViewAction = true</code><ul>
+<li>This option will make SATA ignore any WebView.</li>
+</ul>
+</li>
+<li><code>ape.WebViewActionThreshold = 30</code><ul>
+<li>This option will make SATA to ignore any WebView that has more than 30 interactive widgets.</li>
+</ul>
+</li>
+</ol>
+<h2 id="xpathlet">XPathlet</h2>
+<p>SATA now supports configuring widgets-specified behaviors via XPath.</p>
+<p>Put the following json into the file <code>/sdcard/ape.xpath</code>.
+This will disable actions on any widget that has no text.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
+    &quot;xpath&quot;: &quot;//*[@text=&#39;&#39;]&quot;,
+    &quot;actions&quot;: []
+}]
+</pre></div>
+</td></tr></table>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <a href="https://jsonlint.com/">https://jsonlint.com/</a> to validate your json first.</p>
+</div>
+<h2 id="misc">Misc.</h2>
+<h3 id="input-chinese">Input Chinese</h3>
+<p>SATA can input Unicode text using the ADB Keyboard.</p>
+<p><a href="https://github.com/senzhk/ADBKeyBoard">https://github.com/senzhk/ADBKeyBoard</a></p>
     </div>
 
     <footer class="footer" style="margin-top:10px;">
