@@ -207,6 +207,16 @@ SCROLL_LEFT_RIGHT
 SCROLL_RIGHT_LEFT
 ```
 
+
+## Screenshots
+
+```
+ape.takeScreenshot = true
+ape.takeScreenshotForEveryStep = true
+ape.takeScreenshotForNewState = true
+ape.imageWriterCount = 3
+```
+
 ## Misc.
 
 
