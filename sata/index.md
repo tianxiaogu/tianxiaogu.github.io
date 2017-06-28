@@ -191,9 +191,21 @@ This will disable actions on any widget that has no text.
 }]
 ```
 
+
 !!! note:
     Use <https://jsonlint.com/> to validate your json first.
 
+The field `actions` is an array of action names.
+
+```
+NOP
+CLICK
+LONG_CLICK
+SCROLL_TOP_DOWN
+SCROLL_BOTTOM_UP
+SCROLL_LEFT_RIGHT
+SCROLL_RIGHT_LEFT
+```
 
 ## Misc.
 
