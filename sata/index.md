@@ -234,6 +234,10 @@ SATA decides to do text input by checking the following three conditions.
 
     This feature depends on the [ADB Keyboard](https://github.com/senzhk/ADBKeyBoard). You must build and install a ADBKeyboard first.
 
+    !!! warning:
+        ADB Keyboard cannot properly handle `imeOptions`. To avoid unnecessary crashes, we now only do text input but disable IME actions.
+        More information can be found at <https://developer.android.com/reference/android/view/inputmethod/EditorInfo.html>.
+
 2. `ape.randomPickFromStringList = true`
     * Randomly pick a line from a text file located at `/sdcard/ape.strings`.
 3. `ape.generateRandomTextInput = true`
