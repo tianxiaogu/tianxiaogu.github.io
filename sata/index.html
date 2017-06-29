@@ -292,10 +292,42 @@ ape.imageWriterCount = 3
 </pre></div>
 </td></tr></table>
 
-<h2 id="misc">Misc.</h2>
-<h3 id="input-chinese">Input Chinese</h3>
-<p>SATA can input Unicode text using the ADB Keyboard.</p>
-<p><a href="https://github.com/senzhk/ADBKeyBoard">https://github.com/senzhk/ADBKeyBoard</a></p>
+<h2 id="input-text">Input Text</h2>
+<p>SATA decides to do text input by checking the following three conditions.</p>
+<ol>
+<li>
+<p>Specified by XPath</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
+    &quot;xpath&quot;: &quot;//*[@text=&#39;Title&#39;]&quot;,
+    &quot;text&quot;: &quot;I am a Title&quot;
+}]
+</pre></div>
+</td></tr></table>
+
+<p>An example of testing the Google Keep app can be found here.</p>
+<ul>
+<li><a href="./xpath-input-example/vis-timeline.html">vis-timeline.html</a></li>
+</ul>
+<p>This feature depends on the <a href="https://github.com/senzhk/ADBKeyBoard">ADB Keyboard</a>. You must build and install a ADBKeyboard first.</p>
+</li>
+<li>
+<p><code>ape.randomPickFromStringList = true</code></p>
+<ul>
+<li>Randomly pick a line from a text file located at <code>/sdcard/ape.strings</code>.</li>
+</ul>
+</li>
+<li><code>ape.generateRandomTextInput = true</code><ul>
+<li>Randomly generate a string by regex <code>[0-9a-z]{0,30}</code>.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one type of input action can be triggered.</p>
+</div>
     </div>
 
     <footer class="footer" style="margin-top:10px;">
