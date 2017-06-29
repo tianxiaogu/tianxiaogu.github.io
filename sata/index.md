@@ -217,14 +217,28 @@ ape.takeScreenshotForNewState = true
 ape.imageWriterCount = 3
 ```
 
-## Misc.
+## Input Text
+
+SATA decides to do text input by checking the following three conditions.
+
+1. Specified by XPath
+
+        [{
+            "xpath": "//*[@text='Title']",
+            "text": "I am a Title"
+        }]
+
+    An example of testing the Google Keep app can be found here.
+
+    * [vis-timeline.html](./xpath-input-example/vis-timeline.html)
+
+    This feature depends on the [ADB Keyboard](https://github.com/senzhk/ADBKeyBoard). You must build and install a ADBKeyboard first.
+
+2. `ape.randomPickFromStringList = true`
+    * Randomly pick a line from a text file located at `/sdcard/ape.strings`.
+3. `ape.generateRandomTextInput = true`
+    * Randomly generate a string by regex `[0-9a-z]{0,30}`.
 
 
-### Input Chinese
-
-SATA can input Unicode text using the ADB Keyboard.
-
-<https://github.com/senzhk/ADBKeyBoard>
-
-
-
+!!! note:
+    Only one type of input action can be triggered.
