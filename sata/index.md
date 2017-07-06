@@ -2,7 +2,7 @@ title: SATA
 
 # SATA: Steering Automated Testing for Android Applications
 
-A replacement of Monkey.
+An upgrade of Monkey.
 
 Download our model-based automated testing tool [Ape](ape-bin.zip).
 
@@ -29,7 +29,7 @@ ape-bin/README.md
 !!! note:
     For Android 7, just use another jar.
 
-        adb puosh 7/ape.jar /sdcard/
+        adb push 7/ape.jar /sdcard/
 
 
 
