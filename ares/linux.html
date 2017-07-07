@@ -65,7 +65,7 @@ I have to build a local <code>jpf-core</code> in <code>ares-jpf</code> since
 <ul>
 <li>In default, this script will build all configurations.
   Usually I only build two configurations, i.e., <code>product</code> and <code>fastdebug</code>.
-  You can specify a configuration.<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>quick_build.sh fastdebug
+  You can specify a configuration.<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>quick_build.sh fastdebug
 </pre></div>
 </td></tr></table>
 
@@ -75,7 +75,7 @@ I have to build a local <code>jpf-core</code> in <code>ares-jpf</code> since
 <li>
 <p>If everything is OK, you will find a script <code>hotspot</code> at <code>build/linux/linux_amd64_compiler2/fastdebug/hotspot</code>
    Run this script as a replacement of the command <code>java</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>hotspot HelloWorld
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hotspot HelloWorld
 </pre></div>
 </td></tr></table>
 
@@ -115,7 +115,7 @@ and it provides many extra options.</p>
 25
 26
 27
-28</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">ARES_LOG</span><span class="o">=</span><span class="s2">&quot;-XX:TraceRuntimeRecovery=2048&quot;</span>
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">ARES_LOG</span><span class="o">=</span><span class="s2">&quot;-XX:TraceRuntimeRecovery=2048&quot;</span>
 <span class="c1"># JVM has two JIT compilers, c1 (compiler1) and c2 (compiler2).</span>
 <span class="c1"># We only implemented Ares on c2.</span>
 <span class="c1"># So, disable c1 here.</span>
@@ -130,19 +130,19 @@ and it provides many extra options.</p>
 <span class="nv">ARES_JPF</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ARES_JPF_HOME</span><span class="si">}</span><span class="s2">/ares-jpf.jar:</span><span class="si">${</span><span class="nv">ARES_JPF_HOME</span><span class="si">}</span><span class="s2">/lib/jpf-classes.jar:</span><span class="si">${</span><span class="nv">ARES_JPF_HOME</span><span class="si">}</span><span class="s2">/lib/jpf.jar&quot;</span>
 
 <span class="c1"># Use JPF</span>
-<span class="nb">export</span> <span class="nv">JPF</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RES_VM </span><span class="nv">$A</span><span class="s2">RES_LOG -XX:+UseJPF -Xbootclasspath/a:</span><span class="si">${</span><span class="nv">ARES_JPF</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">export</span> <span class="nv">JPF</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARES_VM</span><span class="s2"> </span><span class="nv">$ARES_LOG</span><span class="s2"> -XX:+UseJPF -Xbootclasspath/a:</span><span class="si">${</span><span class="nv">ARES_JPF</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="c1"># Use 1-ER</span>
-<span class="nb">export</span> <span class="nv">FER</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RES_VM </span><span class="nv">$A</span><span class="s2">RES_LOG -XX:-UseErrorTransformation -XX:+UseEarlyReturn -XX:-OnlyEarlyReturnVoid&quot;</span>
+<span class="nb">export</span> <span class="nv">FER</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARES_VM</span><span class="s2"> </span><span class="nv">$ARES_LOG</span><span class="s2"> -XX:-UseErrorTransformation -XX:+UseEarlyReturn -XX:-OnlyEarlyReturnVoid&quot;</span>
 
 <span class="c1"># Use VOER</span>
-<span class="nb">export</span> <span class="nv">VOER</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RES_VM </span><span class="nv">$A</span><span class="s2">RES_LOG -XX:-UseErrorTransformation -XX:+UseEarlyReturn -XX:+OnlyEarlyReturnVoid&quot;</span>
+<span class="nb">export</span> <span class="nv">VOER</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARES_VM</span><span class="s2"> </span><span class="nv">$ARES_LOG</span><span class="s2"> -XX:-UseErrorTransformation -XX:+UseEarlyReturn -XX:+OnlyEarlyReturnVoid&quot;</span>
 
 <span class="c1"># Use SBET</span>
-<span class="nb">export</span> <span class="nv">SBET</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RES_VM </span><span class="nv">$A</span><span class="s2">RES_LOG -XX:+UseErrorTransformation -XX:-UseEarlyReturn -XX:+UseStack -XX:-UseForceThrowable&quot;</span>
+<span class="nb">export</span> <span class="nv">SBET</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARES_VM</span><span class="s2"> </span><span class="nv">$ARES_LOG</span><span class="s2"> -XX:+UseErrorTransformation -XX:-UseEarlyReturn -XX:+UseStack -XX:-UseForceThrowable&quot;</span>
 
 <span class="c1"># Use FTET</span>
-<span class="nb">export</span> <span class="nv">FTET</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RES_VM </span><span class="nv">$A</span><span class="s2">RES_LOG -XX:+UseErrorTransformation -XX:-UseEarlyReturn -XX:-UseStack -XX:+UseForceThrowable&quot;</span>
+<span class="nb">export</span> <span class="nv">FTET</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARES_VM</span><span class="s2"> </span><span class="nv">$ARES_LOG</span><span class="s2"> -XX:+UseErrorTransformation -XX:-UseEarlyReturn -XX:-UseStack -XX:+UseForceThrowable&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -153,11 +153,11 @@ Therefore, <code>$RUN_FER</code> will be expand to <code>JAVA=$ARES_BIN VM_OPTS=
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nb">export</span> <span class="nv">RUN_FER</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$A</span><span class="s2">RES_BIN\&quot;  VM_OPTS=\&quot;</span><span class="nv">$FE</span><span class="s2">R\&quot; ./run.sh &gt; fer.txt&quot;</span>
-<span class="nb">export</span> <span class="nv">RUN_VOER</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$A</span><span class="s2">RES_BIN\&quot; VM_OPTS=\&quot;</span>$<span class="s2">VOER\&quot; ./run.sh &gt; voer.txt&quot;</span>
-<span class="nb">export</span> <span class="nv">RUN_SBET</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$A</span><span class="s2">RES_BIN\&quot; VM_OPTS=\&quot;</span>$<span class="s2">SBET\&quot; ./run.sh &gt; sbet.txt&quot;</span>
-<span class="nb">export</span> <span class="nv">RUN_FTET</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$A</span><span class="s2">RES_BIN\&quot; VM_OPTS=\&quot;</span><span class="nv">$F</span><span class="s2">TET\&quot; ./run.sh &gt; ftet.txt&quot;</span>
-<span class="nb">export</span> <span class="nv">RUN_JPF</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$A</span><span class="s2">RES_BIN\&quot; VM_OPTS=\&quot;</span>$<span class="s2">JPF\&quot; ./run.sh &gt; jpf.txt&quot;</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">RUN_FER</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$ARES_BIN</span><span class="s2">\&quot;  VM_OPTS=\&quot;</span><span class="nv">$FER</span><span class="s2">\&quot; ./run.sh &gt; fer.txt&quot;</span>
+<span class="nb">export</span> <span class="nv">RUN_VOER</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$ARES_BIN</span><span class="s2">\&quot; VM_OPTS=\&quot;</span><span class="nv">$VOER</span><span class="s2">\&quot; ./run.sh &gt; voer.txt&quot;</span>
+<span class="nb">export</span> <span class="nv">RUN_SBET</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$ARES_BIN</span><span class="s2">\&quot; VM_OPTS=\&quot;</span><span class="nv">$SBET</span><span class="s2">\&quot; ./run.sh &gt; sbet.txt&quot;</span>
+<span class="nb">export</span> <span class="nv">RUN_FTET</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$ARES_BIN</span><span class="s2">\&quot; VM_OPTS=\&quot;</span><span class="nv">$FTET</span><span class="s2">\&quot; ./run.sh &gt; ftet.txt&quot;</span>
+<span class="nb">export</span> <span class="nv">RUN_JPF</span><span class="o">=</span><span class="s2">&quot;JAVA=\&quot;</span><span class="nv">$ARES_BIN</span><span class="s2">\&quot; VM_OPTS=\&quot;</span><span class="nv">$JPF</span><span class="s2">\&quot; ./run.sh &gt; jpf.txt&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -197,7 +197,7 @@ Therefore, <code>$RUN_FER</code> will be expand to <code>JAVA=$ARES_BIN VM_OPTS=
 31
 32
 33
-34</pre></div></td><td class="code"><div class="codehilite"><pre><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ThrowRuntimeException</span><span class="o">{</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">do_throw_RuntimeException</span><span class="o">(){</span>

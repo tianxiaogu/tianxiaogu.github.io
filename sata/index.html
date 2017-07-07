@@ -21,11 +21,18 @@
 <p>Download our model-based automated testing tool <a href="ape-bin.zip">Ape</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ape is the internal name used during developing SATA.</p>
+<p>Ape is the internal name we used during developing SATA.</p>
 </div>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>A new modeling method.</li>
+<li>Introduce a duration for a swipe action.</li>
+<li>Handle <code>EditorInfo</code> for ADB Keyboard.</li>
+<li>Wait a proper time for a lagging activity.</li>
+</ul>
 <h2 id="evaluation">Evaluation</h2>
 <ul>
-<li>Preliminary Results on some popular apps in China<ul>
+<li>Preliminary results on some popular apps in China<ul>
 <li><a href="data.html">Data</a></li>
 </ul>
 </li>
@@ -37,7 +44,7 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre>ape-bin/
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
 ape-bin/7/
 ape-bin/7/ape.jar  &lt;--- For Android 7
 ape-bin/ape.jar    &lt;--- For Android 6
@@ -47,14 +54,14 @@ ape-bin/README.md
 </td></tr></table>
 
 <p>Just copy the <code>ape.jar</code> to the phone.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>adb push ape.jar /sdcard/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /sdcard/
 </pre></div>
 </td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For Android 7, just use another jar.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>adb push 7/ape.jar /sdcard/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push 7/ape.jar /sdcard/
 </pre></div>
 </td></tr></table>
 
@@ -62,7 +69,7 @@ ape-bin/README.md
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run SATA to test the Calculator on a real device connected via <code>adb</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
 </pre></div>
 </td></tr></table>
 
@@ -81,7 +88,7 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </li>
 </ul>
 <p>You can also specify the total amount of Monkey events. In this mode, SATA will stop by default once there is a crash.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>./ape.py -p com.google.android.calculator --ape sata 1000
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --ape sata 1000
 </pre></div>
 </td></tr></table>
 
@@ -173,7 +180,7 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 52
 53
 54
-55</pre></div></td><td class="code"><div class="codehilite"><pre>ape.WebViewActionThreshold = 30
+55</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape.WebViewActionThreshold = 30
 ape.activityStableRestartThreshold = 200
 ape.alwaysIgnoreWebViewAction = true
 ape.avoidEditText = false
@@ -261,7 +268,7 @@ This will disable actions on any widget that has no text.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre>[{
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
     &quot;xpath&quot;: &quot;//*[@text=&#39;&#39;]&quot;,
     &quot;actions&quot;: []
 }]
@@ -279,7 +286,7 @@ This will disable actions on any widget that has no text.</p>
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre>NOP
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>NOP
 CLICK
 LONG_CLICK
 SCROLL_TOP_DOWN
@@ -293,7 +300,7 @@ SCROLL_RIGHT_LEFT
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre>ape.takeScreenshot = true
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape.takeScreenshot = true
 ape.takeScreenshotForEveryStep = true
 ape.takeScreenshotForNewState = true
 ape.imageWriterCount = 3
@@ -308,7 +315,7 @@ ape.imageWriterCount = 3
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre>[{
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
     &quot;xpath&quot;: &quot;//*[@text=&#39;Title&#39;]&quot;,
     &quot;text&quot;: &quot;I am a Title&quot;
 }]
