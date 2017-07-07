@@ -33,6 +33,12 @@
     <!-- Bootstrap -->
     <script src="/js/bootstrap.min.js"></script>
 
+    {% if g.bundle.code %}
+        {% for code in g.bundle.code %}
+    <script>{{ code|safe }}</script>
+        {% endfor %}
+    {% endif %}
+
     {% block customjs %}{% endblock %}
   </body>
 </html>
