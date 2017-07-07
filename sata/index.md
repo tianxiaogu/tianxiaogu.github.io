@@ -7,11 +7,19 @@ An upgrade of Monkey.
 Download our model-based automated testing tool [Ape](ape-bin.zip).
 
 !!! note:
-    Ape is the internal name used during developing SATA.
+    Ape is the internal name we used during developing SATA.
+
+
+## TODO
+
+* A new modeling method.
+* Introduce a duration for a swipe action.
+* Handle `EditorInfo` for ADB Keyboard.
+* Wait a proper time for a lagging activity.
 
 ## Evaluation
 
-* Preliminary Results on some popular apps in China
+* Preliminary results on some popular apps in China
     * [Data](data.html)
 
 ## Install
