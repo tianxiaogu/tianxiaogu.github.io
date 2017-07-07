@@ -9,6 +9,13 @@ Download our model-based automated testing tool [Ape](ape-bin.zip).
 !!! note:
     Ape is the internal name used during developing SATA.
 
+## Evaluation
+
+* Preliminary Results on some popular apps in China
+    * [Data](data.html)
+
+## Install
+
 Files inside `ape-bin.zip`:
 
 ```
@@ -20,8 +27,7 @@ ape-bin/ape.py
 ape-bin/README.md
 ```
 
-## Install
-
+Just copy the `ape.jar` to the phone.
 
     adb push ape.jar /sdcard/
 
@@ -246,3 +252,5 @@ SATA decides to do text input by checking the following three conditions.
 
 !!! note:
     Only one type of input action can be triggered.
+
+

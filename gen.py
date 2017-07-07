@@ -45,10 +45,16 @@ class G(object):
         self.bundle = Bundle()
         self.bundle.code = []
 
-#!!!
 g = G()
-
 ENV.globals.update(g=g)
+
+#--------------------------
+# Simulation new page
+#--------------------------
+def start_new_page():
+    global g
+    g = G()
+    ENV.globals.update(g=g)
 
 #---------------------------
 # jstrick
@@ -355,6 +361,7 @@ def get_markdown_page(page_path):
     page = Page()
     with open(page_path, 'r') as f:
         md = create_markdown()
+        start_new_page()
         page.html = md.convert(f.read().decode('utf-8'))
         page.meta = md.Meta # flask-pages naming convention
         for key, value in page.meta.iteritems():
