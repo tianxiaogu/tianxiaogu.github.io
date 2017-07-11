@@ -261,4 +261,8 @@ SATA decides to do text input by checking the following three conditions.
 !!! note:
     Only one type of input action can be triggered.
 
+## Acknowledgments
 
+We thank the following experts/researchers/engineers for their comments on improving SATA.
+
+* Zhao Zhang 张钊

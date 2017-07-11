@@ -2,6 +2,7 @@ title: Data
 
 # Data
 
+
 ## Subjects
 
 |Category | App Name | Install  | Activity  | Method  | Instruction |
@@ -27,6 +28,13 @@ title: Data
 
 
 ## Activity Coverage
+
+* `SATA`: the default strategy
+* `RL`: the reinforcement learning enhanced random strategy
+* `Random`: uniform random
+* `ORBIT`: greedy
+* `WeChat`: from the paper in the FSE 2016 industry track
+* `Monkey`: default configuration
 
 |App|Instruction|SATA|RL|Random|ORBIT|WeChat|Monkey|
 |--:|----------:|---:|-:|-----:|----:|-----:|-----:|
