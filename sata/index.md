@@ -263,6 +263,7 @@ SATA decides to do text input by checking the following three conditions.
 
 ## Acknowledgments
 
-We thank the following experts/researchers/engineers for their comments on improving SATA.
+We thank the following experts for their insightful comments on SATA.
 
+* [Ting Su](https://tingsu.github.io/)
 * Zhao Zhang 张钊
