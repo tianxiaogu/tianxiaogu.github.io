@@ -3,10 +3,23 @@ title: Data
 # Data
 
 
+## Tools
+
+* `SATA`: the default strategy
+* `RL`: the reinforcement learning enhanced random strategy
+* `Random`: uniform random
+* `ORBIT`:
+    * Yang, Wei, Mukul R. Prasad, and Tao Xie. “A Grey-Box Approach for Automated GUI-Model Generation of Mobile Applications.” In Fundamental Approaches to Software Engineering, 250–65. Springer Berlin Heidelberg, 2013.
+* `WeChat`:
+    * Zeng, Xia, Dengfeng Li, Wujie Zheng, Fan Xia, Yuetang Deng, Wing Lam, Wei Yang, and Tao Xie. “Automated Test Input Generation for Android: Are We Really There Yet in an Industrial Case?” In Proceedings of the 2016 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 987–992. FSE 2016. New York, NY, USA: ACM, 2016.
+* `Monkey`: with default configuration
+
+
+
 ## Subjects
 
-|Category | App Name | Install  | Activity  | Method  | Instruction |
-|---------|----------|---------:|----------:|--------:|------------:|
+|Category | App Name | Install  | Activity (#)  | Method (#)  | Instruction (#) |
+|--------:|---------:|---------:|----------:|--------:|------------:|
 |Dict | Bing Dict | 28 MB | 63 | 53,133 | 671,122|
 |Dict | KingSoft Dict | 16 MB | 196 | 73,297 | 1,228,268|
 |Dict | Youdao Dict | 41 MB | 117 | 130,149 | 1,797,581|
@@ -29,14 +42,7 @@ title: Data
 
 ## Activity Coverage
 
-* `SATA`: the default strategy
-* `RL`: the reinforcement learning enhanced random strategy
-* `Random`: uniform random
-* `ORBIT`: greedy
-* `WeChat`: from the paper in the FSE 2016 industry track
-* `Monkey`: default configuration
-
-|App|Instruction|SATA|RL|Random|ORBIT|WeChat|Monkey|
+|App|Activity (#) |SATA (%) |RL (%) |Random (%) |ORBIT (%) |WeChat (%) |Monkey (%) |
 |--:|----------:|---:|-:|-----:|----:|-----:|-----:|
 |Bing Dict | 63 |  58.7 | 42.9 | 27.0 | 49.2 | 49.2 | 41.3|
 |KingSoft Dict | 196 |  26.5 | 11.2 | 10.7 | 18.4 | 19.4 | 9.7|
@@ -62,7 +68,7 @@ title: Data
 ## Method Coverage
 
 
-|App|Instruction|SATA|RL|Random|ORBIT|WeChat|Monkey|
+|App|Method (#) |SATA (%) |RL (%) |Random (%) |ORBIT (%) |WeChat (%) |Monkey (%) |
 |--:|----------:|---:|-:|-----:|----:|-----:|-----:|
 |Bing Dict | 53,133 |  19.5 | 17.5 | 17.0 | 18.2 | 18.5 | 17.1|
 |KingSoft Dict | 73,297 |  22.3 | 16.9 | 16.3 | 18.9 | 20.1 | 17.1|
@@ -87,7 +93,7 @@ title: Data
 
 ## Instruction Coverage
 
-|App|Instruction|SATA|RL|Random|ORBIT|WeChat|Monkey|
+|App|Instruction (#) |SATA (%) |RL (%) |Random (%) |ORBIT (%) |WeChat (%) |Monkey (%) |
 |--:|----------:|---:|-:|-----:|----:|-----:|-----:|
 |Bing Dict | 671,122 |  20.8 | 18.7 | 18.3 | 19.3 | 19.9 | 18.5|
 |KingSoft Dict | 1,228,268 |  21.4 | 15.5 | 15.0 | 17.9 | 18.9 | 15.7|
