@@ -5,25 +5,16 @@ title: Homepage
 
 ----------------
 
-<div class="row gutter" markdown="1">
-<div class="col-lg-2 col-md-2 col-sm-12">
-<img style="max-width:100%;height:auto;" src="tianxiaogu.png" alt="Tianxiao Gu"/>
-</div>
-<div class="col-lg-10 col-md-10 col-sm-12" style="vertical-align:middle" markdown="1">
-<ul markdown="1">
-<li>Postdoc
-<li>Department of Computer Science
-<li>University of California, Davis, USA
-<li markdown="1">Supervisor: Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/)
-<li>Email: tianxiao.gu (at) gmail dot com
-<li><a href="http://www.linkedin.com/in/tianxiaogu"><i class="fa fa-linkedin-square"></i></a>
+* Postdoc
+* Department of Computer Science
+* University of California, Davis, USA
+* Supervisor: Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/)
+* Email: tianxiao.gu (at) gmail dot com
+* <a href="http://www.linkedin.com/in/tianxiaogu"><i class="fa fa-linkedin-square"></i></a>
   <a href="https://twitter.com/Xiaotiangu"><i class="fa fa-twitter-square"></i></a>
   <a href="https://www.facebook.com/eric.ku.505"><i class="fa fa-facebook-square"></i></a>
   <a href="https://www.bitbucket.org/txgu/"><i class="fa fa-bitbucket"></i></a>
   <a href="https://github.com/tianxiaogu"><i class="fa fa-github"></i></a>
-</ul>
-</div>
-</div>
 
 
 ----------------
