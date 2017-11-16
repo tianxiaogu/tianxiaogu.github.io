@@ -33,6 +33,12 @@ title: Homepage
 
 * Java Virtual Machine
 * Android Security/Testing
+    * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
+    * [Ape](./sata)
+    * MiniTracing: Collect method/coverage without byteocde instrumentation.
+        * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
+        * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
+        * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
 * Dynamic Software Updating
     * A [list](./javelus/literature) of practical DSU tools.
 * Program Analysis
@@ -42,6 +48,13 @@ title: Homepage
 ## Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{gu_AimDroid:_2017,
+  title = {AimDroid: Activity-Insulated Multi-level Automated Testing for Android Applications},
+  author = {Tianxiao Gu and Chun Cao and Tianchi Liu and Chengnian Sun and Jing Deng and Xiaoxing Ma and Jian L{\"u}},
+  booktitle = {Proceedings of the 2017 IEEE International Conference on Software Maintenance and Evolution (ICSME 2017)},
+  year = {2017},
+  pages = {103--114},
+}
 @inproceedings{gu_synthesize_2017,
   author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian L{\"u}},
   title     = {Synthesizing Object Transformation for Dynamic Software Updating},
@@ -142,7 +155,8 @@ title: Homepage
         * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.
 * <a href="https://bitbucket.org/txgu/ares"><i class="fa fa-bitbucket"></i></a> [Ares](./ares/): Automatic Runtime Recovery via Error Handler Synthesis.
 * <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fa fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
-* <a href="https://bitbucket.org/txgu/sata"><i class="fa fa-bitbucket"></i></a> [SATA](./sata/): Steering Android Testing for Android Applications.
+* <a href="https://bitbucket.org/txgu/sata"><i class="fa fa-bitbucket"></i></a> [Ape](./sata/): Automated Testing of Android Applications with Abstraction Refinement.
+
 
 --------------------
 
