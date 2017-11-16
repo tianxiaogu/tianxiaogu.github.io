@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> SATA |  Tianxiao Gu</title>
+    <title> Ape |  Tianxiao Gu</title>
 
 
     <!-- Styles -->
@@ -16,39 +16,18 @@
   </head>
   <body role="document">
     <div class="container">
-    <h1 id="sata-steering-automated-testing-for-android-applications">SATA: Steering Automated Testing for Android Applications</h1>
-<p>An upgrade of Monkey.</p>
+    <h1 id="ape-automated-testing-of-android-applications-with-abstraction-refinement">Ape: Automated Testing of Android Applications with Abstraction Refinement</h1>
 <p>Download our model-based automated testing tool <a href="ape-bin.zip">Ape</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ape is the internal name we used during developing SATA.</p>
-</div>
-<h2 id="todo">TODO</h2>
-<ul>
-<li>A new modeling method.</li>
-<li>Introduce a duration for a swipe action.</li>
-<li>Handle <code>EditorInfo</code> for ADB Keyboard.</li>
-<li>Wait a proper time for a lagging activity.</li>
-</ul>
-<h2 id="evaluation">Evaluation</h2>
-<ul>
-<li>Preliminary results on some popular apps in China<ul>
-<li><a href="data.html">Data</a></li>
-</ul>
-</li>
-</ul>
 <h2 id="install">Install</h2>
 <p>Files inside <code>ape-bin.zip</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
-ape-bin/7/
-ape-bin/7/ape.jar  &lt;--- For Android 7
-ape-bin/ape.jar    &lt;--- For Android 6
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
+ape-bin/ape.jar
 ape-bin/ape.py
+ape-bin/install.py
 ape-bin/README.md
 </pre></div>
 </td></tr></table>
@@ -58,44 +37,43 @@ ape-bin/README.md
 </pre></div>
 </td></tr></table>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For Android 7, just use another jar.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push 7/ape.jar /sdcard/
-</pre></div>
-</td></tr></table>
-
-</div>
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
-<p>The following command starts to run SATA to test the Calculator on a real device connected via <code>adb</code>.</p>
+<p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
 </pre></div>
 </td></tr></table>
 
-<p>Check the <code>ape.py</code> if you want to run SATA with an emulator.
+<p>Check the <code>ape.py</code> if you want to run Ape with an emulator.
 You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 <p>Options:</p>
 <ul>
 <li><code>-p</code>: specify the package name, the same as Monkey</li>
 <li><code>--running-minutes</code>: the total testing time in minutes<ul>
-<li>This is the continuous mode, which means SATA does not stop when it triggers a crash.</li>
+<li>This is the continuous mode, which means Ape does not stop when it triggers a crash.</li>
 </ul>
 </li>
-<li><code>--ape sata</code>: use the SATA exploration strategy described in the paper.<ul>
+<li><code>--ape sata</code>: use the default exploration strategy described in the paper.<ul>
 <li>You can also try <code>orbit</code>, <code>wechat</code>, <code>random</code>, and reinforcement learning enhanced random (<code>satarl</code>)</li>
 </ul>
 </li>
 </ul>
-<p>You can also specify the total amount of Monkey events. In this mode, SATA will stop by default once there is a crash.</p>
+<p>You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --ape sata 1000
 </pre></div>
 </td></tr></table>
 
+<h2 id="known-bugs">Known Bugs</h2>
+<ol>
+<li>Memory Bloat:<ul>
+<li>Ape runs in the phone with limited memory for each process. Hence it may run out of memory as now we simply keep a large number of Strings and XML document objects in the memory.</li>
+</ul>
+</li>
+</ol>
 <h2 id="visualization">Visualization</h2>
 <p>We provide a tool to visualize the model.</p>
 <ol>
-<li>SATA writes several js files into the output folder for visualization.<ul>
+<li>Ape writes several js files into the output folder for visualization.<ul>
 <li>Check the tail of the output message to locate the output folder in the phone.</li>
 </ul>
 </li>
@@ -120,12 +98,18 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 <ul>
 <li><a href="./demo-keep-timeline/vis.html">Google Keep</a><ul>
 <li><a href="./demo-keep-timeline/vis-timeline.html">Timeline</a></li>
+<li>Copy <a href="./demo-keep-timeline/vis-timeline.html">vis-timeline.html</a> to your local output directory.</li>
+<li>Open the copied <code>vis-timeline.html</code> in your browser.</li>
 </ul>
 </li>
 </ul>
 <h2 id="configuration">Configuration</h2>
-<p>SATA is under developing now. There is no stable documentation right now.</p>
-<p>Put the following content into <code>/sdcard/ape.properties</code> to configure SATA.</p>
+<p>Ape is under developing now. There is no stable documentation right now.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The documentation below is out-of-date now. Updated documentation will come later.</p>
+</div>
+<p>Put the following content into <code>/sdcard/ape.properties</code> to configure Ape.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -239,8 +223,8 @@ ape.useSingleScroll = false
 </td></tr></table>
 
 <h2 id="trap-detection">Trap Detection</h2>
-<p>SATA will force the app to be restarted if it detects that it stays in a particular activity/state for a certain number of steps.
-In addition, SATA will also restart the app if the graph is not updated for a specific steps.</p>
+<p>Ape will force the app to be restarted if it detects that it stays in a particular activity/state for a certain number of steps.
+In addition, Ape will also restart the app if the graph is not updated for a specific steps.</p>
 <p>Check the following options.</p>
 <ol>
 <li><code>ape.graphStableRestartThreshold</code></li>
@@ -249,20 +233,20 @@ In addition, SATA will also restart the app if the graph is not updated for a sp
 </ol>
 <h2 id="webview">WebView</h2>
 <p>The <code>uiautomator dump</code> now support dumping contents into WebView.
-But SATA ignores widgets inside a WebView by default.</p>
+But Ape ignores widgets inside a WebView by default.</p>
 <p>Check the following options.</p>
 <ol>
 <li><code>ape.alwaysIgnoreWebViewAction = true</code><ul>
-<li>This option will make SATA ignore any WebView.</li>
+<li>This option will make Ape ignore any WebView.</li>
 </ul>
 </li>
 <li><code>ape.WebViewActionThreshold = 30</code><ul>
-<li>This option will make SATA to ignore any WebView that has more than 30 interactive widgets.</li>
+<li>This option will make Ape to ignore any WebView that has more than 30 interactive widgets.</li>
 </ul>
 </li>
 </ol>
 <h2 id="xpathlet">XPathlet</h2>
-<p>SATA now supports configuring widgets-specified behaviors via XPath.</p>
+<p>Ape now supports configuring widgets-specified behaviors via XPath.</p>
 <p>Put the following json into the file <code>/sdcard/ape.xpath</code>.
 This will disable actions on any widget that has no text.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -308,7 +292,7 @@ ape.imageWriterCount = 3
 </td></tr></table>
 
 <h2 id="input-text">Input Text</h2>
-<p>SATA decides to do text input by checking the following three conditions.</p>
+<p>Ape decides to do text input by checking the following three conditions.</p>
 <ol>
 <li>
 <p>Specified by XPath</p>
@@ -340,7 +324,7 @@ More information can be found at <a href="https://developer.android.com/referenc
 </ul>
 </li>
 <li><code>ape.generateRandomTextInput = true</code><ul>
-<li>Randomly generate a string by regex <code>[0-9a-z]{0,30}</code>.</li>
+<li>Randomly generate a string by regex <code>[0-9a-z]{0,32}</code>.</li>
 </ul>
 </li>
 </ol>
@@ -349,7 +333,7 @@ More information can be found at <a href="https://developer.android.com/referenc
 <p>Only one type of input action can be triggered.</p>
 </div>
 <h2 id="acknowledgments">Acknowledgments</h2>
-<p>We thank the following experts for their insightful comments on SATA.</p>
+<p>We thank the following experts for their insightful comments on Ape.</p>
 <ul>
 <li><a href="https://tingsu.github.io/">Ting Su</a></li>
 <li>Zhao Zhang 张钊</li>

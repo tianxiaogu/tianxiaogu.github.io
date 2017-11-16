@@ -1,26 +1,9 @@
-title: SATA
+title: Ape
 
-# SATA: Steering Automated Testing for Android Applications
-
-An upgrade of Monkey.
+# Ape: Automated Testing of Android Applications with Abstraction Refinement
 
 Download our model-based automated testing tool [Ape](ape-bin.zip).
 
-!!! note:
-    Ape is the internal name we used during developing SATA.
-
-
-## TODO
-
-* A new modeling method.
-* Introduce a duration for a swipe action.
-* Handle `EditorInfo` for ADB Keyboard.
-* Wait a proper time for a lagging activity.
-
-## Evaluation
-
-* Preliminary results on some popular apps in China
-    * [Data](data.html)
 
 ## Install
 
@@ -28,10 +11,9 @@ Files inside `ape-bin.zip`:
 
 ```
 ape-bin/
-ape-bin/7/
-ape-bin/7/ape.jar  <--- For Android 7
-ape-bin/ape.jar    <--- For Android 6
+ape-bin/ape.jar
 ape-bin/ape.py
+ape-bin/install.py
 ape-bin/README.md
 ```
 
@@ -40,38 +22,37 @@ Just copy the `ape.jar` to the phone.
     adb push ape.jar /sdcard/
 
 
-!!! note:
-    For Android 7, just use another jar.
-
-        adb push 7/ape.jar /sdcard/
-
-
 
 ## Run
 
 We provide a python script (i.e., `ape.py`) to facilitate running ape on Android platform.
 
-The following command starts to run SATA to test the Calculator on a real device connected via `adb`.
+The following command starts to run Ape to test the Calculator on a real device connected via `adb`.
 
 
     ./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
 
-Check the `ape.py` if you want to run SATA with an emulator.
+Check the `ape.py` if you want to run Ape with an emulator.
 You should at least remove the `-d` options for `adb`.
 
 Options:
 
 * `-p`: specify the package name, the same as Monkey
 * `--running-minutes`: the total testing time in minutes
-    * This is the continuous mode, which means SATA does not stop when it triggers a crash.
-* `--ape sata`: use the SATA exploration strategy described in the paper.
+    * This is the continuous mode, which means Ape does not stop when it triggers a crash.
+* `--ape sata`: use the default exploration strategy described in the paper.
     * You can also try `orbit`, `wechat`, `random`, and reinforcement learning enhanced random (`satarl`)
 
-You can also specify the total amount of Monkey events. In this mode, SATA will stop by default once there is a crash.
+You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.
 
 
     ./ape.py -p com.google.android.calculator --ape sata 1000
 
+
+## Known Bugs
+
+1. Memory Bloat:
+    * Ape runs in the phone with limited memory for each process. Hence it may run out of memory as now we simply keep a large number of Strings and XML document objects in the memory.
 
 
 
@@ -79,7 +60,7 @@ You can also specify the total amount of Monkey events. In this mode, SATA will 
 
 We provide a tool to visualize the model.
 
-1. SATA writes several js files into the output folder for visualization.
+1. Ape writes several js files into the output folder for visualization.
     * Check the tail of the output message to locate the output folder in the phone.
 2. `adb pull /sdcard/your-output-folder` to your local directory.
 3. Copy the following files into the local output directory
@@ -99,13 +80,18 @@ Now we can check the timeline.
 
 * [Google Keep](./demo-keep-timeline/vis.html)
     * [Timeline](./demo-keep-timeline/vis-timeline.html)
+    * Copy [vis-timeline.html](./demo-keep-timeline/vis-timeline.html) to your local output directory.
+    * Open the copied `vis-timeline.html` in your browser.
 
 
 ## Configuration
 
-SATA is under developing now. There is no stable documentation right now.
+Ape is under developing now. There is no stable documentation right now.
 
-Put the following content into `/sdcard/ape.properties` to configure SATA.
+!!! note:
+    The documentation below is out-of-date now. Updated documentation will come later.
+
+Put the following content into `/sdcard/ape.properties` to configure Ape.
 
 ```
 ape.WebViewActionThreshold = 30
@@ -169,8 +155,8 @@ ape.useSingleScroll = false
 
 ## Trap Detection
 
-SATA will force the app to be restarted if it detects that it stays in a particular activity/state for a certain number of steps.
-In addition, SATA will also restart the app if the graph is not updated for a specific steps.
+Ape will force the app to be restarted if it detects that it stays in a particular activity/state for a certain number of steps.
+In addition, Ape will also restart the app if the graph is not updated for a specific steps.
 
 Check the following options.
 
@@ -181,19 +167,19 @@ Check the following options.
 ## WebView
 
 The `uiautomator dump` now support dumping contents into WebView.
-But SATA ignores widgets inside a WebView by default.
+But Ape ignores widgets inside a WebView by default.
 
 Check the following options.
 
 1. `ape.alwaysIgnoreWebViewAction = true`
-    * This option will make SATA ignore any WebView.
+    * This option will make Ape ignore any WebView.
 2. `ape.WebViewActionThreshold = 30`
-    * This option will make SATA to ignore any WebView that has more than 30 interactive widgets.
+    * This option will make Ape to ignore any WebView that has more than 30 interactive widgets.
 
 ## XPathlet
 
 
-SATA now supports configuring widgets-specified behaviors via XPath.
+Ape now supports configuring widgets-specified behaviors via XPath.
 
 Put the following json into the file `/sdcard/ape.xpath`.
 This will disable actions on any widget that has no text.
@@ -233,7 +219,7 @@ ape.imageWriterCount = 3
 
 ## Input Text
 
-SATA decides to do text input by checking the following three conditions.
+Ape decides to do text input by checking the following three conditions.
 
 1. Specified by XPath
 
@@ -255,7 +241,7 @@ SATA decides to do text input by checking the following three conditions.
 2. `ape.randomPickFromStringList = true`
     * Randomly pick a line from a text file located at `/sdcard/ape.strings`.
 3. `ape.generateRandomTextInput = true`
-    * Randomly generate a string by regex `[0-9a-z]{0,30}`.
+    * Randomly generate a string by regex `[0-9a-z]{0,32}`.
 
 
 !!! note:
@@ -263,7 +249,7 @@ SATA decides to do text input by checking the following three conditions.
 
 ## Acknowledgments
 
-We thank the following experts for their insightful comments on SATA.
+We thank the following experts for their insightful comments on Ape.
 
 * [Ting Su](https://tingsu.github.io/)
 * Zhao Zhang 张钊
