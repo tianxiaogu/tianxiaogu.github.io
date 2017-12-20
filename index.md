@@ -48,6 +48,13 @@ title: Homepage
 ## Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{sun_perses_2018,
+  title = {Perses: Syntax-Guided Program Reduction},
+  author = {Chengnian Sun and Yuanbo Li and Qirun Zhang and Tianxiao Gu and Zhendong Su},
+  booktitle = {Proceedings of the 40th International Conference on Software Engineering (ICSE 2018)},
+  year = {2018},
+  pages = {To appear},
+}
 @inproceedings{gu_AimDroid:_2017,
   title = {AimDroid: Activity-Insulated Multi-level Automated Testing for Android Applications},
   author = {Tianxiao Gu and Chun Cao and Tianchi Liu and Chengnian Sun and Jing Deng and Xiaoxing Ma and Jian L{\"u}},
