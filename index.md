@@ -66,7 +66,7 @@ title: Homepage
   author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian L{\"u}},
   title     = {Synthesizing Object Transformation for Dynamic Software Updating},
   booktitle = {Proceedings of the 39th International Conference on Software Engineering Companion (ICSE-C 2017)},
-  pages     = {to appear},
+  pages     = {336--338},
   year      = {2017},
 }
 @inproceedings{gu_precise_2016,
