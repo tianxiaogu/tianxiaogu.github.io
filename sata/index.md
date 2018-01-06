@@ -87,73 +87,19 @@ Now we can check the timeline.
 ## Configuration
 
 Ape is under developing now. There is no stable documentation right now.
+After the testing, ape will print a list of configurations.
+To change an option,
+you can put a Java properties file into `/sdcard/ape.properties`.
 
 !!! note:
     The documentation below is out-of-date now. Updated documentation will come later.
 
-Put the following content into `/sdcard/ape.properties` to configure Ape.
-
-```
-ape.WebViewActionThreshold = 30
-ape.activityStableRestartThreshold = 200
-ape.alwaysIgnoreWebViewAction = true
-ape.avoidEditText = false
-ape.checkHomogeneous = false
-ape.checkUnsaturatedTrivialState = true
-ape.defaultAlpha = 0.2
-ape.defaultBeta = 0.8
-ape.defaultEpsilon = 0.05
-ape.defaultGUIThrottle = 200
-ape.defaultGamma = 0.8
-ape.defaultMaxDepthEarlyStage = 3
-ape.defaultMaxLengthEarlyStage = 2
-ape.extraBasePriority = 3
-ape.fallbackToGraphTransition = true
-ape.fillTransitionsByHistory = true
-ape.flushImagesThreshold = 10
-ape.generateRandomTextInput = true
-ape.graphStableRestartThreshold = 100
-ape.ignoreEmpty = true
-ape.ignoreEmptyWebViewWidget = true
-ape.ignoreEmptyWidget = false
-ape.ignoreOutOfBounds = true
-ape.ignoreOutOfBoundsWidget = true
-ape.imageWriterCount = 3
-ape.includeFocusable = true
-ape.invalidBackCircleThreshold = 3
-ape.maxAppendThrottle = 3000
-ape.nopActionThrottle = 1000
-ape.onlyAddedActions = true
-ape.randomPickFromStringList = false
-ape.simpleGreedyEarlyStage = false
-ape.sizeOfGuiTreeBuffer = 5
-ape.startActionThrottle = 0
-ape.stateStableCheckWelcomeThreshold = 10
-ape.stateStableRestartThreshold = 50
-ape.stopWhenEqual = true
-ape.takeScreenshot = true
-ape.takeScreenshotForEveryStep = true
-ape.takeScreenshotForNewState = true
-ape.throttleForUnvisitedAction = 500
-ape.throttlePerActivityTransition = 100
-ape.throttlePerTrivialState = 1000
-ape.throttlePerWeakEdge = 500
-ape.trivialStateActionThreshold = 1
-ape.trivialStateUnsaturationActionThreshold = 3
-ape.trivialStateUnsaturationThreshold = 3
-ape.trivialStateWidgetThreshold = 3
-ape.useComplexSPathChildrenThreshold = 5
-ape.useComplexSPathDescendantActionThreshold = 20
-ape.useDynamicSPath = true
-ape.useShortID = false
-ape.useShortestPathForEarlyStage = false
-ape.useSimpleSPath = false
-ape.useSingleScroll = false
-```
 
 ## Model Evolution
 
 Naming is a set of XPath based rules to specify how to abstract a GUI tree into a state representation.
+The details of a naming is not covered in this document.
+
 
 1. Disable abstraction refinement:
     * `ape.evolveModel = false`
@@ -180,8 +126,6 @@ An action needs more throttle if it is
 
 However, the previous rules are heuristic-based. There are a few actions that need a relative long wait interval.
 Hence, we randomly append a `maxExtraThorttle` to an action.
-
-
 
 Recommend configuration #1:
 
