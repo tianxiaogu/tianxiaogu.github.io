@@ -151,6 +151,118 @@ ape.useSimpleSPath = false
 ape.useSingleScroll = false
 ```
 
+## Model Evolution
+
+Naming is a set of XPath based rules to specify how to abstract a GUI tree into a state representation.
+
+1. Disable abstraction refinement:
+    * `ape.evolveModel = false`
+    * `ape.baseNaming = stoat`
+2. Enable abstraction refinement:
+    * `ape.evolveModel = true` (default)
+    * `ape.baseNaming = resourceid` (default)
+3. User specified custom base naming is under working.
+
+If you want to use ape as a stress testing tool, you need to disable abstraction refinement
+and set a proper wait interval.
+
+## Action Wait Interval
+
+
+An action needs more throttle if it is
+1. unvisited
+    * `ape.throttleForUnvisitedAction = 500`
+    * An unvisited action usually triggers resource loading and warm up.
+2. an activity transition.
+    * Rendering a new activity usually needs to wait for more time.
+3. visited and non-deterministic (weak transition)
+    * Non-deterministic actions usually are caused by canceling a long time GUI transition.
+
+However, the previous rules are heuristic-based. There are a few actions that need a relative long wait interval.
+Hence, we randomly append a `maxExtraThorttle` to an action.
+
+
+
+Recommend configuration #1:
+
+1. Use the recommended default throttle.
+2. Smaller regular throttle and large probability to trigger the `maxExtraThrottle`:
+    * `ape.throttleForUnvisitedAction = 100`
+    * `ape.throttlePerActivityTransition= 0`
+    * `ape.throttlePerWeakStateTransition= 0`
+    * `ape.throttlePerTrivialState = 0`
+    * `ape.maxExtraThrottleProbability = 0.1` (default is 0.01)
+3. Use XPathlet to specify a wait interval for particular actions.
+
+Details of how ape calculates the wait interval for an action.
+
+```
+    private static final int throttleForUnvisitedAction = Config.getInteger("ape.throttleForUnvisitedAction", 500); // set base throttle
+    private static final int throttlePerActivityTransition = Config.getInteger("ape.throttlePerActivityTransition", 200); // set base throttle
+    private static final int throttlePerWeakStateTransition =  Config.getInteger("ape.throttlePerWeakStateTransition", 500); // false;
+    private static final int throttlePerTrivialState = Config.getInteger("ape.throttlePerTrivialState", 1000);
+    private static final int maxExtraThrottle =  Config.getInteger("ape.maxExtraThrottle", 5000);
+    private static final int maxThrottle =  Config.getInteger("ape.maxThrottle", 5000); // 5 000;
+
+    private static final double maxExtraThrottleProbability = Config.getDouble("ape.maxExtraThrottleProbability", 0.01D);
+    private static final double maxExtraThrottleProbabilityForActivityTransition = Config.getDouble("ape.maxExtraThrottleProbabilityForActivityTransition", 0.10D);
+
+    protected int getThrottleForNewAction(State state, Action action) {
+        int throttle = 0;
+        Collection<StateTransition> edges = getGraph().getOutStateTransitions(action);
+        boolean hasActivityTransition = false;
+        boolean hasWeakStateTransition = false;
+        boolean hasTrivialState = false;
+        for (StateTransition edge : edges) {
+            if (edge.action.isBack()) {
+                continue;
+            }
+            if (!edge.isStrong()) {
+                hasWeakStateTransition = true;
+            } else if (edge.target.isTrivialState()) {}{
+                hasTrivialState = true;
+            }
+            if (!edge.isSameActivity()) {
+                hasActivityTransition = true;
+            }
+        }
+
+        if (hasTrivialState && edges.size() == 0) {
+            throttle += throttlePerTrivialState;
+        } else {
+            if (hasWeakStateTransition) {
+                throttle += throttlePerWeakStateTransition; // only count one weak edge
+            }
+            if (hasActivityTransition) {
+                throttle += throttlePerActivityTransition;
+            }
+        }
+        if (action.isUnvisited()) {
+            throttle += throttleForUnvisitedAction;
+        }
+
+        if (toss(maxExtraThrottleProbability)) {
+            throttle = throttle + getRandom().nextInt(maxExtraThrottle);
+        }
+        if (hasActivityTransition && toss(maxExtraThrottleProbabilityForActivityTransition)) {
+            throttle = throttle + getRandom().nextInt(maxExtraThrottle);
+        }
+
+        throttle =  throttle <= maxThrottle ? throttle : maxThrottle;
+
+        GUITreeNode node = action.getResolvedNode();
+        if (node != null) {
+            throttle += node.getExtraThrottle(); // via XPath
+        }
+
+        if (throttle > 0) {
+            Logger.dformat("Append a throttle %d for action %s", throttle, action);
+        }
+        return throttle;
+    }
+
+
+```
 
 
 ## Trap Detection
