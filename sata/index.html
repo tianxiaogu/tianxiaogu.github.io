@@ -222,6 +222,176 @@ ape.useSingleScroll = false
 </pre></div>
 </td></tr></table>
 
+<h2 id="model-evolution">Model Evolution</h2>
+<p>Naming is a set of XPath based rules to specify how to abstract a GUI tree into a state representation.</p>
+<ol>
+<li>Disable abstraction refinement:<ul>
+<li><code>ape.evolveModel = false</code></li>
+<li><code>ape.baseNaming = stoat</code></li>
+</ul>
+</li>
+<li>Enable abstraction refinement:<ul>
+<li><code>ape.evolveModel = true</code> (default)</li>
+<li><code>ape.baseNaming = resourceid</code> (default)</li>
+</ul>
+</li>
+<li>User specified custom base naming is under working.</li>
+</ol>
+<p>If you want to use ape as a stress testing tool, you need to disable abstraction refinement
+and set a proper wait interval.</p>
+<h2 id="action-wait-interval">Action Wait Interval</h2>
+<p>An action needs more throttle if it is
+1. unvisited
+    * <code>ape.throttleForUnvisitedAction = 500</code>
+    * An unvisited action usually triggers resource loading and warm up.
+2. an activity transition.
+    * Rendering a new activity usually needs to wait for more time.
+3. visited and non-deterministic (weak transition)
+    * Non-deterministic actions usually are caused by canceling a long time GUI transition.</p>
+<p>However, the previous rules are heuristic-based. There are a few actions that need a relative long wait interval.
+Hence, we randomly append a <code>maxExtraThorttle</code> to an action.</p>
+<p>Recommend configuration #1:</p>
+<ol>
+<li>Use the recommended default throttle.</li>
+<li>Smaller regular throttle and large probability to trigger the <code>maxExtraThrottle</code>:<ul>
+<li><code>ape.throttleForUnvisitedAction = 100</code></li>
+<li><code>ape.throttlePerActivityTransition= 0</code></li>
+<li><code>ape.throttlePerWeakStateTransition= 0</code></li>
+<li><code>ape.throttlePerTrivialState = 0</code></li>
+<li><code>ape.maxExtraThrottleProbability = 0.1</code> (default is 0.01)</li>
+</ul>
+</li>
+<li>Use XPathlet to specify a wait interval for particular actions.</li>
+</ol>
+<p>Details of how ape calculates the wait interval for an action.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    private static final int throttleForUnvisitedAction = Config.getInteger(&quot;ape.throttleForUnvisitedAction&quot;, 500); // set base throttle
+    private static final int throttlePerActivityTransition = Config.getInteger(&quot;ape.throttlePerActivityTransition&quot;, 200); // set base throttle
+    private static final int throttlePerWeakStateTransition =  Config.getInteger(&quot;ape.throttlePerWeakStateTransition&quot;, 500); // false;
+    private static final int throttlePerTrivialState = Config.getInteger(&quot;ape.throttlePerTrivialState&quot;, 1000);
+    private static final int maxExtraThrottle =  Config.getInteger(&quot;ape.maxExtraThrottle&quot;, 5000);
+    private static final int maxThrottle =  Config.getInteger(&quot;ape.maxThrottle&quot;, 5000); // 5 000;
+
+    private static final double maxExtraThrottleProbability = Config.getDouble(&quot;ape.maxExtraThrottleProbability&quot;, 0.01D);
+    private static final double maxExtraThrottleProbabilityForActivityTransition = Config.getDouble(&quot;ape.maxExtraThrottleProbabilityForActivityTransition&quot;, 0.10D);
+
+    protected int getThrottleForNewAction(State state, Action action) {
+        int throttle = 0;
+        Collection&lt;StateTransition&gt; edges = getGraph().getOutStateTransitions(action);
+        boolean hasActivityTransition = false;
+        boolean hasWeakStateTransition = false;
+        boolean hasTrivialState = false;
+        for (StateTransition edge : edges) {
+            if (edge.action.isBack()) {
+                continue;
+            }
+            if (!edge.isStrong()) {
+                hasWeakStateTransition = true;
+            } else if (edge.target.isTrivialState()) {}{
+                hasTrivialState = true;
+            }
+            if (!edge.isSameActivity()) {
+                hasActivityTransition = true;
+            }
+        }
+
+        if (hasTrivialState &amp;&amp; edges.size() == 0) {
+            throttle += throttlePerTrivialState;
+        } else {
+            if (hasWeakStateTransition) {
+                throttle += throttlePerWeakStateTransition; // only count one weak edge
+            }
+            if (hasActivityTransition) {
+                throttle += throttlePerActivityTransition;
+            }
+        }
+        if (action.isUnvisited()) {
+            throttle += throttleForUnvisitedAction;
+        }
+
+        if (toss(maxExtraThrottleProbability)) {
+            throttle = throttle + getRandom().nextInt(maxExtraThrottle);
+        }
+        if (hasActivityTransition &amp;&amp; toss(maxExtraThrottleProbabilityForActivityTransition)) {
+            throttle = throttle + getRandom().nextInt(maxExtraThrottle);
+        }
+
+        throttle =  throttle &lt;= maxThrottle ? throttle : maxThrottle;
+
+        GUITreeNode node = action.getResolvedNode();
+        if (node != null) {
+            throttle += node.getExtraThrottle(); // via XPath
+        }
+
+        if (throttle &gt; 0) {
+            Logger.dformat(&quot;Append a throttle %d for action %s&quot;, throttle, action);
+        }
+        return throttle;
+    }
+</pre></div>
+</td></tr></table>
+
 <h2 id="trap-detection">Trap Detection</h2>
 <p>Ape will force the app to be restarted if it detects that it stays in a particular activity/state for a certain number of steps.
 In addition, Ape will also restart the app if the graph is not updated for a specific steps.</p>
