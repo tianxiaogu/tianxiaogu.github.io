@@ -131,20 +131,32 @@ The details of a naming is not covered in this document.</p>
 <p>If you want to use ape as a stress testing tool, you need to disable abstraction refinement
 and set a proper wait interval.</p>
 <h2 id="action-wait-interval">Action Wait Interval</h2>
-<p>An action needs more throttle if it is
-1. unvisited
-    * <code>ape.throttleForUnvisitedAction = 500</code>
-    * An unvisited action usually triggers resource loading and warm up.
-2. an activity transition.
-    * Rendering a new activity usually needs to wait for more time.
-3. visited and non-deterministic (weak transition)
-    * Non-deterministic actions usually are caused by canceling a long time GUI transition.</p>
+<p>An action needs more throttle if it is</p>
+<ol>
+<li>unvisited<ul>
+<li><code>ape.throttleForUnvisitedAction = 500</code></li>
+<li>An unvisited action usually triggers resource loading and warm up.</li>
+</ul>
+</li>
+<li>an activity transition.<ul>
+<li>Rendering a new activity usually needs to wait for more time.</li>
+</ul>
+</li>
+<li>visited and non-deterministic (weak transition)<ul>
+<li>Non-deterministic actions usually are caused by canceling a long time GUI transition.</li>
+</ul>
+</li>
+</ol>
 <p>However, the previous rules are heuristic-based. There are a few actions that need a relative long wait interval.
 Hence, we randomly append a <code>maxExtraThorttle</code> to an action.</p>
-<p>Recommend configuration #1:</p>
+<p>Recommend configurations:</p>
 <ol>
-<li>Use the recommended default throttle.</li>
-<li>Smaller regular throttle and large probability to trigger the <code>maxExtraThrottle</code>:<ul>
+<li>
+<h1 id="1-use-the-recommended-default-throttle">1: Use the recommended default throttle.</h1>
+</li>
+<li>
+<h1 id="2-smaller-regular-throttle-and-large-probability-to-trigger-the-maxextrathrottle">2: Smaller regular throttle and large probability to trigger the <code>maxExtraThrottle</code>:</h1>
+<ul>
 <li><code>ape.throttleForUnvisitedAction = 100</code></li>
 <li><code>ape.throttlePerActivityTransition= 0</code></li>
 <li><code>ape.throttlePerWeakStateTransition= 0</code></li>
