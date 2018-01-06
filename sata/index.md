@@ -13,7 +13,6 @@ Files inside `ape-bin.zip`:
 ape-bin/
 ape-bin/ape.jar
 ape-bin/ape.py
-ape-bin/install.py
 ape-bin/README.md
 ```
 
