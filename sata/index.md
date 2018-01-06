@@ -116,6 +116,7 @@ and set a proper wait interval.
 
 
 An action needs more throttle if it is
+
 1. unvisited
     * `ape.throttleForUnvisitedAction = 500`
     * An unvisited action usually triggers resource loading and warm up.
@@ -127,10 +128,10 @@ An action needs more throttle if it is
 However, the previous rules are heuristic-based. There are a few actions that need a relative long wait interval.
 Hence, we randomly append a `maxExtraThorttle` to an action.
 
-Recommend configuration #1:
+Recommend configurations:
 
-1. Use the recommended default throttle.
-2. Smaller regular throttle and large probability to trigger the `maxExtraThrottle`:
+1. #1: Use the recommended default throttle.
+2. #2: Smaller regular throttle and large probability to trigger the `maxExtraThrottle`:
     * `ape.throttleForUnvisitedAction = 100`
     * `ape.throttlePerActivityTransition= 0`
     * `ape.throttlePerWeakStateTransition= 0`
