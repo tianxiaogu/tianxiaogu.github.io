@@ -2,7 +2,7 @@ title: Ape
 
 # Ape: Automated Testing of Android Applications with Abstraction Refinement
 
-Download our model-based automated testing tool [Ape](ape-bin.zip).
+Download our model-based automated testing tool [Ape](ape-bin.zip) (update: 2018-01-05).
 
 
 ## Install
@@ -130,9 +130,9 @@ Hence, we randomly append a `maxExtraThorttle` to an action.
 
 Recommend configurations:
 
-1. #1: Use the recommended default throttle.
-2. #2: Smaller regular throttle and large probability to trigger the `maxExtraThrottle`:
-    * `ape.throttleForUnvisitedAction = 100`
+1. \#1: Use the recommended default throttle.
+2. \#2: Smaller regular throttle and large probability to trigger the `maxExtraThrottle`:
+    * `ape.throttleForUnvisitedAction = 100` (or smaller, e.g., 10)
     * `ape.throttlePerActivityTransition= 0`
     * `ape.throttlePerWeakStateTransition= 0`
     * `ape.throttlePerTrivialState = 0`
@@ -141,7 +141,7 @@ Recommend configurations:
 
 Details of how ape calculates the wait interval for an action.
 
-```
+```java
     private static final int throttleForUnvisitedAction = Config.getInteger("ape.throttleForUnvisitedAction", 500); // set base throttle
     private static final int throttlePerActivityTransition = Config.getInteger("ape.throttlePerActivityTransition", 200); // set base throttle
     private static final int throttlePerWeakStateTransition =  Config.getInteger("ape.throttlePerWeakStateTransition", 500); // false;
@@ -164,7 +164,7 @@ Details of how ape calculates the wait interval for an action.
             }
             if (!edge.isStrong()) {
                 hasWeakStateTransition = true;
-            } else if (edge.target.isTrivialState()) {}{
+            } else if (edge.target.isTrivialState()) {
                 hasTrivialState = true;
             }
             if (!edge.isSameActivity()) {
