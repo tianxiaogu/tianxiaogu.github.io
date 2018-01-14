@@ -31,10 +31,11 @@ title: Homepage
 ----------------
 ## Research Interests
 
-* Compiler Testing
+* [Compiler Testing](./testing/compiler/)
     * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
 * Java Virtual Machine
-* Android Security/Testing
+    * [Bytecode generator](./testing/jvm/)
+* Android Application Testing
     * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
     * [Ape](./sata)
     * MiniTracing: Collect method/coverage without byteocde instrumentation.
