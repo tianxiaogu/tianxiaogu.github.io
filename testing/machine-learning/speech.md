@@ -19,6 +19,8 @@ title: Speech and Text
 * [DeepVoice2]
 * [DeepVoice3]
 * [Tacotron]
+    * <https://github.com/keithito/tacotron>
+* [Tacotron2]
 * [Heiga Zen][HeigaZen]
 
 
@@ -35,5 +37,5 @@ title: Speech and Text
 [DeepVoice2]: http://research.baidu.com/deep-voice-2-multi-speaker-neural-text-speech/
 [DeepVoice3]: http://research.baidu.com/deep-voice-3-2000-speaker-neural-text-speech/
 [HeigaZen]: https://research.google.com/pubs/HeigaZen.html
-[Tecotron]: https://arxiv.org/abs/1703.10135
-[Tecotron2]: https://arxiv.org/abs/1712.05884
+[Tacotron]: https://arxiv.org/abs/1703.10135
+[Tacotron2]: https://arxiv.org/abs/1712.05884
