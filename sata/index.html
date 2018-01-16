@@ -23,7 +23,7 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
+4</pre></div></td><td class="code"><div class="codehilite"><pre>ape-bin/
 ape-bin/ape.jar
 ape-bin/ape.py
 ape-bin/README.md
@@ -31,14 +31,14 @@ ape-bin/README.md
 </td></tr></table>
 
 <p>Just copy the <code>ape.jar</code> to the phone.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /sdcard/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>adb push ape.jar /sdcard/
 </pre></div>
 </td></tr></table>
 
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
 </pre></div>
 </td></tr></table>
 
@@ -57,7 +57,7 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </li>
 </ul>
 <p>You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --ape sata 1000
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre>./ape.py -p com.google.android.calculator --ape sata 1000
 </pre></div>
 </td></tr></table>
 
@@ -106,10 +106,8 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 After the testing, ape will print a list of configurations.
 To change an option,
 you can put a Java properties file into <code>/sdcard/ape.properties</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The documentation below is out-of-date now. Updated documentation will come later.</p>
-</div>
+<p>!!! note:
+    The documentation below is out-of-date now. Updated documentation will come later.</p>
 <h2 id="model-evolution">Model Evolution</h2>
 <p>Naming is a set of XPath based rules to specify how to abstract a GUI tree into a state representation.
 The details of a naming is not covered in this document.</p>
@@ -223,7 +221,7 @@ Hence, we randomly append a <code>maxExtraThorttle</code> to an action.</p>
 60
 61
 62
-63</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">throttleForUnvisitedAction</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="s">&quot;ape.throttleForUnvisitedAction&quot;</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span> <span class="c1">// set base throttle</span>
+63</pre></div></td><td class="code"><div class="codehilite"><pre>    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">throttleForUnvisitedAction</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="s">&quot;ape.throttleForUnvisitedAction&quot;</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span> <span class="c1">// set base throttle</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">throttlePerActivityTransition</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="s">&quot;ape.throttlePerActivityTransition&quot;</span><span class="o">,</span> <span class="mi">200</span><span class="o">);</span> <span class="c1">// set base throttle</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">throttlePerWeakStateTransition</span> <span class="o">=</span>  <span class="n">Config</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="s">&quot;ape.throttlePerWeakStateTransition&quot;</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span> <span class="c1">// false;</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">throttlePerTrivialState</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="s">&quot;ape.throttlePerTrivialState&quot;</span><span class="o">,</span> <span class="mi">1000</span><span class="o">);</span>
@@ -319,17 +317,15 @@ This will disable actions on any widget that has no text.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
+4</pre></div></td><td class="code"><div class="codehilite"><pre>[{
     &quot;xpath&quot;: &quot;//*[@text=&#39;&#39;]&quot;,
     &quot;actions&quot;: []
 }]
 </pre></div>
 </td></tr></table>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use <a href="https://jsonlint.com/">https://jsonlint.com/</a> to validate your json first.</p>
-</div>
+<p>!!! note:
+    Use <a href="https://jsonlint.com/">https://jsonlint.com/</a> to validate your json first.</p>
 <p>The field <code>actions</code> is an array of action names.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -337,7 +333,7 @@ This will disable actions on any widget that has no text.</p>
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>NOP
+7</pre></div></td><td class="code"><div class="codehilite"><pre>NOP
 CLICK
 LONG_CLICK
 SCROLL_TOP_DOWN
@@ -351,7 +347,7 @@ SCROLL_RIGHT_LEFT
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape.takeScreenshot = true
+4</pre></div></td><td class="code"><div class="codehilite"><pre>ape.takeScreenshot = true
 ape.takeScreenshotForEveryStep = true
 ape.takeScreenshotForNewState = true
 ape.imageWriterCount = 3
@@ -366,7 +362,7 @@ ape.imageWriterCount = 3
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
+4</pre></div></td><td class="code"><div class="codehilite"><pre>[{
     &quot;xpath&quot;: &quot;//*[@text=&#39;Title&#39;]&quot;,
     &quot;text&quot;: &quot;I am a Title&quot;
 }]
@@ -378,11 +374,9 @@ ape.imageWriterCount = 3
 <li><a href="./xpath-input-example/vis-timeline.html">vis-timeline.html</a></li>
 </ul>
 <p>This feature depends on the <a href="https://github.com/senzhk/ADBKeyBoard">ADB Keyboard</a>. You must build and install a ADBKeyboard first.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>ADB Keyboard cannot properly handle <code>imeOptions</code>. To avoid unnecessary crashes, we now only do text input but disable IME actions.
-More information can be found at <a href="https://developer.android.com/reference/android/view/inputmethod/EditorInfo.html">https://developer.android.com/reference/android/view/inputmethod/EditorInfo.html</a>.</p>
-</div>
+<p>!!! warning:
+    ADB Keyboard cannot properly handle <code>imeOptions</code>. To avoid unnecessary crashes, we now only do text input but disable IME actions.
+    More information can be found at <a href="https://developer.android.com/reference/android/view/inputmethod/EditorInfo.html">https://developer.android.com/reference/android/view/inputmethod/EditorInfo.html</a>.</p>
 </li>
 <li>
 <p><code>ape.randomPickFromStringList = true</code></p>
@@ -395,10 +389,8 @@ More information can be found at <a href="https://developer.android.com/referenc
 </ul>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only one type of input action can be triggered.</p>
-</div>
+<p>!!! note:
+    Only one type of input action can be triggered.</p>
 <h2 id="acknowledgments">Acknowledgments</h2>
 <p>We thank the following experts for their insightful comments on Ape.</p>
 <ul>
