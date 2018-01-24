@@ -153,7 +153,7 @@ title: Homepage
 ## Projects
 
 
-!!! note:
+!!! note
     A project may not be publicly available if we are working on a paper about it.
 
 * <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
