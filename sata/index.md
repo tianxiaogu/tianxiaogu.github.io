@@ -90,7 +90,8 @@ After the testing, ape will print a list of configurations.
 To change an option,
 you can put a Java properties file into `/sdcard/ape.properties`.
 
-!!! note:
+
+!!! note
     The documentation below is out-of-date now. Updated documentation will come later.
 
 
@@ -248,7 +249,7 @@ This will disable actions on any widget that has no text.
 ```
 
 
-!!! note:
+!!! note
     Use <https://jsonlint.com/> to validate your json first.
 
 The field `actions` is an array of action names.
@@ -300,7 +301,7 @@ Ape decides to do text input by checking the following three conditions.
     * Randomly generate a string by regex `[0-9a-z]{0,32}`.
 
 
-!!! note:
+!!! note
     Only one type of input action can be triggered.
 
 ## Acknowledgments
