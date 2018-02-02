@@ -35,6 +35,23 @@ ape-bin/README.md
 </pre></div>
 </td></tr></table>
 
+<h2 id="evaluation">Evaluation</h2>
+<p>We selected all 180 open-source apps from F-Droid that were released or updated between October 1 and October 26
+and used Ape to test them for half an hour.</p>
+<p>Testing apps with random testing tools such as Ape and Monkey may be annoying, e.g., sending spams emails/comments, registering lots of accounts.
+We try our best to avoid annoying app developers by selecting a subset of the total 180 apps.
+The list of reported bugs is available <a href="./reported-bugs">here</a></p>
+<h2 id="mini-tracing">Mini Tracing</h2>
+<p>We provided a <code>libart.so</code> for x86 emulators to collect coverage without instrumentation.
+That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.</p>
+<ul>
+<li>MiniTracing: Collect method/coverage without byteocde instrumentation.<ul>
+<li><a href="art-mt-x86.zip">Android 6 (binary for x86)</a>: Android ART with method/instruction coverage support.</li>
+<li><a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-cmd</a>: Command line tools to collect coverage.</li>
+<li><a href="https://bitbucket.org/txgu/android-mt-parser">android-mt-parser</a>: Parser for the coverage data.</li>
+</ul>
+</li>
+</ul>
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.</p>

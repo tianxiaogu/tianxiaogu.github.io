@@ -35,9 +35,11 @@ title: Homepage
     * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
 * Java Virtual Machine
     * [Bytecode generator](./testing/jvm/)
+        * [Reported bugs](./testing/jvm/)
 * Android Application Testing
     * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
     * [Ape](./sata)
+        * [Reported bugs](./sata/reported-bugs) found by Ape using only half an hour.
     * MiniTracing: Collect method/coverage without byteocde instrumentation.
         * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
         * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
