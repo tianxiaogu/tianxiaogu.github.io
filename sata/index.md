@@ -36,7 +36,7 @@ We provided a `libart.so` for x86 emulators to collect coverage without instrume
 That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.
 
 * MiniTracing: Collect method/coverage without byteocde instrumentation.
-    * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
+    * [Android 6 (binary for x86)](/art-mt-x86.zip): Android ART with method/instruction coverage support.
     * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
     * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
 
