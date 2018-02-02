@@ -21,6 +21,24 @@ Just copy the `ape.jar` to the phone.
     adb push ape.jar /sdcard/
 
 
+## Evaluation
+
+We selected all 180 open-source apps from F-Droid that were released or updated between October 1 and October 26
+and used Ape to test them for half an hour.
+
+Testing apps with random testing tools such as Ape and Monkey may be annoying, e.g., sending spams emails/comments, registering lots of accounts.
+We try our best to avoid annoying app developers by selecting a subset of the total 180 apps.
+The list of reported bugs is available [here](./reported-bugs)
+
+## Mini Tracing
+
+We provided a `libart.so` for x86 emulators to collect coverage without instrumentation.
+That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.
+
+* MiniTracing: Collect method/coverage without byteocde instrumentation.
+    * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
+    * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
+    * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
 
 ## Run
 
