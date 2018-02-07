@@ -16,6 +16,7 @@ A random fuzzing tool that generates type-safe bytecode sequences.
         * r8 developers now try to make r8 compile any valid Java bytecode into valid dalvik.
     1. [72758525](https://issuetracker.google.com/issues/72758525)
     1. [72811434](https://issuetracker.google.com/issues/72811434)
+    1. [72886946](https://issuetracker.google.com/issues/72886946)
 * [OpenJDK](http://openjdk.java.net/)
     1. [JDK-8195838](https://bugs.openjdk.java.net/browse/JDK-8195838) (Not an issue)
         * Not an issue in OpenJDK 10 but can be triggered in the latest publicly available JDK 9.
@@ -36,3 +37,4 @@ A random fuzzing tool that generates type-safe bytecode sequences.
          * [The JVM specification](https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-6.html#jvms-6.5.anewarray) specifies that a `NegativeArraySizeException` should be thrown,
          which means the unused allocation should not be removed by optimizations without checking the array size from my perspective.
     1. [#999](https://github.com/eclipse/openj9/issues/999)
+    1. [#1126](https://github.com/eclipse/openj9/issues/1126)
