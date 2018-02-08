@@ -132,6 +132,8 @@ and set a proper wait interval.
 
 ## Action Wait Interval
 
+First of all, Ape is based on `UiTestAutomationBridge`.
+To obtain the GUI tree, there is already a wait internal imposed by `UiTestAutomationBridge.waitForIdle`.
 
 An action needs more throttle if it is
 

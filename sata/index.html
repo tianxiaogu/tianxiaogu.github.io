@@ -146,6 +146,8 @@ The details of a naming is not covered in this document.</p>
 <p>If you want to use ape as a stress testing tool, you need to disable abstraction refinement
 and set a proper wait interval.</p>
 <h2 id="action-wait-interval">Action Wait Interval</h2>
+<p>First of all, Ape is based on <code>UiTestAutomationBridge</code>.
+To obtain the GUI tree, there is already a wait internal imposed by <code>UiTestAutomationBridge.waitForIdle</code>.</p>
 <p>An action needs more throttle if it is</p>
 <ol>
 <li>unvisited<ul>
