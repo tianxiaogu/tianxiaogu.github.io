@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Testing JVM |  Tianxiao Gu</title>
+    <title> Bytecode Generator |  Tianxiao Gu</title>
 
 
     <!-- Styles -->
@@ -16,10 +16,9 @@
   </head>
   <body role="document">
     <div class="container">
-    <h1 id="testing-java-virtual-machine">Testing Java Virtual Machine</h1>
-<h2 id="bytecode-generator">Bytecode Generator</h2>
+    <h1 id="bytecode-generator">Bytecode Generator</h1>
 <p>A random fuzzing tool that generates type-safe bytecode sequences.</p>
-<h3 id="reported-bugs">Reported Bugs</h3>
+<h2 id="reported-bugs">Reported Bugs</h2>
 <ul>
 <li><a href="https://r8.googlesource.com/r8">r8</a><ol>
 <li><a href="https://issuetracker.google.com/issues/72269635">72269635</a> (Fixed)<ul>
@@ -31,8 +30,8 @@
 <li>r8 developers now try to make r8 compile any valid Java bytecode into valid dalvik.</li>
 </ul>
 </li>
-<li><a href="https://issuetracker.google.com/issues/72758525">72758525</a></li>
-<li><a href="https://issuetracker.google.com/issues/72811434">72811434</a></li>
+<li><a href="https://issuetracker.google.com/issues/72758525">72758525</a> (Fixed)</li>
+<li><a href="https://issuetracker.google.com/issues/72811434">72811434</a> (Fixed)</li>
 <li><a href="https://issuetracker.google.com/issues/72886946">72886946</a></li>
 </ol>
 </li>
@@ -45,8 +44,8 @@
 </li>
 <li><a href="">Graal (jaotc)</a><ol>
 <li><a href="https://github.com/oracle/graal/issues/288">#288</a> (Fixed)</li>
-<li><a href="https://github.com/oracle/graal/issues/289">#289</a></li>
-<li><a href="https://github.com/oracle/graal/issues/290">#290</a></li>
+<li><a href="https://github.com/oracle/graal/issues/289">#289</a> (Fixed)</li>
+<li><a href="https://github.com/oracle/graal/issues/290">#290</a> </li>
 </ol>
 </li>
 <li><a href="https://sourceforge.net/projects/proguard/">ProGuard</a><ol>
@@ -70,10 +69,13 @@
 </ul>
 </li>
 <li><a href="https://github.com/eclipse/openj9/issues/999">#999</a></li>
-<li><a href="https://github.com/eclipse/openj9/issues/1126">#1126</a></li>
 </ol>
 </li>
 </ul>
+<!--
+    1. [#1126](https://github.com/eclipse/openj9/issues/1126): **Not an issue**
+        * `StackOverflowError` is not enforced by the JVM specification. OpenJ9 applies tail recursion to eliminate stack frames thus no StackOverflowError would be thrown.
+-->
     </div>
 
     <footer class="footer" style="margin-top:10px;">

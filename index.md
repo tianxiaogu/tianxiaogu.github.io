@@ -17,16 +17,6 @@ title: Homepage
   <a href="https://github.com/tianxiaogu"><i class="fa fa-github"></i></a>
 
 
-----------------
-
-## Education and Work Experience
-
-* 2012.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](http://moon.nju.edu.cn/people/xiaoxingma "Xiaoxing Ma")
-* 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com) (formerly known as [Alipay](https://www.alipay.com))
-* 2013.9 - 2014.9: Visiting Student, University of California, Davis, Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/).
-* 2010.9 - 2012.7: Ph.D. Student, Department of Computer Science and Technology, Nanjing University
-* 2006.9 - 2010.6: B.S., Department of Computer Science and Technology, Nanjing University
-
 
 ----------------
 ## Research Interests
@@ -48,6 +38,15 @@ title: Homepage
     * A [list](./javelus/literature) of practical DSU tools.
 * Program Analysis
 * Programming Languages
+
+----------------
+
+## Education and Work Experience
+
+* 2010.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](http://moon.nju.edu.cn/people/xiaoxingma "Xiaoxing Ma")
+* 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com) (formerly known as [Alipay](https://www.alipay.com))
+* 2013.9 - 2014.9: Visiting Student, University of California, Davis, Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/).
+* 2006.9 - 2010.6: B.S., Department of Computer Science and Technology, Nanjing University
 
 ----------------
 ## Publications
