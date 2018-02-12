@@ -17,11 +17,12 @@ A random fuzzing tool that generates type-safe bytecode sequences.
     1. [72886946](https://issuetracker.google.com/issues/72886946)
 * [OpenJDK](http://openjdk.java.net/)
     1. [JDK-8195838](https://bugs.openjdk.java.net/browse/JDK-8195838) (Not an issue)
-        * Not an issue in OpenJDK 10 but can be triggered in the latest publicly available JDK 9.
+        * Not an issue in OpenJDK 10 but can be triggered in the latest publicly available Oracle JDK 9.0.4+11.
+    1. [JDK-8197563](https://bugs.openjdk.java.net/browse/JDK-8197563)
 * [Graal (jaotc)]()
     1. [#288](https://github.com/oracle/graal/issues/288) (Fixed)
     1. [#289](https://github.com/oracle/graal/issues/289) (Fixed)
-    1. [#290](https://github.com/oracle/graal/issues/290) 
+    1. [#290](https://github.com/oracle/graal/issues/290)
 * [ProGuard](https://sourceforge.net/projects/proguard/)
     1. [#681](https://sourceforge.net/p/proguard/bugs/681/) (Fixed)
     1. [#682](https://sourceforge.net/p/proguard/bugs/682/) (Open-later)
