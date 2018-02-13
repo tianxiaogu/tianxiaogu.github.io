@@ -32,6 +32,7 @@ title: Homepage
         * [Reported bugs](./sata/reported-bugs) found by Ape using only half an hour.
     * MiniTracing: Collect method/coverage without bytecode instrumentation.
         * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
+        * [Android 4.4 (binary for x86)](dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.
         * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
         * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
 * Dynamic Software Updating
