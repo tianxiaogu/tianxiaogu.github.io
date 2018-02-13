@@ -31,7 +31,7 @@ ape-bin/README.md
 </td></tr></table>
 
 <p>Just copy the <code>ape.jar</code> to the phone.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /sdcard/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /data/local/tmp/
 </pre></div>
 </td></tr></table>
 
@@ -47,6 +47,7 @@ That means, you can use this tool to collect coverage for apps such as Google Do
 <ul>
 <li>MiniTracing: Collect method/coverage without byteocde instrumentation.<ul>
 <li><a href="/art-mt-x86.zip">Android 6 (binary for x86)</a>: Android ART with method/instruction coverage support.</li>
+<li><a href="/dalvikvm-mt-x86.zip">Android 4.4 (binary for x86)</a>: Android Dalvik VM with method/instruction coverage support.</li>
 <li><a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-cmd</a>: Command line tools to collect coverage.</li>
 <li><a href="https://bitbucket.org/txgu/android-mt-parser">android-mt-parser</a>: Parser for the coverage data.</li>
 </ul>
