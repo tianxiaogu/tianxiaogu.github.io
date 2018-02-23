@@ -30,6 +30,7 @@ title: Homepage
     * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
     * [Ape](./sata)
         * [Reported bugs](./sata/reported-bugs) found by Ape using only half an hour.
+        * A [list](https://ape-report.github.io/) of crashes detected by Ape using only 15 minitues.
     * MiniTracing: Collect method/coverage without bytecode instrumentation.
         * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
         * [Android 4.4 (binary for x86)](dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.
