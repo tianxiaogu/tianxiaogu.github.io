@@ -10,11 +10,11 @@ title: Homepage
 * University of California, Davis, USA
 * Supervisor: Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/)
 * Email: tianxiao.gu (at) gmail dot com
-* <a href="http://www.linkedin.com/in/tianxiaogu"><i class="fa fa-linkedin-square"></i></a>
-  <a href="https://twitter.com/Xiaotiangu"><i class="fa fa-twitter-square"></i></a>
-  <a href="https://www.facebook.com/eric.ku.505"><i class="fa fa-facebook-square"></i></a>
-  <a href="https://www.bitbucket.org/txgu/"><i class="fa fa-bitbucket"></i></a>
-  <a href="https://github.com/tianxiaogu"><i class="fa fa-github"></i></a>
+* <a href="http://www.linkedin.com/in/tianxiaogu"><i class="fab fa-linkedin-square"></i></a>
+  <a href="https://twitter.com/Xiaotiangu"><i class="fab fa-twitter-square"></i></a>
+  <a href="https://www.facebook.com/eric.ku.505"><i class="fab fa-facebook-square"></i></a>
+  <a href="https://www.bitbucket.org/txgu/"><i class="fab fa-bitbucket"></i></a>
+  <a href="https://github.com/tianxiaogu"><i class="fab fa-github"></i></a>
 
 
 
@@ -159,16 +159,16 @@ title: Homepage
 !!! note
     A project may not be publicly available if we are working on a paper about it.
 
-* <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
+* <a href="https://bitbucket.org/txgu/javelus"><i class="fab fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
     * A dynamic-updating-enabled JVM built on top the HotSpot JVM in OpenJDK 8
-* <a href="https://bitbucket.org/txgu/javelus"><i class="fa fa-bitbucket"></i></a> [MiniTracing](./minitracing/)
+* <a href="https://bitbucket.org/txgu/javelus"><i class="fab fa-bitbucket"></i></a> [MiniTracing](./minitracing/)
     * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving, and locking/unlocking events in the JVM.
     * Checkout the branch `mini-tracing` of `javelus`
     * Other tools based on this project:
         * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.
-* <a href="https://bitbucket.org/txgu/ares"><i class="fa fa-bitbucket"></i></a> [Ares](./ares/): Automatic Runtime Recovery via Error Handler Synthesis.
-* <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fa fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
-* <a href="https://bitbucket.org/txgu/sata"><i class="fa fa-bitbucket"></i></a> [Ape](./sata/): Automated Testing of Android Applications with Abstraction Refinement.
+* <a href="https://bitbucket.org/txgu/ares"><i class="fab fa-bitbucket"></i></a> [Ares](./ares/): Automatic Runtime Recovery via Error Handler Synthesis.
+* <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fab fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
+* <a href="https://bitbucket.org/txgu/sata"><i class="fab fa-bitbucket"></i></a> [Ape](./sata/): Automated Testing of Android Applications with Abstraction Refinement.
 
 
 --------------------
