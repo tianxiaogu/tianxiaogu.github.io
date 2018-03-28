@@ -3,35 +3,45 @@ title: Reported Bugs
 
 # Reported Bugs
 
+
 !!! note
     We only report crashes that we can manage to reproduce within 10 steps in a real Nexus 5 phone (not emulators).
     A more detailed list of crashes can be found at <https://ape-report.github.io/>. We are still working on reproducing and reporting crashes.
 
-1. [AsciiCam](https://github.com/dozingcat/AsciiCam) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.dozingcatsoftware.asciicam)
-    * [#17](https://github.com/dozingcat/AsciiCam/issues/17)
+## Google Play Store
+
+1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
+    * [#1102 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1102)
+1. [AsciiCam](https://github.com/dozingcat/AsciiCam) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.dozingcatsoftware.asciicam) 
+    * [#17 (Fixed)](https://github.com/dozingcat/AsciiCam/issues/17)
 1. [Primitive FTPd](https://github.com/wolpi/prim-ftpd) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.primftpd)
-    * [#131](https://github.com/wolpi/prim-ftpd/issues/131)
+    * [#131 (Fixed)](https://github.com/wolpi/prim-ftpd/issues/131)
 1. [materialistic](https://github.com/hidroh/materialistic) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
     * [#1066](https://github.com/hidroh/materialistic/issues/1066)
     * [#1067](https://github.com/hidroh/materialistic/issues/1067)
 1. [mtg-familiar](https://github.com/AEFeinstein/mtg-familiar) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.gelakinetic.mtgfam)
-    * [#284](https://github.com/AEFeinstein/mtg-familiar/issues/284)
+    * [#284 (Fixed)](https://github.com/AEFeinstein/mtg-familiar/issues/284)
 1. [markor](https://github.com/gsantner/markor) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=net.gsantner.markor)
-    * [#104](https://github.com/gsantner/markor/issues/104)
-    * [#194](https://github.com/gsantner/markor/issues/194)
+    * [#104 (Fixed)](https://github.com/gsantner/markor/issues/104)
+    * [#194 (Fixed)](https://github.com/gsantner/markor/issues/194)
 1. [openScale](https://github.com/oliexdev/openScale) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.health.openscale)
-    * [#89](https://github.com/oliexdev/openScale/issues/89)
+    * [#89 (Fixed)](https://github.com/oliexdev/openScale/issues/89)
 1. [LibreNews](https://github.com/milesmcc/LibreNews-Android) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=app.librenews.io.librenews)
     * [#22](https://github.com/milesmcc/LibreNews-Android/issues/22)
     * [#23](https://github.com/milesmcc/LibreNews-Android/issues/23)
 1. [microMathematics](https://github.com/mkulesh/microMathematics) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mkulesh.micromath)
-    * [#39](https://github.com/mkulesh/microMathematics/issues/39)
+    * [#39 (Fixed)](https://github.com/mkulesh/microMathematics/issues/39)
 1. [NewsBlur](https://github.com/samuelclay/NewsBlur) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.newsblur)
     * [#1053](https://github.com/samuelclay/NewsBlur/issues/1053)
 1. [syncplayer](https://github.com/mo3rfan/syncplayer) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.powerinside.syncplay)
     * [#6](https://github.com/mo3rfan/syncplayer/issues/6)
 1. [CityZenApp](https://github.com/CityZenApp/Android-Development) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.cityzen.cityzen)
     * [#43](https://github.com/CityZenApp/Android-Development/issues/43)
+
+
+
+## F-Droid
+
 1. [AndrOBD](https://github.com/fr3ts0n/AndrOBD)
     * [#36](https://github.com/fr3ts0n/AndrOBD/issues/36)
 1. [uhabits](https://github.com/iSoron/uhabits)
