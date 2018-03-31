@@ -37,8 +37,30 @@ title: Reported Bugs
     * [#6](https://github.com/mo3rfan/syncplayer/issues/6)
 1. [CityZenApp](https://github.com/CityZenApp/Android-Development) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.cityzen.cityzen)
     * [#43](https://github.com/CityZenApp/Android-Development/issues/43)
+1. [Bankdroid](https://github.com/liato/android-bankdroid) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.liato.bankdroid)
+    * [#687](https://github.com/liato/android-bankdroid/issues/687)
+1. [Comfort Reader](https://github.com/mschlauch/comfortreader) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mschlauch.comfortreader)
+    * [#12](https://github.com/mschlauch/comfortreader/issues/12)
+1. [Budget with Envelopes](https://github.com/notriddle/budget-envelopes)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.notriddle.budget)
+    * [#45](https://github.com/notriddle/budget-envelopes/issues/45)
+    * [#46](https://github.com/notriddle/budget-envelopes/issues/46)
+1. [Simple File Manager](https://github.com/SimpleMobileTools/Simple-File-Manager)
+    * [#206](https://github.com/SimpleMobileTools/Simple-File-Manager/issues/206)
+1. [Boilr](https://github.com/drpout/boilr)
+    * [#285](https://github.com/drpout/boilr/issues/286)
+1. [Food Scale Droid](https://gitlab.com/tmendes/FoodScaleDroid)
+    * [#2](https://gitlab.com/tmendes/FoodScaleDroid/issues/3)
+1. [mOTP](https://github.com/chrismiceli/motp)
+    * [#8](https://github.com/chrismiceli/motp/issues/8)
+    * [#9](https://github.com/chrismiceli/motp/issues/9)
 
 
+### Reported By Email
+
+1. <https://ape-report.github.io/report/report-CN.MyPrivateMessages/CN.MyPrivateMessages-3/>
+1. <https://ape-report.github.io/report/report-CN.MyPrivateMessages/CN.MyPrivateMessages-217/>
+1. <https://ape-report.github.io/ape-report-1/report-com.tinymission.dailyyogafree/com.tinymission.dailyyogafree-285/>
+1. <https://ape-report.github.io/ape-report-1/report-org.efalk.rpncalc/org.efalk.rpncalc-501/>
 
 ## F-Droid
 
