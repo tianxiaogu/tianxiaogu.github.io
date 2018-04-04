@@ -10,6 +10,10 @@ title: Reported Bugs
 
 ## Google Play Store
 
+* Reported: 28
+* Fixed: 8
+* Accepted: 5
+
 1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
     * [#1102 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1102)
 1. [AsciiCam](https://github.com/dozingcat/AsciiCam) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.dozingcatsoftware.asciicam) 
@@ -27,15 +31,15 @@ title: Reported Bugs
 1. [openScale](https://github.com/oliexdev/openScale) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.health.openscale)
     * [#89 (Fixed)](https://github.com/oliexdev/openScale/issues/89)
 1. [LibreNews](https://github.com/milesmcc/LibreNews-Android) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=app.librenews.io.librenews)
-    * [#22](https://github.com/milesmcc/LibreNews-Android/issues/22)
-    * [#23](https://github.com/milesmcc/LibreNews-Android/issues/23)
+    * [#22 (Confirmed)](https://github.com/milesmcc/LibreNews-Android/issues/22)
+    * [#23 (Confirmed)](https://github.com/milesmcc/LibreNews-Android/issues/23)
 1. [microMathematics](https://github.com/mkulesh/microMathematics) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mkulesh.micromath)
     * [#39 (Fixed)](https://github.com/mkulesh/microMathematics/issues/39)
-1. [NewsBlur](https://github.com/samuelclay/NewsBlur) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.newsblur)
+1. [NewsBlur (Won't Fix)](https://github.com/samuelclay/NewsBlur) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.newsblur)
     * [#1053](https://github.com/samuelclay/NewsBlur/issues/1053)
-1. [syncplayer](https://github.com/mo3rfan/syncplayer) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.powerinside.syncplay)
+1. [syncplayer (Confirmed)](https://github.com/mo3rfan/syncplayer) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.powerinside.syncplay)
     * [#6](https://github.com/mo3rfan/syncplayer/issues/6)
-1. [CityZenApp](https://github.com/CityZenApp/Android-Development) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.cityzen.cityzen)
+1. [CityZenApp (Confirmed)](https://github.com/CityZenApp/Android-Development) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.cityzen.cityzen)
     * [#43](https://github.com/CityZenApp/Android-Development/issues/43)
 1. [Bankdroid](https://github.com/liato/android-bankdroid) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.liato.bankdroid)
     * [#687](https://github.com/liato/android-bankdroid/issues/687)
@@ -44,7 +48,7 @@ title: Reported Bugs
 1. [Budget with Envelopes](https://github.com/notriddle/budget-envelopes)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.notriddle.budget)
     * [#45](https://github.com/notriddle/budget-envelopes/issues/45)
     * [#46](https://github.com/notriddle/budget-envelopes/issues/46)
-1. [Simple File Manager](https://github.com/SimpleMobileTools/Simple-File-Manager)
+1. [Simple File Manager (Confirmed)](https://github.com/SimpleMobileTools/Simple-File-Manager)
     * [#206](https://github.com/SimpleMobileTools/Simple-File-Manager/issues/206)
 1. [Boilr](https://github.com/drpout/boilr)
     * [#285](https://github.com/drpout/boilr/issues/286)
