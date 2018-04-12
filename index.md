@@ -54,6 +54,22 @@ title: Homepage
 ## Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{gu_automating_2018,
+  author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian Lu},
+  title     = {Automating Object Transformations for Dynamic Software Updating via Online Execution Synthesis},
+  pages     = {to appear},
+  year      = {2018},
+  booktitle = {Proceedings of the 32nd European Conference on Object-Oriented Programming (ECOOP 2018)},
+}
+@inproceedings{wang_aatt_2018,
+  author  = {Jue Wang and Yanyan Jiang and Chang Xu and Qiwei Li and Tianxiao Gu and Jun Ma and Xiaoxing Ma and Jian Lu},
+  title   = {AATT+: Effectively Manifesting Concurrency Bugs in Android Apps},
+  journal = {Science of Computer Programming (SCP)},
+  year    = {2018},
+  volume  = {0},
+  number  = {0},
+  pages   = {to appear},
+}
 @inproceedings{sun_perses_2018,
   title = {Perses: Syntax-Guided Program Reduction},
   author = {Chengnian Sun and Yuanbo Li and Qirun Zhang and Tianxiao Gu and Zhendong Su},
