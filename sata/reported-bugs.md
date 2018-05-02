@@ -10,9 +10,14 @@ title: Reported Bugs
 
 ## Google Play Store
 
-* Reported: 28
-* Fixed: 8
-* Accepted: 5
+* Reported: 30
+* Fixed: 11
+* Confirmed: 5
+
+
+------------
+
+### Fixed
 
 1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
     * [#1102 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1102)
@@ -20,9 +25,6 @@ title: Reported Bugs
     * [#17 (Fixed)](https://github.com/dozingcat/AsciiCam/issues/17)
 1. [Primitive FTPd](https://github.com/wolpi/prim-ftpd) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.primftpd)
     * [#131 (Fixed)](https://github.com/wolpi/prim-ftpd/issues/131)
-1. [materialistic](https://github.com/hidroh/materialistic) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
-    * [#1066](https://github.com/hidroh/materialistic/issues/1066)
-    * [#1067](https://github.com/hidroh/materialistic/issues/1067)
 1. [mtg-familiar](https://github.com/AEFeinstein/mtg-familiar) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.gelakinetic.mtgfam)
     * [#284 (Fixed)](https://github.com/AEFeinstein/mtg-familiar/issues/284)
 1. [markor](https://github.com/gsantner/markor) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=net.gsantner.markor)
@@ -30,33 +32,46 @@ title: Reported Bugs
     * [#194 (Fixed)](https://github.com/gsantner/markor/issues/194)
 1. [openScale](https://github.com/oliexdev/openScale) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.health.openscale)
     * [#89 (Fixed)](https://github.com/oliexdev/openScale/issues/89)
+1. [Simple File Manager](https://github.com/SimpleMobileTools/Simple-File-Manager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager)
+    * [#206 (Fixed)](https://github.com/SimpleMobileTools/Simple-File-Manager/issues/206)
+1. [Comfort Reader](https://github.com/mschlauch/comfortreader) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mschlauch.comfortreader)
+    * [#12 (Fixed)](https://github.com/mschlauch/comfortreader/issues/12)
+1. [uhabits (Fixed)](https://github.com/iSoron/uhabits) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.isoron.uhabits)
+    * [#354](https://github.com/iSoron/uhabits/issues/354)
+1. [microMathematics](https://github.com/mkulesh/microMathematics) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mkulesh.micromath)
+    * [#39 (Fixed)](https://github.com/mkulesh/microMathematics/issues/39)
+
+### Confirmed
+
 1. [LibreNews](https://github.com/milesmcc/LibreNews-Android) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=app.librenews.io.librenews)
     * [#22 (Confirmed)](https://github.com/milesmcc/LibreNews-Android/issues/22)
     * [#23 (Confirmed)](https://github.com/milesmcc/LibreNews-Android/issues/23)
-1. [microMathematics](https://github.com/mkulesh/microMathematics) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mkulesh.micromath)
-    * [#39 (Fixed)](https://github.com/mkulesh/microMathematics/issues/39)
-1. [NewsBlur (Won't Fix)](https://github.com/samuelclay/NewsBlur) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.newsblur)
-    * [#1053](https://github.com/samuelclay/NewsBlur/issues/1053)
 1. [syncplayer (Confirmed)](https://github.com/mo3rfan/syncplayer) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.powerinside.syncplay)
     * [#6](https://github.com/mo3rfan/syncplayer/issues/6)
 1. [CityZenApp (Confirmed)](https://github.com/CityZenApp/Android-Development) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.cityzen.cityzen)
     * [#43](https://github.com/CityZenApp/Android-Development/issues/43)
+1. [NewsBlur (Won't Fix)](https://github.com/samuelclay/NewsBlur) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.newsblur)
+    * [#1053](https://github.com/samuelclay/NewsBlur/issues/1053)
+
+### Waiting For Confirmation
+
+1. [materialistic](https://github.com/hidroh/materialistic) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic)
+    * [#1066](https://github.com/hidroh/materialistic/issues/1066)
+    * [#1067](https://github.com/hidroh/materialistic/issues/1067)
 1. [Bankdroid](https://github.com/liato/android-bankdroid) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.liato.bankdroid)
     * [#687](https://github.com/liato/android-bankdroid/issues/687)
-1. [Comfort Reader](https://github.com/mschlauch/comfortreader) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mschlauch.comfortreader)
-    * [#12](https://github.com/mschlauch/comfortreader/issues/12)
 1. [Budget with Envelopes](https://github.com/notriddle/budget-envelopes)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.notriddle.budget)
     * [#45](https://github.com/notriddle/budget-envelopes/issues/45)
     * [#46](https://github.com/notriddle/budget-envelopes/issues/46)
-1. [Simple File Manager (Confirmed)](https://github.com/SimpleMobileTools/Simple-File-Manager)
-    * [#206](https://github.com/SimpleMobileTools/Simple-File-Manager/issues/206)
-1. [Boilr](https://github.com/drpout/boilr)
+1. [Boilr](https://github.com/drpout/boilr) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=mobi.boilr.boilr)
     * [#285](https://github.com/drpout/boilr/issues/286)
-1. [Food Scale Droid](https://gitlab.com/tmendes/FoodScaleDroid)
+1. [Food Scale Droid](https://gitlab.com/tmendes/FoodScaleDroid) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=tmendes.com.analyticalbalancedroid&hl=en)
     * [#2](https://gitlab.com/tmendes/FoodScaleDroid/issues/3)
-1. [mOTP](https://github.com/chrismiceli/motp)
+1. [mOTP](https://github.com/chrismiceli/motp) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.cry.otp)
     * [#8](https://github.com/chrismiceli/motp/issues/8)
     * [#9](https://github.com/chrismiceli/motp/issues/9)
+1. [United4](https://github.com/nilesr/United4) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.angryburg.uapp)
+    * [#8](https://github.com/nilesr/United4/issues/8)
 
 
 ### Reported By Email
@@ -70,8 +85,6 @@ title: Reported Bugs
 
 1. [AndrOBD](https://github.com/fr3ts0n/AndrOBD)
     * [#36](https://github.com/fr3ts0n/AndrOBD/issues/36)
-1. [uhabits](https://github.com/iSoron/uhabits)
-    * [#354](https://github.com/iSoron/uhabits/issues/354)
 1. [metronome](https://gitlab.com/funkygoby/metronome)
     * [#2](https://gitlab.com/funkygoby/metronome/issues/2)
     * [#3](https://gitlab.com/funkygoby/metronome/issues/3)

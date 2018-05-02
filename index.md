@@ -45,6 +45,7 @@ title: Homepage
 
 ## Education and Work Experience
 
+* 2017.5 - : Postdoc, University of California, Davis.
 * 2010.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](http://moon.nju.edu.cn/people/xiaoxingma "Xiaoxing Ma")
 * 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com) (formerly known as [Alipay](https://www.alipay.com))
 * 2013.9 - 2014.9: Visiting Student, University of California, Davis, Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/).
