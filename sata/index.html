@@ -29,7 +29,7 @@
   <body role="document">
     <div class="container">
     <h1 id="ape-automated-testing-of-android-applications-with-abstraction-refinement">Ape: Automated Testing of Android Applications with Abstraction Refinement</h1>
-<p>Download our model-based automated testing tool <a href="ape-bin.zip">Ape</a> (update: 2018-02-19).</p>
+<p>Download our model-based automated testing tool <a href="ape-bin.zip">Ape</a> (update: 2018-05-01).</p>
 <h2 id="install">Install</h2>
 <p>Files inside <code>ape-bin.zip</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -51,7 +51,11 @@ ape-bin/README.md
 
 <h2 id="evaluation">Evaluation</h2>
 <ul>
-<li>A <a href="https://ape-report.github.io/">list</a> of crashes detected by Ape using only 15 minutes.</li>
+<li>Crashes detected by Ape using only 15 minutes.<ul>
+<li><a href="https://ape-report.github.io/">list1</a></li>
+<li><a href="https://ape-report.github.io/ape-report-1">list2</a></li>
+</ul>
+</li>
 <li><a href="./reported-bugs">Reported bugs</a></li>
 </ul>
 <h2 id="mini-tracing">Mini Tracing</h2>
@@ -92,13 +96,6 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </pre></div>
 </td></tr></table>
 
-<h2 id="known-bugs">Known Bugs</h2>
-<ol>
-<li>Memory Bloat:<ul>
-<li>Ape runs in the phone with limited memory for each process. Hence it may run out of memory as now we simply keep a large number of Strings and XML document objects in the memory.</li>
-</ul>
-</li>
-</ol>
 <h2 id="visualization">Visualization</h2>
 <p>We provide a tool to visualize the model.</p>
 <ol>

@@ -2,7 +2,7 @@ title: Ape
 
 # Ape: Automated Testing of Android Applications with Abstraction Refinement
 
-Download our model-based automated testing tool [Ape](ape-bin.zip) (update: 2018-02-19).
+Download our model-based automated testing tool [Ape](ape-bin.zip) (update: 2018-05-01).
 
 
 ## Install
@@ -25,7 +25,9 @@ Just copy the `ape.jar` to the phone.
 ## Evaluation
 
 
-* A [list](https://ape-report.github.io/) of crashes detected by Ape using only 15 minutes.
+* Crashes detected by Ape using only 15 minutes.
+    * [list1](https://ape-report.github.io/)
+    * [list2](https://ape-report.github.io/ape-report-1)
 * [Reported bugs](./reported-bugs)
 
 ## Mini Tracing
@@ -63,12 +65,6 @@ You can also specify the total amount of Monkey events. In this mode, Ape will s
 
 
     ./ape.py -p com.google.android.calculator --ape sata 1000
-
-
-## Known Bugs
-
-1. Memory Bloat:
-    * Ape runs in the phone with limited memory for each process. Hence it may run out of memory as now we simply keep a large number of Strings and XML document objects in the memory.
 
 
 
