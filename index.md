@@ -27,10 +27,11 @@ title: Homepage
     * [Bytecode generator](./testing/jvm/)
         * [Reported bugs](./testing/jvm/)
 * Android Application Testing
-    * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
-    * [Ape](./sata)
-        * A [list](https://ape-report.github.io/) of crashes detected by Ape using only 15 minitues.
+    * [Ape](./sata): A framework for model-based testing for Android apps.
+        * Crashes detected by Ape using only 15 minitues: [list1](https://ape-report.github.io/)[list2](https://ape-report.github.io/ape-report-1).
         * [Reported bugs](./sata/reported-bugs) found by Ape using only half an hour.
+    * WGDroid: A fancy GUI exploration tool developed on top of Ape.
+    * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
     * MiniTracing: Collect method/coverage without bytecode instrumentation.
         * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
         * [Android 4.4 (binary for x86)](dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.

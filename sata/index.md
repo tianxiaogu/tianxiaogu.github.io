@@ -59,7 +59,8 @@ Options:
 * `--running-minutes`: the total testing time in minutes
     * This is the continuous mode, which means Ape does not stop when it triggers a crash.
 * `--ape sata`: use the default exploration strategy described in the paper.
-    * You can also try `orbit`, `wechat`, `random`, and reinforcement learning enhanced random (`satarl`)
+    * <del>You can also try `orbit`, `wechat`, `random`, and reinforcement learning enhanced random (`satarl`)</del>
+    * Only `random` and `ape` are supported now.
 
 You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.
 
