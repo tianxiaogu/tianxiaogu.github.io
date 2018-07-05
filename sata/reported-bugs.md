@@ -17,6 +17,13 @@ title: Reported Bugs
 
 ------------
 
+### New Reported
+
+1. [Dir](https://github.com/veniosg/Dir) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.veniosg.dir)
+    * [#122](https://github.com/veniosg/Dir/issues/122)
+1. [Car Report](https://bitbucket.org/frigus02/car-report) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=me.kuehle.carreport)
+    * [#100](https://bitbucket.org/frigus02/car-report/issues/100/nullpointerexception)
+
 ### Fixed
 
 1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
