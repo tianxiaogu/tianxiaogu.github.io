@@ -4,9 +4,20 @@ title: Reported Bugs
 # Reported Bugs
 
 
-!!! note
-    We only report crashes that we can manage to reproduce within 10 steps in a real Nexus 5 phone (not emulators).
-    A more detailed list of crashes can be found at <https://ape-report.github.io/>. We are still working on reproducing and reporting crashes.
+### New Reported
+
+1. [Dir](https://github.com/veniosg/Dir) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.veniosg.dir)
+    * [#122](https://github.com/veniosg/Dir/issues/122)
+1. [Car Report](https://bitbucket.org/frigus02/car-report) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=me.kuehle.carreport)
+    * [#100](https://bitbucket.org/frigus02/car-report/issues/100/nullpointerexception)
+1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
+    * [#1346](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
+1. [MALP](https://gitlab.com/gateship-one/malp)
+    * [#135](https://gitlab.com/gateship-one/malp/issues/135)
+
+
+
+
 
 ## Google Play Store
 
@@ -14,15 +25,8 @@ title: Reported Bugs
 * Fixed: 11
 * Confirmed: 5
 
-
 ------------
 
-### New Reported
-
-1. [Dir](https://github.com/veniosg/Dir) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.veniosg.dir)
-    * [#122](https://github.com/veniosg/Dir/issues/122)
-1. [Car Report](https://bitbucket.org/frigus02/car-report) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=me.kuehle.carreport)
-    * [#100](https://bitbucket.org/frigus02/car-report/issues/100/nullpointerexception)
 
 ### Fixed
 
