@@ -6,6 +6,8 @@ title: Reported Bugs
 
 ### New Reported
 
+1. [Linphone](https://github.com/BelledonneCommunications/linphone-android) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.linphone)
+    * [#315](https://github.com/BelledonneCommunications/linphone-android/issues/315)
 1. [Dir](https://github.com/veniosg/Dir) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.veniosg.dir)
     * [#122](https://github.com/veniosg/Dir/issues/122)
 1. [Car Report](https://bitbucket.org/frigus02/car-report) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=me.kuehle.carreport)
@@ -14,7 +16,6 @@ title: Reported Bugs
     * [#1346](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
 1. [MALP](https://gitlab.com/gateship-one/malp)
     * [#135](https://gitlab.com/gateship-one/malp/issues/135)
-
 
 
 
