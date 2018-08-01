@@ -16,7 +16,8 @@ title: Reported Bugs
     * [#1346](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
 1. [MALP](https://gitlab.com/gateship-one/malp)
     * [#135](https://gitlab.com/gateship-one/malp/issues/135)
-
+1. [Clip Stack](https://github.com/heruoxin/Clip-Stack)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.catchingnow.tinyclipboardmanager)
+    * [#66](https://github.com/heruoxin/Clip-Stack/issues/66)
 
 
 
