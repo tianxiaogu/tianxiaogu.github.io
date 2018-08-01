@@ -4,7 +4,7 @@ title: Reported Bugs
 # Reported Bugs
 
 
-* Reported: 45
+* Reported: 49
 * Fixed: 20
 * Confirmed: 5
 
