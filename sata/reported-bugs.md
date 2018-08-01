@@ -21,6 +21,8 @@ title: Reported Bugs
     * [#66](https://github.com/heruoxin/Clip-Stack/issues/66)
 1. [MALP](https://gitlab.com/gateship-one/malp)
     * [#135](https://gitlab.com/gateship-one/malp/issues/135)
+1. [Moive DB](https://notabug.org/nvb/MovieDB)
+    * [#49](https://notabug.org/nvb/MovieDB/issues/49)
 
 
 
