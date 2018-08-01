@@ -4,23 +4,27 @@ title: Reported Bugs
 # Reported Bugs
 
 
+* Reported: 45
+* Fixed: 20
+* Confirmed: 5
+
+
+
 ### New Reported
 
 1. [k-9 Email](https://github.com/k9mail/k-9)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.fsck.k9)
-    * [#3538](https://github.com/k9mail/k-9/issues/3538)
-    * [Timeline](./com.fsck.k9-10/)
+    * [#3538](https://github.com/k9mail/k-9/issues/3538) [Timeline](./com.fsck.k9-10/)
+1. [Any Memo](https://github.com/helloworld1/AnyMemo)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.liberty.android.fantastischmemo)
+    * [#454](https://github.com/helloworld1/AnyMemo/issues/454)
+    * [#455](https://github.com/helloworld1/AnyMemo/issues/455)
 1. [Linphone](https://github.com/BelledonneCommunications/linphone-android) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.linphone)
     * [#315](https://github.com/BelledonneCommunications/linphone-android/issues/315)
 1. [Dir](https://github.com/veniosg/Dir) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.veniosg.dir)
     * [#122](https://github.com/veniosg/Dir/issues/122)
 1. [Car Report](https://bitbucket.org/frigus02/car-report) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=me.kuehle.carreport)
     * [#100](https://bitbucket.org/frigus02/car-report/issues/100/nullpointerexception)
-1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
-    * [#1346](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
 1. [Clip Stack](https://github.com/heruoxin/Clip-Stack)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.catchingnow.tinyclipboardmanager)
     * [#66](https://github.com/heruoxin/Clip-Stack/issues/66)
-1. [MALP](https://gitlab.com/gateship-one/malp)
-    * [#135](https://gitlab.com/gateship-one/malp/issues/135)
 1. [Moive DB](https://notabug.org/nvb/MovieDB)
     * [#49](https://notabug.org/nvb/MovieDB/issues/49)
 
@@ -28,17 +32,11 @@ title: Reported Bugs
 
 ## Google Play Store
 
-* Reported: 30
-* Fixed: 11
-* Confirmed: 5
-
-------------
-
-
 ### Fixed
 
 1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
     * [#1102 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1102)
+    * [#1346 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
 1. [AsciiCam](https://github.com/dozingcat/AsciiCam) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.dozingcatsoftware.asciicam) 
     * [#17 (Fixed)](https://github.com/dozingcat/AsciiCam/issues/17)
 1. [Primitive FTPd](https://github.com/wolpi/prim-ftpd) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.primftpd)
@@ -101,19 +99,21 @@ title: Reported Bugs
 
 ## F-Droid
 
+1. [MALP](https://gitlab.com/gateship-one/malp)
+    * [#135 (Fixed)](https://gitlab.com/gateship-one/malp/issues/135)
 1. [AndrOBD](https://github.com/fr3ts0n/AndrOBD)
-    * [#36](https://github.com/fr3ts0n/AndrOBD/issues/36)
+    * [#36 (Fixed)](https://github.com/fr3ts0n/AndrOBD/issues/36)
 1. [metronome](https://gitlab.com/funkygoby/metronome)
-    * [#2](https://gitlab.com/funkygoby/metronome/issues/2)
-    * [#3](https://gitlab.com/funkygoby/metronome/issues/3)
+    * [#2 (Fixed)](https://gitlab.com/funkygoby/metronome/issues/2)
+    * [#3 (Fixed)](https://gitlab.com/funkygoby/metronome/issues/3)
 1. [passegares](https://framagit.org/JonathanMM/passegares)
-    * [#78](https://framagit.org/JonathanMM/passegares/issues/78)
+    * [#78 (Fixed)](https://framagit.org/JonathanMM/passegares/issues/78)
 1. [VocableTrainer-Android](https://github.com/0xpr03/VocableTrainer-Android)
-    * [#14](https://github.com/0xpr03/VocableTrainer-Android/issues/14)
+    * [#14 (Fixed)](https://github.com/0xpr03/VocableTrainer-Android/issues/14)
 1. [TransektCount](https://github.com/wistein/TransektCount)
-    * [#8](https://github.com/wistein/TransektCount/issues/8)
+    * [#8 (Fixed)](https://github.com/wistein/TransektCount/issues/8)
 1. [TourCount](https://github.com/wistein/TourCount)
-    * [#15](https://github.com/wistein/TourCount/issues/15)
+    * [#15 (Fixed)](https://github.com/wistein/TourCount/issues/15)
 1. [xposed_downloader](https://github.com/daktak/xposed_downloader)
     * [#23](https://github.com/daktak/xposed_downloader/issues/23)
 1. [OpenManga](https://github.com/nv95/OpenManga)
