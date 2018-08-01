@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> org.notabug.lifeuser.moviedb |  Tianxiao Gu</title>
+
+
+    <!-- Styles -->
+    <link href="/css/fontawesome-all.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/moon.css" rel="stylesheet" type="text/css"><!-- moon -->
+    <link href="/css/bibtex.css" rel="stylesheet" type="text/css"><!-- bibtex-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51393322-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-51393322-1');
+    </script>
+    -->
+  </head>
+  <body role="document">
+    <div class="container">
+    <h1 id="orgnotabuglifeusermoviedb">org.notabug.lifeuser.moviedb</h1>
+<p><a href="https://play.google.com/store/apps/details?id=org.notabug.lifeuser.moviedb">Google Play Store</a></p>
+<p><a href="./vis-timeline.html">Timeline</a></p>
+<iframe src="./vis-timeline.html" width="100%" height="500px" style="border:none;"></iframe>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>// java.lang.RuntimeException: Unable to start activity ComponentInfo{org.notabug.lifeuser.moviedb/org.notabug.lifeuser.moviedb.activity.FilterActivity}: java.lang.NullPointerException: Attempt to invoke virtual method &#39;android.graphics.drawable.Drawable android.widget.Button.getBackground()&#39; on a null object reference
+//  at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2416)
+//  at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2476)
+//  at android.app.ActivityThread.-wrap11(ActivityThread.java)
+//  at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1344)
+//  at android.os.Handler.dispatchMessage(Handler.java:102)
+//  at android.os.Looper.loop(Looper.java:148)
+//  at android.app.ActivityThread.main(ActivityThread.java:5417)
+//  at java.lang.reflect.Method.invoke(Native Method)
+//  at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+//  at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+// Caused by: java.lang.NullPointerException: Attempt to invoke virtual method &#39;android.graphics.drawable.Drawable android.widget.Button.getBackground()&#39; on a null object reference
+//  at org.notabug.lifeuser.moviedb.activity.FilterActivity.retrieveFilterPreferences(FilterActivity.java:439)
+//  at org.notabug.lifeuser.moviedb.activity.FilterActivity.onCreate(FilterActivity.java:230)
+//  at android.app.Activity.performCreate(Activity.java:6251)
+//  at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1107)
+//  at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2369)
+//  ... 9 more
+</pre></div>
+</td></tr></table>
+    </div>
+
+    <footer class="footer" style="margin-top:10px;">
+      <div class="container">
+          <span class="text-muted">&copy; 2017 <a href="/">Tianxiao Gu</a>. All rights reserved.</span>
+      <!--
+      -->
+      <div style="width:70px;height:48px;">
+      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=I1T5oEaSW-FJIJ_bZCvK8XMDQ35ouGHQP_ixsLYwvOo'></script></div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+
+    
+  </body>
+</html>

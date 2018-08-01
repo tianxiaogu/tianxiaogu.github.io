@@ -6,6 +6,9 @@ title: Reported Bugs
 
 ### New Reported
 
+1. [k-9 Email](https://github.com/k9mail/k-9)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.fsck.k9)
+    * [#3538](https://github.com/k9mail/k-9/issues/3538)
+    * [Timeline](./com.fsck.k9-10/)
 1. [Linphone](https://github.com/BelledonneCommunications/linphone-android) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.linphone)
     * [#315](https://github.com/BelledonneCommunications/linphone-android/issues/315)
 1. [Dir](https://github.com/veniosg/Dir) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.veniosg.dir)
@@ -14,10 +17,10 @@ title: Reported Bugs
     * [#100](https://bitbucket.org/frigus02/car-report/issues/100/nullpointerexception)
 1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
     * [#1346](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
-1. [MALP](https://gitlab.com/gateship-one/malp)
-    * [#135](https://gitlab.com/gateship-one/malp/issues/135)
 1. [Clip Stack](https://github.com/heruoxin/Clip-Stack)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.catchingnow.tinyclipboardmanager)
     * [#66](https://github.com/heruoxin/Clip-Stack/issues/66)
+1. [MALP](https://gitlab.com/gateship-one/malp)
+    * [#135](https://gitlab.com/gateship-one/malp/issues/135)
 
 
 
