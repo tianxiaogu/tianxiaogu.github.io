@@ -25,8 +25,6 @@ title: Reported Bugs
     * [#100](https://bitbucket.org/frigus02/car-report/issues/100/nullpointerexception)
 1. [Clip Stack](https://github.com/heruoxin/Clip-Stack)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.catchingnow.tinyclipboardmanager)
     * [#66](https://github.com/heruoxin/Clip-Stack/issues/66)
-1. [Moive DB](https://notabug.org/nvb/MovieDB)
-    * [#49](https://notabug.org/nvb/MovieDB/issues/49)
 
 
 
@@ -99,6 +97,8 @@ title: Reported Bugs
 
 ## F-Droid
 
+1. [Moive DB](https://notabug.org/nvb/MovieDB)
+    * [#49 (Fixed)](https://notabug.org/nvb/MovieDB/issues/49)
 1. [MALP](https://gitlab.com/gateship-one/malp)
     * [#135 (Fixed)](https://gitlab.com/gateship-one/malp/issues/135)
 1. [AndrOBD](https://github.com/fr3ts0n/AndrOBD)
