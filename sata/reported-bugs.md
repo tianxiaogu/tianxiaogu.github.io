@@ -5,15 +5,13 @@ title: Reported Bugs
 
 
 * Reported: 49
-* Fixed: 20
+* Fixed: 21
 * Confirmed: 5
 
 
 
 ### New Reported
 
-1. [k-9 Email](https://github.com/k9mail/k-9)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.fsck.k9)
-    * [#3538](https://github.com/k9mail/k-9/issues/3538) [Timeline](./com.fsck.k9-10/)
 1. [Any Memo](https://github.com/helloworld1/AnyMemo)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.liberty.android.fantastischmemo)
     * [#454](https://github.com/helloworld1/AnyMemo/issues/454)
     * [#455](https://github.com/helloworld1/AnyMemo/issues/455)
@@ -32,6 +30,9 @@ title: Reported Bugs
 
 ### Fixed
 
+
+1. [k-9 Email](https://github.com/k9mail/k-9)  [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.fsck.k9)
+    * [#3538 (Fixed)](https://github.com/k9mail/k-9/issues/3538) [Timeline](./com.fsck.k9-10/)
 1. [Amaze](https://github.com/TeamAmaze/AmazeFileManager) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
     * [#1102 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1102)
     * [#1346 (Fixed)](https://github.com/TeamAmaze/AmazeFileManager/issues/1346)
@@ -50,8 +51,8 @@ title: Reported Bugs
     * [#206 (Fixed)](https://github.com/SimpleMobileTools/Simple-File-Manager/issues/206)
 1. [Comfort Reader](https://github.com/mschlauch/comfortreader) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mschlauch.comfortreader)
     * [#12 (Fixed)](https://github.com/mschlauch/comfortreader/issues/12)
-1. [uhabits (Fixed)](https://github.com/iSoron/uhabits) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.isoron.uhabits)
-    * [#354](https://github.com/iSoron/uhabits/issues/354)
+1. [uhabits](https://github.com/iSoron/uhabits) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=org.isoron.uhabits)
+    * [#354 (Fixed)](https://github.com/iSoron/uhabits/issues/354)
 1. [microMathematics](https://github.com/mkulesh/microMathematics) [<i class="fab fa-google-play"></i>](https://play.google.com/store/apps/details?id=com.mkulesh.micromath)
     * [#39 (Fixed)](https://github.com/mkulesh/microMathematics/issues/39)
 

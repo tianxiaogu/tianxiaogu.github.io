@@ -29,6 +29,8 @@ List:
     1. <https://github.com/Tencent/tinker>
 * Instant Run:
     1. <https://developer.android.com/studio/run/index.html>
+* Facebook Buck
+    1. <https://code.fb.com/android/hotswap-bringing-hot-code-reloading-to-buck/>
 * Android Kernel Adaptive Android Kernel Live Patch (Baidu X-Lab):
     1. <https://www.inforsec.org/wp/?p=1042> (In Chinese)
     2. HITB <http://conference.hitb.org/hitbsecconf2016ams/wp-content/uploads/2015/11/D1T2-Tim-Xia-Adaptive-Android-Kernel-Live-Patching.pdf>

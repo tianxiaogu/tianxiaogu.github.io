@@ -2,8 +2,6 @@ title: Ape
 
 # Ape: Automated Testing of Android Applications with Abstraction Refinement
 
-<del>Download our model-based automated testing tool [Ape](ape-bin.zip) (update: 2018-07-23).</del>
-
 * Please send me an email if you are interested in the tool.
 
 
