@@ -21,6 +21,7 @@ title: Homepage
 ----------------
 ## Research Interests
 
+* Fuzz Testing
 * [Compiler Testing](./testing/compiler/)
     * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
 * Java Virtual Machine
