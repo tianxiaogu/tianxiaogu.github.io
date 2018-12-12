@@ -57,6 +57,13 @@ title: Homepage
 ## Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{gu_practical_2019,
+  author    = {Tianxiao Gu, Chengnian Sun, Xiaoxing Ma, Chun Cao, Chang Xu, Yuan Yao, Qirun Zhang, Jian Lu and Zhendong Su},
+  title     = {Practical GUI Testing of Android Applications via Model Abstraction and Refinement},
+  pages     = {to appear},
+  year      = {2019},
+  booktitle = {Proceedings of the 41st International Conference on Software Engineering (ICSE 2019)},
+}
 @inproceedings{gu_automating_2018,
   author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian Lu},
   title     = {Automating Object Transformations for Dynamic Software Updating via Online Execution Synthesis},
