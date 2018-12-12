@@ -58,7 +58,7 @@ title: Homepage
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
 @inproceedings{gu_practical_2019,
-  author    = {Tianxiao Gu, Chengnian Sun, Xiaoxing Ma, Chun Cao, Chang Xu, Yuan Yao, Qirun Zhang, Jian Lu and Zhendong Su},
+  author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Chun Cao and Chang Xu and Yuan Yao and Qirun Zhang and Jian Lu and Zhendong Su},
   title     = {Practical GUI Testing of Android Applications via Model Abstraction and Refinement},
   pages     = {to appear},
   year      = {2019},
