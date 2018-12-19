@@ -64,6 +64,20 @@ title: Homepage
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
 }
+@inproceedings{tang_an_2019,
+  author    = {Shijie Tang and Yuan Yao and Suwei Zhang and Feng Xu and Tianxiao Gu and Hanghang Tong and Xiaohui Yan, and Jian Lu},
+  title     = {An Integral Tag Recommendation Model for Textual Content},
+  pages     = {to appear},
+  year      = {2019},
+  booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
+}
+@inproceedings{cao_accelerating_cao,
+  author    = {Chun Cao and Hongjun Ge and Tianxiao Gu and Jing Deng and Ping Yu and Jian Lu},
+  title     = {Accelerating Automated Android GUI Exploration with Widgets Grouping},
+  pages     = {268--267},
+  year      = {2018},
+  booktitle = {Proceedings of the 25th Asia-Pacific Software Engineering Conference (APSEC 2018)},
+}
 @inproceedings{gu_automating_2018,
   author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian Lu},
   title     = {Automating Object Transformations for Dynamic Software Updating via Online Execution Synthesis},
