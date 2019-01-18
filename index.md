@@ -115,6 +115,17 @@ title: Homepage
   pages     = {336--338},
   year      = {2017},
 }
+@inproceedings{ma_software_2017,
+  author    = {Xiaoxing Ma and
+               Tianxiao Gu and
+               Wei Song},
+  title     = {Software Is Not Soft - Challenges and Approaches to Dynamic Software
+               Update},
+  booktitle = {Engineering Trustworthy Software Systems - Third International School,
+               {SETSS} 2017, Chongqing, China, April 17-22, 2017, Tutorial Lectures},
+  pages     = {143--175},
+  year      = {2017},
+}
 @inproceedings{gu_precise_2016,
   author    = {Tianxiao Gu and Ruiqi Liu and Xiaoxing Ma and Zelin Zhao},
   title     = {Precise Heap Differentiating Using Access Path and Execution Index},
