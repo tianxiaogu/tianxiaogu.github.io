@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Ape |  Tianxiao Gu</title>
+
+
+    <!-- Styles -->
+    <link href="/css/fontawesome-all.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/moon.css" rel="stylesheet" type="text/css"><!-- moon -->
+    <link href="/css/bibtex.css" rel="stylesheet" type="text/css"><!-- bibtex-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51393322-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-51393322-1');
+    </script>
+    -->
+  </head>
+  <body role="document">
+    <div class="container">
+    <h1 id="ape-automated-testing-of-android-applications-with-abstraction-refinement">Ape: Automated Testing of Android Applications with Abstraction Refinement</h1>
+<ul>
+<li>Please send me an email if you are interested in the tool.</li>
+</ul>
+<h2 id="install">Install</h2>
+<p>Files inside <code>ape-bin.zip</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
+ape-bin/ape.jar
+ape-bin/ape.py
+ape-bin/install.py
+ape-bin/README.md
+</pre></div>
+</td></tr></table>
+
+<p>Just copy the <code>ape.jar</code> to the phone.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /data/local/tmp/
+</pre></div>
+</td></tr></table>
+
+<h2 id="evaluation">Evaluation</h2>
+<ul>
+<li>Crashes detected by Ape using only 15 minutes.<ul>
+<li><a href="https://ape-report.github.io/">list1</a></li>
+<li><a href="https://ape-report.github.io/ape-report-1">list2</a></li>
+</ul>
+</li>
+<li><a href="./reported-bugs">Reported bugs</a></li>
+</ul>
+<h2 id="mini-tracing">Mini Tracing</h2>
+<p>We provided a <code>libart.so</code> for x86 emulators to collect coverage without instrumentation.
+That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.</p>
+<ul>
+<li>MiniTracing: Collect method/coverage without bytecode instrumentation.<ul>
+<li><a href="/art-mt-x86.zip">Android 6 (binary for x86)</a>: Android ART with method/instruction coverage support.</li>
+<li><a href="/dalvikvm-mt-x86.zip">Android 4.4 (binary for x86)</a>: Android Dalvik VM with method/instruction coverage support.</li>
+<li><a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-cmd</a>: Command line tools to collect coverage.</li>
+<li><a href="https://bitbucket.org/txgu/android-mt-parser">android-mt-parser</a>: Parser for the coverage data.</li>
+</ul>
+</li>
+</ul>
+<h2 id="run">Run</h2>
+<p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
+<p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
+</pre></div>
+</td></tr></table>
+
+<p>Check the <code>ape.py</code> if you want to run Ape with an emulator.
+You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
+<p>Options:</p>
+<ul>
+<li><code>-p</code>: specify the package name, the same as Monkey</li>
+<li><code>--running-minutes</code>: the total testing time in minutes<ul>
+<li>This is the continuous mode, which means Ape does not stop when it triggers a crash.</li>
+</ul>
+</li>
+<li><code>--ape sata</code>: use the default exploration strategy described in the paper.<ul>
+<li><del>You can also try <code>orbit</code>, <code>wechat</code>, <code>random</code>, and reinforcement learning enhanced random (<code>satarl</code>)</del></li>
+<li>Only <code>random</code> and <code>ape</code> are supported now.</li>
+</ul>
+</li>
+</ul>
+<p>You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --ape sata 1000
+</pre></div>
+</td></tr></table>
+
+<h2 id="visualization">Visualization</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Screenshot is disabled by default to save space.</p>
+</div>
+<p>We provide a tool to visualize the model.</p>
+<ol>
+<li>Ape writes several js files into the output folder for visualization.<ul>
+<li>Check the tail of the output message to locate the output folder in the phone.</li>
+</ul>
+</li>
+<li><code>adb pull /sdcard/your-output-folder</code> to your local directory.</li>
+<li>Copy the following files into the local output directory<ul>
+<li><a href="./demo/vis.html">vis.html</a> (Right click and choose 'save as')</li>
+<li><a href="./demo/vis.min.css">vis.min.css</a></li>
+<li><a href="./demo/vis.min.js">vis.min.js</a></li>
+</ul>
+</li>
+<li>Open the copied <code>vis.html</code> in your browser.<ul>
+<li>You may need to wait for a certain amount of time to let the browser render the model.</li>
+</ul>
+</li>
+</ol>
+<p>Examples:</p>
+<ul>
+<li><a href="./demo/vis.html">Calculator</a></li>
+<li><a href="./demo-mtxx/vis.html">Meitu</a> (1 min).</li>
+</ul>
+<p>Now we can check the timeline.</p>
+<ul>
+<li><a href="./demo-keep-timeline/vis.html">Google Keep</a><ul>
+<li><a href="./demo-keep-timeline/vis-timeline.html">Timeline</a></li>
+<li>Copy <a href="./demo-keep-timeline/vis-timeline.html">vis-timeline.html</a> to your local output directory.</li>
+<li>Open the copied <code>vis-timeline.html</code> in your browser.</li>
+</ul>
+</li>
+</ul>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>We thank the following experts for their insightful comments on Ape.</p>
+<ul>
+<li><a href="https://tingsu.github.io/">Ting Su</a></li>
+<li>Zhao Zhang 张钊</li>
+</ul>
+    </div>
+
+    <footer class="footer" style="margin-top:10px;">
+      <div class="container">
+          <span class="text-muted">&copy; 2017 <a href="/">Tianxiao Gu</a>. All rights reserved.</span>
+      <!--
+      -->
+      <div style="width:70px;height:48px;">
+      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=I1T5oEaSW-FJIJ_bZCvK8XMDQ35ouGHQP_ixsLYwvOo'></script></div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51393322-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-51393322-1');
+    </script>
+
+  </body>
+</html>
