@@ -28,9 +28,9 @@ title: Homepage
     * [Bytecode generator](./testing/jvm/)
         * [Reported bugs](./testing/jvm/)
 * Android Application Testing
-    * [Ape](./sata): A framework for model-based testing for Android apps.
+    * [Ape](./ape): A framework for model-based testing for Android apps.
         * Crashes detected by Ape using only 15 minitues: [list1](https://ape-report.github.io/)[list2](https://ape-report.github.io/ape-report-1).
-        * [Reported bugs](./sata/reported-bugs) found by Ape using only half an hour.
+        * [Reported bugs](./ape/reported-bugs) found by Ape using only half an hour.
     * WGDroid: A fancy GUI exploration tool developed on top of Ape.
     * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
     * MiniTracing: Collect method/coverage without bytecode instrumentation.
@@ -81,7 +81,7 @@ title: Homepage
 @inproceedings{gu_automating_2018,
   author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian Lu},
   title     = {Automating Object Transformations for Dynamic Software Updating via Online Execution Synthesis},
-  pages     = {to appear},
+  pages     = {19:1--19:28},
   year      = {2018},
   booktitle = {Proceedings of the 32nd European Conference on Object-Oriented Programming (ECOOP 2018)},
 }
@@ -92,14 +92,14 @@ title: Homepage
   year    = {2018},
   volume  = {0},
   number  = {0},
-  pages   = {to appear},
+  pages   = {1--18},
 }
 @inproceedings{sun_perses_2018,
   title = {Perses: Syntax-Guided Program Reduction},
   author = {Chengnian Sun and Yuanbo Li and Qirun Zhang and Tianxiao Gu and Zhendong Su},
   booktitle = {Proceedings of the 40th International Conference on Software Engineering (ICSE 2018)},
   year = {2018},
-  pages = {To appear},
+  pages = {361--371},
 }
 @inproceedings{gu_AimDroid:_2017,
   title = {AimDroid: Activity-Insulated Multi-level Automated Testing for Android Applications},
@@ -219,7 +219,7 @@ title: Homepage
         * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.
 * <a href="https://bitbucket.org/txgu/ares"><i class="fab fa-bitbucket"></i></a> [Ares](./ares/): Automatic Runtime Recovery via Error Handler Synthesis.
 * <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fab fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
-* <a href="https://bitbucket.org/txgu/sata"><i class="fab fa-bitbucket"></i></a> [Ape](./sata/): Automated Testing of Android Applications with Abstraction Refinement.
+* <a href="https://bitbucket.org/txgu/ape"><i class="fab fa-bitbucket"></i></a> [Ape](./ape/): Automated Testing of Android Applications with Abstraction Refinement.
 
 
 --------------------
