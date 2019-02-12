@@ -2,35 +2,62 @@ title: Ape
 
 # Ape: Automated Testing of Android Applications with Abstraction Refinement
 
-* Please send me an email if you are interested in the tool.
 
+[Download](/ape-bin.zip)
 
-## Install
+## Publication
 
-Files inside `ape-bin.zip`:
+Ape applies a CEGAR style technique to refine and coarsen the model abstraction.
+A paper about Ape's main idea has been accepted to ICSE 2019.
 
-```
-ape-bin/
-ape-bin/ape.jar
-ape-bin/ape.py
-ape-bin/install.py
-ape-bin/README.md
-```
+~~~{.bibtexhtml}
+@inproceedings{gu_practical_2019,
+  author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Chun Cao and Chang Xu and Yuan Yao and Qirun Zhang and Jian Lu and Zhendong Su},
+  title     = {Practical GUI Testing of Android Applications via Model Abstraction and Refinement},
+  pages     = {to appear},
+  year      = {2019},
+  booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
+}
+~~~
 
-Just copy the `ape.jar` to the phone.
-
-    adb push ape.jar /data/local/tmp/
-
-
-## Evaluation
-
+### Evaluation
 
 * Crashes detected by Ape using only 15 minutes.
     * [list1](https://ape-report.github.io/)
     * [list2](https://ape-report.github.io/ape-report-1)
 * [Reported bugs](./reported-bugs)
 
-## Mini Tracing
+In the ICSE paper, we evaluated Ape in two experiments.
+
+* The first part of the evaluation was conducted on x86 emulators.
+    * [Install the Google Play Store in an Emulator](./install-google-play-store-in-an-emulator).
+        * We need to download x86 compatible apps.
+    * Install [Mini Tracing](#minitracing).
+        * This step can be omitted if you do not want to collect method and instruction coverage.
+    * Login with a test google account.
+        * This step can be omitted if you do not want to test the Google Drive app.
+    * Install and test the following packages for one hour.
+        * [`com.citymapper.app.release`](https://play.google.com/store/apps/details?id=com.citymapper.app.release)
+        * [`com.duolingo`](https://play.google.com/store/apps/details?id=com.duolingo)
+        * [`com.enzuredigital.weatherbomb`](https://play.google.com/store/apps/details?id=com.enzuredigital.weatherbomb)
+        * [`com.google.android.apps.docs`](https://play.google.com/store/apps/details?id=com.google.android.apps.docs)
+        * [`com.google.android.apps.translate`](https://play.google.com/store/apps/details?id=com.google.android.apps.translate)
+        * [`com.nuzzel.android`](https://play.google.com/store/apps/details?id=com.nuzzel.android)
+        * [`com.popularapp.thirtydayfitnesschallenge`](https://play.google.com/store/apps/details?id=com.popularapp.thirtydayfitnesschallenge)
+        * [`com.zillow.android.zillowmap`](https://play.google.com/store/apps/details?id=com.zillow.android.zillowmap)
+        * [`flipboard.app`](https://play.google.com/store/apps/details?id=flipboard.app)
+        * [`org.videolan.vlc`](https://play.google.com/store/apps/details?id=org.videolan.vlc)
+        * [`tunein.player`](https://play.google.com/store/apps/details?id=tunein.player)
+        * [`com.amaze.filemanager`](https://play.google.com/store/apps/details?id=com.amaze.filemanager)
+        * [`com.eleybourn.bookcatalogue`](https://play.google.com/store/apps/details?id=com.eleybourn.bookcatalogue)
+        * [`org.liberty.android.fantastischmemo`](https://play.google.com/store/apps/details?id=org.liberty.android.fantastischmemo)
+        * [`org.totschnig.myexpenses`](https://play.google.com/store/apps/details?id=org.totschnig.myexpenses)
+* The second part of the evaluation requires a huge amount of time. We release all stack traces instead.
+    * [Stack traces (537 in total)](./trace.zip)
+
+
+<a name="minitracing"></a>
+### Mini Tracing
 
 We provided a `libart.so` for x86 emulators to collect coverage without instrumentation.
 That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.
@@ -40,6 +67,34 @@ That means, you can use this tool to collect coverage for apps such as Google Do
     * [Android 4.4 (binary for x86)](/dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.
     * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
     * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
+
+
+
+
+## Install
+
+Files inside `ape-bin.zip`:
+
+```
+ape-bin/
+ape-bin/ape
+ape-bin/ape.jar
+ape-bin/ape.py
+ape-bin/install.py
+ape-bin/README.md
+```
+
+Copy Just copy the `ape.jar` to the phone.
+
+    adb push ape.jar /data/local/tmp/
+
+and run
+
+    adb shell CLASSPATH=/data/local/tmp/ape.jar /system/bin/app_process /data/local/tmp/ com.android.commands.monkey.Monkey
+
+
+
+More details can be found in `README.md`.
 
 ## Run
 
@@ -101,6 +156,8 @@ Now we can check the timeline.
     * [Timeline](./demo-keep-timeline/vis-timeline.html)
     * Copy [vis-timeline.html](./demo-keep-timeline/vis-timeline.html) to your local output directory.
     * Open the copied `vis-timeline.html` in your browser.
+
+
 
 ## Acknowledgments
 

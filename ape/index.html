@@ -29,29 +29,31 @@
   <body role="document">
     <div class="container">
     <h1 id="ape-automated-testing-of-android-applications-with-abstraction-refinement">Ape: Automated Testing of Android Applications with Abstraction Refinement</h1>
-<ul>
-<li>Please send me an email if you are interested in the tool.</li>
+<p><a href="/ape-bin.zip">Download</a></p>
+<h2 id="publication">Publication</h2>
+<p>Ape applies a CEGAR style technique to refine and coarsen the model abstraction.
+A paper about Ape's main idea has been accepted to ICSE 2019.</p>
+<ul class="bibtex">
+
+<li><a name="gu_practical_2019"></a>
+
+<div><span class="bibtex title">Practical GUI Testing of Android Applications via Model Abstraction and Refinement</span>, </span></div>
+<div><span class="bibtex author">Tianxiao Gu, Chengnian Sun, Xiaoxing Ma, Chun Cao, Chang Xu, Yuan Yao, Qirun Zhang, Jian Lu, and Zhendong Su, 
+</span></div>
+<div>
+<span class="bibtex pages">in </span><span class="bibtex booktitle">Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)</span>
+<span>, </span>
+<span class="bibtex pages">to appear, </span>
+<span class="bibtex year">2019.</span>
+
+
+
+</div>
+</li>
+
 </ul>
-<h2 id="install">Install</h2>
-<p>Files inside <code>ape-bin.zip</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
-ape-bin/ape.jar
-ape-bin/ape.py
-ape-bin/install.py
-ape-bin/README.md
-</pre></div>
-</td></tr></table>
 
-<p>Just copy the <code>ape.jar</code> to the phone.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /data/local/tmp/
-</pre></div>
-</td></tr></table>
-
-<h2 id="evaluation">Evaluation</h2>
+<h3 id="evaluation">Evaluation</h3>
 <ul>
 <li>Crashes detected by Ape using only 15 minutes.<ul>
 <li><a href="https://ape-report.github.io/">list1</a></li>
@@ -60,7 +62,48 @@ ape-bin/README.md
 </li>
 <li><a href="./reported-bugs">Reported bugs</a></li>
 </ul>
-<h2 id="mini-tracing">Mini Tracing</h2>
+<p>In the ICSE paper, we evaluated Ape in two experiments.</p>
+<ul>
+<li>The first part of the evaluation was conducted on x86 emulators.<ul>
+<li><a href="./install-google-play-store-in-an-emulator">Install the Google Play Store in an Emulator</a>.<ul>
+<li>We need to download x86 compatible apps.</li>
+</ul>
+</li>
+<li>Install <a href="#minitracing">Mini Tracing</a>.<ul>
+<li>This step can be omitted if you do not want to collect method and instruction coverage.</li>
+</ul>
+</li>
+<li>Login with a test google account.<ul>
+<li>This step can be omitted if you do not want to test the Google Drive app.</li>
+</ul>
+</li>
+<li>Install and test the following packages for one hour.<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.citymapper.app.release"><code>com.citymapper.app.release</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.duolingo"><code>com.duolingo</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.enzuredigital.weatherbomb"><code>com.enzuredigital.weatherbomb</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs"><code>com.google.android.apps.docs</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.translate"><code>com.google.android.apps.translate</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.nuzzel.android"><code>com.nuzzel.android</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.popularapp.thirtydayfitnesschallenge"><code>com.popularapp.thirtydayfitnesschallenge</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.zillow.android.zillowmap"><code>com.zillow.android.zillowmap</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=flipboard.app"><code>flipboard.app</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.videolan.vlc"><code>org.videolan.vlc</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=tunein.player"><code>tunein.player</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.amaze.filemanager"><code>com.amaze.filemanager</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.eleybourn.bookcatalogue"><code>com.eleybourn.bookcatalogue</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.liberty.android.fantastischmemo"><code>org.liberty.android.fantastischmemo</code></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.totschnig.myexpenses"><code>org.totschnig.myexpenses</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The second part of the evaluation requires a huge amount of time. We release all stack traces instead.<ul>
+<li><a href="./trace.zip">Stack traces (537 in total)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="minitracing"></a></p>
+<h3 id="mini-tracing">Mini Tracing</h3>
 <p>We provided a <code>libart.so</code> for x86 emulators to collect coverage without instrumentation.
 That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.</p>
 <ul>
@@ -72,6 +115,33 @@ That means, you can use this tool to collect coverage for apps such as Google Do
 </ul>
 </li>
 </ul>
+<h2 id="install">Install</h2>
+<p>Files inside <code>ape-bin.zip</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
+ape-bin/ape
+ape-bin/ape.jar
+ape-bin/ape.py
+ape-bin/install.py
+ape-bin/README.md
+</pre></div>
+</td></tr></table>
+
+<p>Copy Just copy the <code>ape.jar</code> to the phone.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /data/local/tmp/
+</pre></div>
+</td></tr></table>
+
+<p>and run</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb shell CLASSPATH=/data/local/tmp/ape.jar /system/bin/app_process /data/local/tmp/ com.android.commands.monkey.Monkey
+</pre></div>
+</td></tr></table>
+
+<p>More details can be found in <code>README.md</code>.</p>
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.</p>
@@ -144,7 +214,7 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </ul>
     </div>
 
-    <footer class="footer" style="margin-top:10px;">
+    <footer class="footer" style="margin-top:50px;">
       <div class="container">
           <span class="text-muted">&copy; 2017 <a href="/">Tianxiao Gu</a>. All rights reserved.</span>
       <!--

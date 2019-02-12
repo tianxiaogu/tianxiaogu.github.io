@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Automatic Runtime Recovery via Error Handler Synthesis |  Tianxiao Gu</title>
+    <title> Install the Google Play Store in an Emulator |  Tianxiao Gu</title>
 
 
     <!-- Styles -->
@@ -28,15 +28,15 @@
   </head>
   <body role="document">
     <div class="container">
-    <h1 id="automatic-runtime-recovery-via-error-handler-synthesis">Automatic Runtime Recovery via Error Handler Synthesis</h1>
-<h2 id="source-code">Source Code</h2>
-<ul>
-<li><a href="https://git.njuics.cn/groups/ares">git.njuics.cn</a></li>
-</ul>
-<h2 id="documentation">Documentation</h2>
-<ul>
-<li><a href="linux">Linux</a></li>
-</ul>
+    <h1 id="install-the-google-play-store-in-an-emulator">Install the Google Play Store in an Emulator</h1>
+<ol>
+<li>Create an AVD using the Android Nexus 5 API 23 x86 image. By default, the name of the AVD should be <code>Nexus 5 API 23</code>.
+    !!! note
+        Android studio has officially released three types of emulators for <strong>Nexus 5 API 23 x86</strong>, i.e., with Google Play Store, with Google API only and without any Google stuffs.
+        Here you must select the one without any Google stuffs since we will install a full Google service framework manually.</li>
+<li>Follow instructions in <a href="https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1">https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1</a></li>
+<li>By default, all permissions of Google Play Service have been disabled. You will encounter crashes as described in the previous link. To solve this issue, you must first enable location and then grant all permissions to Google Play Service.</li>
+</ol>
     </div>
 
     <footer class="footer" style="margin-top:50px;">
