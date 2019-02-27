@@ -17,33 +17,6 @@ title: Homepage
   <a href="https://github.com/tianxiaogu"><i class="fab fa-github"></i></a>
 
 
-
-----------------
-## Research Interests
-
-* Fuzz Testing
-* [Compiler Testing](./testing/compiler/)
-    * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
-* Java Virtual Machine
-    * [Bytecode generator](./testing/jvm/)
-        * [Reported bugs](./testing/jvm/)
-* Android Application Testing
-    * [Ape](./ape): A framework for model-based testing for Android apps.
-        * [**Download**](./ape-bin.zip)
-        * Crashes detected by Ape using only 15 minitues: [list1](https://ape-report.github.io/) [list2](https://ape-report.github.io/ape-report-1).
-        * [Reported bugs](./ape/reported-bugs) found by Ape using only half an hour.
-    * WGDroid: A fancy GUI exploration tool developed on top of Ape.
-    * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
-    * MiniTracing: Collect method/coverage without bytecode instrumentation.
-        * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
-        * [Android 4.4 (binary for x86)](dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.
-        * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
-        * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
-* Dynamic Software Updating
-    * A [list](./javelus/literature) of practical DSU tools.
-* Program Analysis
-* Programming Languages
-
 ----------------
 
 ## Education and Work Experience
@@ -64,6 +37,8 @@ title: Homepage
   pages     = {to appear},
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
+  pdf       = {/static/ape-icse-2019.pdf},
+  link      = {/ape},
 }
 @inproceedings{tang_an_2019,
   author    = {Shijie Tang and Yuan Yao and Suwei Zhang and Feng Xu and Tianxiao Gu and Hanghang Tong and Xiaohui Yan, and Jian Lu},
@@ -203,6 +178,34 @@ title: Homepage
 }
 
 ~~~
+
+----------------
+## Research Interests
+
+* Fuzz Testing
+* [Compiler Testing](./testing/compiler/)
+    * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
+* Java Virtual Machine
+    * [Bytecode generator](./testing/jvm/)
+        * [Reported bugs](./testing/jvm/)
+* Android Application Testing
+    * [Ape](./ape): A framework for model-based testing for Android apps.
+        * [**Download**](./ape-bin.zip)
+        * Crashes detected by Ape using only 15 minitues: [list1](https://ape-report.github.io/) [list2](https://ape-report.github.io/ape-report-1).
+        * [Reported bugs](./ape/reported-bugs) found by Ape using only half an hour.
+    * WGDroid: A fancy GUI exploration tool developed on top of Ape.
+    * [AimDroid](https://icsnju.github.io/AimDroid-ICSME-2017/)
+    * MiniTracing: Collect method/coverage without bytecode instrumentation.
+        * [Android 6 (binary for x86)](art-mt-x86.zip): Android ART with method/instruction coverage support.
+        * [Android 4.4 (binary for x86)](dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.
+        * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
+        * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
+* Dynamic Software Updating
+    * A [list](./javelus/literature) of practical DSU tools.
+* Program Analysis
+* Programming Languages
+
+
 
 ----------------
 ## Projects

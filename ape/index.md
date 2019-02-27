@@ -17,12 +17,14 @@ A paper about Ape's main idea has been accepted to ICSE 2019.
   pages     = {to appear},
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
+  pdf       = {/static/ape-icse-2019.pdf},
+  link      = {/ape},
 }
 ~~~
 
 ### Evaluation
 
-* Crashes detected by Ape using only 15 minutes.
+* Crashes detected by Ape.
     * [list1](https://ape-report.github.io/)
     * [list2](https://ape-report.github.io/ape-report-1)
 * [Reported bugs](./reported-bugs)
@@ -54,7 +56,8 @@ In the ICSE paper, we evaluated Ape in two experiments.
         * [`org.totschnig.myexpenses`](https://play.google.com/store/apps/details?id=org.totschnig.myexpenses)
 * The second part of the evaluation requires a huge amount of time. We release all stack traces instead.
     * [Stack traces (537 in total)](./trace.zip)
-
+* We have implemented a [Null Intent Fuzzer](./null-intent-fuzzer.py) using Python to filter out trivial crashes.
+    * Remember to set environment variable `SERIAL` and `ANDROID_HOME`.
 
 <a name="minitracing"></a>
 ### Mini Tracing
@@ -91,7 +94,6 @@ Copy Just copy the `ape.jar` to the phone.
 and run
 
     adb shell CLASSPATH=/data/local/tmp/ape.jar /system/bin/app_process /data/local/tmp/ com.android.commands.monkey.Monkey
-
 
 
 More details can be found in `README.md`.

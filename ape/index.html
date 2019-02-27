@@ -37,7 +37,7 @@ A paper about Ape's main idea has been accepted to ICSE 2019.</p>
 
 <li><a name="gu_practical_2019"></a>
 
-<div><span class="bibtex title">Practical GUI Testing of Android Applications via Model Abstraction and Refinement</span>, </span></div>
+<div><a href="/static/ape-icse-2019.pdf" target="_blank" title="Local copy of this paper"><span class="bibtex title">Practical GUI Testing of Android Applications via Model Abstraction and Refinement<i class="fa fa-file-pdf-o" aria-hidden="true"></i></span></a>, </span></div>
 <div><span class="bibtex author">Tianxiao Gu, Chengnian Sun, Xiaoxing Ma, Chun Cao, Chang Xu, Yuan Yao, Qirun Zhang, Jian Lu, and Zhendong Su, 
 </span></div>
 <div>
@@ -48,6 +48,7 @@ A paper about Ape's main idea has been accepted to ICSE 2019.</p>
 
 
 
+<span class="bibtex"><a href="/ape" target="_blank" title="Site of this paper"> <i class="fa fa-external-link-square-alt" aria-hidden="true"></i></a></span>
 </div>
 </li>
 
@@ -55,7 +56,7 @@ A paper about Ape's main idea has been accepted to ICSE 2019.</p>
 
 <h3 id="evaluation">Evaluation</h3>
 <ul>
-<li>Crashes detected by Ape using only 15 minutes.<ul>
+<li>Crashes detected by Ape.<ul>
 <li><a href="https://ape-report.github.io/">list1</a></li>
 <li><a href="https://ape-report.github.io/ape-report-1">list2</a></li>
 </ul>
@@ -99,6 +100,10 @@ A paper about Ape's main idea has been accepted to ICSE 2019.</p>
 </li>
 <li>The second part of the evaluation requires a huge amount of time. We release all stack traces instead.<ul>
 <li><a href="./trace.zip">Stack traces (537 in total)</a></li>
+</ul>
+</li>
+<li>We have implemented a <a href="./null-intent-fuzzer.py">Null Intent Fuzzer</a> using Python to filter out trivial crashes.<ul>
+<li>Remember to set environment variable <code>SERIAL</code> and <code>ANDROID_HOME</code>.</li>
 </ul>
 </li>
 </ul>
