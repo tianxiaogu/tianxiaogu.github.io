@@ -3,7 +3,7 @@ title: Ape
 # Ape: Automated Testing of Android Applications with Abstraction Refinement
 
 
-[Download](/ape-bin.zip)
+[Download (ape-bin.zip)](/ape-bin.zip)
 
 ## Publication
 
