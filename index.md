@@ -38,7 +38,7 @@ title: Homepage
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
   pdf       = {/static/ape-icse-2019.pdf},
-  link      = {/ape},
+  code      = {/ape},
 }
 @inproceedings{tang_an_2019,
   author    = {Shijie Tang and Yuan Yao and Suwei Zhang and Feng Xu and Tianxiao Gu and Hanghang Tong and Xiaohui Yan, and Jian Lu},
@@ -98,7 +98,7 @@ title: Homepage
   title     = {Software Is Not Soft - Challenges and Approaches to Dynamic Software
                Update},
   booktitle = {Engineering Trustworthy Software Systems - Third International School,
-               {SETSS} 2017, Chongqing, China, April 17-22, 2017, Tutorial Lectures},
+               SETSS 2017, Chongqing, China, April 17-22, 2017, Tutorial Lectures},
   pages     = {143--175},
   year      = {2017},
 }

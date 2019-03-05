@@ -18,7 +18,6 @@ A paper about Ape's main idea has been accepted to ICSE 2019.
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
   pdf       = {/static/ape-icse-2019.pdf},
-  link      = {/ape},
 }
 ~~~
 
