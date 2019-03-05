@@ -36,9 +36,9 @@
 {% if entry.booktitle or entry.journal %}<span>, </span>{% endif %}
 {% if entry.pages %}<span class="bibtex pages">{{ entry.pages }}, </span>{% endif %}
 {% if entry.year %}<span class="bibtex year">{{ entry.year}}.</span>{% endif %}
-{% if entry.ppt %}<span class="bibtex"><a href="{{ entry.ppt }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint-o" aria-hidden="true"> </i></a></span>{% endif %}
-{% if entry.code %}<span class="bibtex"><a href="{{ entry.code }}" target="_blank" title="Code of this paper"> <i class="fa fa-file-code-o" aria-hidden="true"> </i></a></span>{% endif %}
-{% if entry.slides %}<span class="bibtex"><a href="{{ entry.slides }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></a></span>{% endif %}
+{% if entry.ppt %}<span class="bibtex"><a href="{{ entry.ppt }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint" aria-hidden="true"> </i></a></span>{% endif %}
+{% if entry.code %}<span class="bibtex"><a href="{{ entry.code }}" target="_blank" title="Code of this paper"> <i class="fa fa-file-code" aria-hidden="true"> </i></a></span>{% endif %}
+{% if entry.slides %}<span class="bibtex"><a href="{{ entry.slides }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint" aria-hidden="true"></i></a></span>{% endif %}
 {% if entry.link %}<span class="bibtex"><a href="{{ entry.link }}" target="_blank" title="External link to this paper"> <i class="fa fa-external-link-square-alt" aria-hidden="true"></i></a></span>{% endif %}
 </div>
 {%- endmacro %}
