@@ -5,10 +5,7 @@ title: Homepage
 
 ----------------
 
-* Postdoc
-* Department of Computer Science
-* University of California, Davis, USA
-* Supervisor: Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/)
+* Senior JVM Engineer,  Alibaba Group Holding, Sunnyvale, CA.
 * Email: tianxiao.gu (at) gmail dot com
 * <a href="http://www.linkedin.com/in/tianxiaogu"><i class="fab fa-linkedin-square"></i></a>
   <a href="https://twitter.com/Xiaotiangu"><i class="fab fa-twitter-square"></i></a>
@@ -21,9 +18,10 @@ title: Homepage
 
 ## Education and Work Experience
 
-* 2017.5 - : Postdoc, University of California, Davis.
+* 2019.4 - present: Senior Engineer, Alibaba Group Holding, Sunnyvale, CA, USA.
+* 2017.5 - 2019.3: Postdoc, University of California, Davis.
 * 2010.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](http://moon.nju.edu.cn/people/xiaoxingma "Xiaoxing Ma")
-* 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com) (formerly known as [Alipay](https://www.alipay.com))
+* 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com)
 * 2013.9 - 2014.9: Visiting Student, University of California, Davis, Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/).
 * 2006.9 - 2010.6: B.S., Department of Computer Science and Technology, Nanjing University
 
@@ -50,7 +48,7 @@ title: Homepage
 @inproceedings{cao_accelerating_cao,
   author    = {Chun Cao and Hongjun Ge and Tianxiao Gu and Jing Deng and Ping Yu and Jian Lu},
   title     = {Accelerating Automated Android GUI Exploration with Widgets Grouping},
-  pages     = {268--267},
+  pages     = {268--277},
   year      = {2018},
   booktitle = {Proceedings of the 25th Asia-Pacific Software Engineering Conference (APSEC 2018)},
 }
