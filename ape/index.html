@@ -36,7 +36,7 @@
 </ul>
 </li>
 <li>Source:<ul>
-<li>We plan to make Ape open-source in the near future.</li>
+<li><a href="https://github.com/tianxiaogu/ape">https://github.com/tianxiaogu/ape</a></li>
 </ul>
 </li>
 </ul>
@@ -159,13 +159,13 @@ ape-bin/README.md
 <p>More details can be found in <code>README.md</code>.</p>
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
-<p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.</p>
+<p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.
+Make sure <code>adb</code> is available in your <code>PATH</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
 </pre></div>
 </td></tr></table>
 
-<p>Check the <code>ape.py</code> if you want to run Ape with an emulator.
-You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
+<p>Check the <code>ape.py</code> if you want to run Ape with multiple devices via <code>adb -s</code>.</p>
 <p>Options:</p>
 <ul>
 <li><code>-p</code>: specify the package name, the same as Monkey</li>
@@ -174,8 +174,7 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </ul>
 </li>
 <li><code>--ape sata</code>: use the default exploration strategy described in the paper.<ul>
-<li><del>You can also try <code>orbit</code>, <code>wechat</code>, <code>random</code>, and reinforcement learning enhanced random (<code>satarl</code>)</del></li>
-<li>Only <code>random</code> and <code>ape</code> are supported now.</li>
+<li>Only <code>random</code> and <code>sata</code> are supported now, where <code>sata</code> is the default exploration strategy described in the paper.</li>
 </ul>
 </li>
 </ul>
@@ -184,11 +183,23 @@ You should at least remove the <code>-d</code> options for <code>adb</code>.</p>
 </pre></div>
 </td></tr></table>
 
+<h2 id="output">Output</h2>
+<p>Users should save everything that has been outputted into the console.
+In addition to the standard output, Ape also records both high-level actions and low-level events and saves them into a folder under <code>/sdcard</code>,
+e.g., <code>/sdcard/sata-com.amaze.filemanager-ape-sata-running-minutes-10</code>.</p>
+<ul>
+<li><code>action-history.log</code>: The history of actions. We create a phantom action <code>PHANTOM_CRASH</code> to record crash information.
+    An action may produce more than one events.</li>
+<li><code>produce.log</code>: The history of events that are generated from actions.</li>
+<li><code>consume.log</code>: The history of events that are actually injected but the injection may fail. For example, a click event may fail if the GUI changes after the event is created.</li>
+<li><code>sataGraph.vis.js</code>: Model graph can be visualized using <a href="http://visjs.org/">vis</a>.</li>
+<li><code>sataTimeline.vis.js</code>: Timeline can be visualized using <a href="http://visjs.org/">vis</a>.</li>
+<li><code>sataModel.obj</code>: Model graph has been dumped using the <a href="https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html">Java Serialization API</a>. This file could be used for off-line graph analysis of the model.</li>
+<li><code>step-11-g5s8.txt</code>: The state at iteration 11.</li>
+<li><code>step-1404.xml</code>: The GUI tree (in XML) at iteration 1404.</li>
+<li><code>step-597.png</code>: The snapshot at step 597.</li>
+</ul>
 <h2 id="visualization">Visualization</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Screenshot is disabled by default to save space.</p>
-</div>
 <p>We provide a tool to visualize the model.</p>
 <ol>
 <li>Ape writes several js files into the output folder for visualization.<ul>

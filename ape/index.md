@@ -2,14 +2,12 @@ title: Ape
 
 # Ape: Automated Testing of Android Applications with Abstraction Refinement
 
-
-
 ## Download
 
 * Binary:
     * [ape-bin.zip](/ape-bin.zip)
 * Source:
-    * We plan to make Ape open-source in the near future.
+    * <https://github.com/tianxiaogu/ape>
 
 ## Publication
 
@@ -108,12 +106,13 @@ More details can be found in `README.md`.
 We provide a python script (i.e., `ape.py`) to facilitate running ape on Android platform.
 
 The following command starts to run Ape to test the Calculator on a real device connected via `adb`.
+Make sure `adb` is available in your `PATH`.
 
 
     ./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
 
-Check the `ape.py` if you want to run Ape with an emulator.
-You should at least remove the `-d` options for `adb`.
+
+Check the `ape.py` if you want to run Ape with multiple devices via `adb -s`.
 
 Options:
 
@@ -121,8 +120,7 @@ Options:
 * `--running-minutes`: the total testing time in minutes
     * This is the continuous mode, which means Ape does not stop when it triggers a crash.
 * `--ape sata`: use the default exploration strategy described in the paper.
-    * <del>You can also try `orbit`, `wechat`, `random`, and reinforcement learning enhanced random (`satarl`)</del>
-    * Only `random` and `ape` are supported now.
+    * Only `random` and `sata` are supported now, where `sata` is the default exploration strategy described in the paper.
 
 You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.
 
@@ -130,14 +128,24 @@ You can also specify the total amount of Monkey events. In this mode, Ape will s
     ./ape.py -p com.google.android.calculator --ape sata 1000
 
 
+## Output
+
+Users should save everything that has been outputted into the console.
+In addition to the standard output, Ape also records both high-level actions and low-level events and saves them into a folder under `/sdcard`,
+e.g., `/sdcard/sata-com.amaze.filemanager-ape-sata-running-minutes-10`.
+
+* `action-history.log`: The history of actions. We create a phantom action `PHANTOM_CRASH` to record crash information.
+    An action may produce more than one events.
+* `produce.log`: The history of events that are generated from actions.
+* `consume.log`: The history of events that are actually injected but the injection may fail. For example, a click event may fail if the GUI changes after the event is created.
+* `sataGraph.vis.js`: Model graph can be visualized using [vis](http://visjs.org/).
+* `sataTimeline.vis.js`: Timeline can be visualized using [vis](http://visjs.org/).
+* `sataModel.obj`: Model graph has been dumped using the [Java Serialization API](https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html). This file could be used for off-line graph analysis of the model.
+* `step-11-g5s8.txt`: The state at iteration 11.
+* `step-1404.xml`: The GUI tree (in XML) at iteration 1404.
+* `step-597.png`: The snapshot at step 597.
 
 ## Visualization
-
-
-!!! note
-    Screenshot is disabled by default to save space.
-
-
 
 We provide a tool to visualize the model.
 
@@ -163,8 +171,6 @@ Now we can check the timeline.
     * [Timeline](./demo-keep-timeline/vis-timeline.html)
     * Copy [vis-timeline.html](./demo-keep-timeline/vis-timeline.html) to your local output directory.
     * Open the copied `vis-timeline.html` in your browser.
-
-
 
 ## Acknowledgments
 

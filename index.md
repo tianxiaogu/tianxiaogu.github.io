@@ -5,7 +5,7 @@ title: Homepage
 
 ----------------
 
-* Senior JVM Engineer,  Alibaba Group Holding, Sunnyvale, CA.
+* Senior JVM Engineer,  Alibaba Group, Sunnyvale, CA.
 * Email: tianxiao.gu (at) gmail dot com
 * <a href="http://www.linkedin.com/in/tianxiaogu"><i class="fab fa-linkedin-square"></i></a>
   <a href="https://twitter.com/Xiaotiangu"><i class="fab fa-twitter-square"></i></a>
