@@ -18,7 +18,7 @@ title: Homepage
 
 ## Education and Work Experience
 
-* 2019.4 - present: Senior Engineer, Alibaba Group Holding, Sunnyvale, CA, USA.
+* 2019.4 - present: Senior Engineer, Alibaba Group, Sunnyvale, CA, USA.
 * 2017.5 - 2019.3: Postdoc, University of California, Davis.
 * 2010.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](http://moon.nju.edu.cn/people/xiaoxingma "Xiaoxing Ma")
 * 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com)
