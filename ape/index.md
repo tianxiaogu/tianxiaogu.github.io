@@ -5,7 +5,7 @@ title: Ape
 ## Download
 
 * Binary:
-    * [ape-bin.zip](/ape-bin.zip), last updated: 6/2/2019
+    * [ape-bin.zip](/ape-bin.zip), last updated: 6/8/2019
 * Source:
     * <https://github.com/tianxiaogu/ape>
 
