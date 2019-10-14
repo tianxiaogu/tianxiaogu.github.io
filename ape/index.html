@@ -32,7 +32,7 @@
 <h2 id="download">Download</h2>
 <ul>
 <li>Binary:<ul>
-<li><a href="/ape-bin.zip">ape-bin.zip</a>, last updated: 6/8/2019</li>
+<li><a href="/ape-bin.zip">ape-bin.zip</a>, last updated: Oct 13, 2019</li>
 </ul>
 </li>
 <li>Source:<ul>
@@ -232,6 +232,74 @@ e.g., <code>/sdcard/sata-com.amaze.filemanager-ape-sata-running-minutes-10</code
 </ul>
 </li>
 </ul>
+<h2 id="patching-gui-tree">Patching GUI Tree</h2>
+<p>Ape will read file <code>/sdcard/ape.xpath</code> to patch the GUI tree before applying the abstraction function to build the state.</p>
+<p>The configuration file is a JSON file encoding a JSON array. Each element of the array is an object that has the following attributes.</p>
+<ol>
+<li><code>"xpath"</code>: the xpath to select elements in the XML tree<ul>
+<li>The XML that Ape used is different from that obtained via <code>uiautomator dump --compressed</code>. Please check the output directory to find some examples (e.g., <code>step-N.xml</code>)</li>
+<li>The value of property <code>text</code> has been truncated to save memory. Try to avoid using property <code>text</code> or see <code>ape.truncateTextLength</code>. The default length of truncated text string is 8.</li>
+</ul>
+</li>
+<li><code>"actions"</code> (optional): a set of supported model actions, i.e., <code>MODEL_CLICK</code>, <code>MODEL_</code><ul>
+<li>click: <code>MODEL_CLICK</code></li>
+<li>long click: <code>MODEL_LONG_CLICK</code></li>
+<li>swipe vertically: <code>MODEL_SCROLL_TOP_DOWN</code> or <code>MODEL_SCROLL_BOTTOM_UP</code></li>
+<li>swipe horizontally: <code>MODEL_SCROLL_LEFT_RIGHT</code> or <code>MODEL_SCROLL_RIGHT_LEFT</code></li>
+<li>An empty array will clear the actions on the widget, i.e., the widget has been disabled.</li>
+</ul>
+</li>
+<li><code>"text"</code> (optional):<ul>
+<li>If the selected widget is an <code>EditText</code>, the text will be used to generate input for the widget.</li>
+</ul>
+</li>
+<li><code>"throttle"</code> (optional):<ul>
+<li>Throttle for the widget.</li>
+</ul>
+</li>
+</ol>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
+    &quot;xpath&quot;: &quot;//*[@class=&#39;android.widget.EditText&#39;]&quot;,
+    &quot;actions&quot;: [&quot;MODEL_CLICK&quot;],
+    &quot;text&quot;: &quot;San Francisco&quot;,
+    &quot;throttle&quot;: 500
+},
+{
+    &quot;xpath&quot;: &quot;//*[@class=&#39;android.widget.ImageButton&#39;]&quot;,
+    &quot;actions&quot;: []
+}]
+</pre></div>
+</td></tr></table>
+
+<p>The above example will do the following patch to every GUI tree.</p>
+<ol>
+<li>Input <code>San Francisco</code> for every <code>EditText</code>.</li>
+<li>Disable all <code>ImageButton</code> (no actions).</li>
+</ol>
+<p>Ape will output the following messages if it can successfully parse file <code>ape.xpath</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">[APE] *** INFO *** Select 1 nodes by //*[@class=&#39;android.widget.EditText&#39;]</span>
+<span class="k">[APE] *** INFO *** Select 0 nodes by //*[@class=&#39;android.widget.ImageButton&#39;]</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol>
+<li>Make sure that <code>ape.xpath</code> is a valid JSON file and still available at <code>/sdcard/ape.xpath</code>.</li>
+<li>Make sure that your XPath expression works on the dumped <code>step-N.xml</code>.</li>
+<li>You could use a large throttle for debugging to easily test whether the XPath based patching takes effect.</li>
+</ol>
+</div>
 <h2 id="acknowledgments">Acknowledgments</h2>
 <p>We thank the following experts for their insightful comments on Ape.</p>
 <ul>

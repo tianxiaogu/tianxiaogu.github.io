@@ -5,7 +5,7 @@ title: Ape
 ## Download
 
 * Binary:
-    * [ape-bin.zip](/ape-bin.zip), last updated: 6/8/2019
+    * [ape-bin.zip](/ape-bin.zip), last updated: Oct 13, 2019
 * Source:
     * <https://github.com/tianxiaogu/ape>
 
@@ -171,6 +171,59 @@ Now we can check the timeline.
     * [Timeline](./demo-keep-timeline/vis-timeline.html)
     * Copy [vis-timeline.html](./demo-keep-timeline/vis-timeline.html) to your local output directory.
     * Open the copied `vis-timeline.html` in your browser.
+
+## Patching GUI Tree
+
+Ape will read file `/sdcard/ape.xpath` to patch the GUI tree before applying the abstraction function to build the state.
+
+The configuration file is a JSON file encoding a JSON array. Each element of the array is an object that has the following attributes.
+
+1. `"xpath"`: the xpath to select elements in the XML tree
+    * The XML that Ape used is different from that obtained via `uiautomator dump --compressed`. Please check the output directory to find some examples (e.g., `step-N.xml`)
+    * The value of property `text` has been truncated to save memory. Try to avoid using property `text` or see `ape.truncateTextLength`. The default length of truncated text string is 8.
+2. `"actions"` (optional): a set of supported model actions, i.e., `MODEL_CLICK`, `MODEL_`
+    * click: `MODEL_CLICK`
+    * long click: `MODEL_LONG_CLICK`
+    * swipe vertically: `MODEL_SCROLL_TOP_DOWN` or `MODEL_SCROLL_BOTTOM_UP`
+    * swipe horizontally: `MODEL_SCROLL_LEFT_RIGHT` or `MODEL_SCROLL_RIGHT_LEFT`
+    * An empty array will clear the actions on the widget, i.e., the widget has been disabled.
+3. `"text"` (optional):
+    * If the selected widget is an `EditText`, the text will be used to generate input for the widget.
+4. `"throttle"` (optional):
+    * Throttle for the widget.
+
+```
+[{
+    "xpath": "//*[@class='android.widget.EditText']",
+    "actions": ["MODEL_CLICK"],
+    "text": "San Francisco",
+    "throttle": 500
+},
+{
+    "xpath": "//*[@class='android.widget.ImageButton']",
+    "actions": []
+}]
+```
+
+The above example will do the following patch to every GUI tree.
+
+1. Input `San Francisco` for every `EditText`.
+2. Disable all `ImageButton` (no actions).
+
+
+Ape will output the following messages if it can successfully parse file `ape.xpath`.
+
+```
+[APE] *** INFO *** Select 1 nodes by //*[@class='android.widget.EditText']
+[APE] *** INFO *** Select 0 nodes by //*[@class='android.widget.ImageButton']
+```
+
+
+
+!!! note
+    1. Make sure that `ape.xpath` is a valid JSON file and still available at `/sdcard/ape.xpath`.
+    2. Make sure that your XPath expression works on the dumped `step-N.xml`.
+    3. You could use a large throttle for debugging to easily test whether the XPath based patching takes effect.
 
 ## Acknowledgments
 
