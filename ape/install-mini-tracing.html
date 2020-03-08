@@ -123,7 +123,7 @@ Here you must select the one without any Google stuffs since we will install a f
 </li>
 <li>
 <p>Stop MiniTracing, data will be copied to <code>/sdcard/</code> in your emulator.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 minitrace.py harvest &lt;your-package-name&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 minitrace.py disable &lt;your-package-name&gt;
 </pre></div>
 </td></tr></table>
 
@@ -133,8 +133,16 @@ Here you must select the one without any Google stuffs since we will install a f
 <li>
 <p>Parse coverage data</p>
 <ol>
-<li>Download <a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-parser</a></li>
-<li>Copy data from emulator via <code>adb pull</code></li>
+<li>
+<p>Download <a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-parser</a>. Use maven to build the project.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mvn package
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Copy data from emulator via <code>adb pull</code></p>
+</li>
 <li>Run <code>android-mt-parser/run.py</code><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 run.py -apk &lt;path-to-your-apk&gt; -cov &lt;path-to-mini_trace_xxxxx_coverage.dat&gt;
 </pre></div>
 </td></tr></table>

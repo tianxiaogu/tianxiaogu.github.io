@@ -63,12 +63,15 @@ MiniTracing: Collect method/coverage without bytecode instrumentation.
 
     3. Stop MiniTracing, data will be copied to `/sdcard/` in your emulator.
 
-            python2 minitrace.py harvest <your-package-name>
+            python2 minitrace.py disable <your-package-name>
 
 
 5. Parse coverage data
 
-    1. Download [android-mt-parser](https://bitbucket.org/txgu/android-mt-cmd)
+    1. Download [android-mt-parser](https://bitbucket.org/txgu/android-mt-cmd). Use maven to build the project.
+
+            mvn package
+
     2. Copy data from emulator via `adb pull`
     3. Run `android-mt-parser/run.py`
 
