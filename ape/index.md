@@ -37,7 +37,7 @@ In the ICSE paper, we evaluated Ape in two experiments.
 * The first part of the evaluation was conducted on x86 emulators.
     * [Install the Google Play Store in an Emulator](./install-google-play-store-in-an-emulator).
         * We need to download x86 compatible apps.
-    * Install [Mini Tracing](#minitracing).
+    * Install [Mini Tracing](./install-mini-tracing).
         * This step can be omitted if you do not want to collect method and instruction coverage.
     * Login with a test google account.
         * This step can be omitted if you do not want to test the Google Drive app.

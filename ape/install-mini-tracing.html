@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Install MiniTracing |  Tianxiao Gu</title>
+
+
+    <!-- Styles -->
+    <link href="/css/fontawesome-all.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css"><!-- Pygments -->
+    <link href="/css/moon.css" rel="stylesheet" type="text/css"><!-- moon -->
+    <link href="/css/bibtex.css" rel="stylesheet" type="text/css"><!-- bibtex-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51393322-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-51393322-1');
+    </script>
+    -->
+  </head>
+  <body role="document">
+    <div class="container">
+    <h1 id="install-minitracing-in-an-emulator">Install MiniTracing in an Emulator</h1>
+<p>MiniTracing: Collect method/coverage without bytecode instrumentation.</p>
+<ul>
+<li><a href="/art-mt-x86.zip">Android 6 (binary for x86)</a>: Android ART with method/instruction coverage support.</li>
+<li><a href="/dalvikvm-mt-x86.zip">Android 4.4 (binary for x86)</a>: Android Dalvik VM with method/instruction coverage support.</li>
+<li><a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-cmd</a>: Command line tools to collect coverage.</li>
+<li><a href="https://bitbucket.org/txgu/android-mt-parser">android-mt-parser</a>: Parser for the coverage data.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>
+<p>Create an AVD using the Android Nexus 5 API 23 x86 image. By default, the name of the AVD should be <code>Nexus 5 API 23</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Android studio has officially released three types of emulators for <strong>Nexus 5 API 23 x86</strong>, i.e., with Google Play Store, with Google API only and without any Google stuffs.
+Here you must select the one without any Google stuffs since we will install a full Google service framework manually.</p>
+</div>
+</li>
+<li>
+<p>Install Google Play (optional):</p>
+<ol>
+<li>Follow instructions in <a href="https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1">https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1</a></li>
+<li>By default, all permissions of Google Play Service have been disabled. You will encounter crashes as described in the previous link. To solve this issue, you must first enable location and then grant all permissions to Google Play Service.</li>
+</ol>
+</li>
+<li>
+<p>Install MiniTracing</p>
+<ol>
+<li>Download <a href="/art-mt-x86.zip">art-mt-x86.zip</a> for Android 6 and change directory to <code>art-mt-x86</code>.</li>
+<li>
+<p>Run <code>install_libart.sh</code>. You need to provide the SERIAL of the Android Device. The default SERIAL for an emulator is <code>emulator-5554</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>export SERIAL=emulator-5554 &amp;&amp; bash install_libart.sh
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Wait for the restart of the emulator to be completed.</p>
+</li>
+<li>Validate whether MiniTracing has been installed:<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb -s emulator-5554 logcat | grep mini_trace
+</pre></div>
+</td></tr></table>
+
+</li>
+</ol>
+</li>
+<li>
+<p>Download <a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-cmd</a></p>
+<ol>
+<li>
+<p>Change directory to android-mt-cmd:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd android-mt-cmd
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Run <code>ant</code> to build the project</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ant
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Run <code>install.py</code> (necessary), and you also need to set the environment variable SERIAL.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 install.py
+</pre></div>
+</td></tr></table>
+
+</li>
+</ol>
+</li>
+<li>
+<p>Enable MiniTracing for a package</p>
+<ol>
+<li>
+<p>Enable MiniTracing for a package before testing but must be done after the package has been installed.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 minitrace.py enable &lt;your-package-name&gt;
+</pre></div>
+</td></tr></table>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>minitrace.py</code> will generate config file based on the id of the installed package, which means you must reenable a package after reinstalling it.</p>
+</div>
+</li>
+<li>
+<p>Harvest coverage data during the testing</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 minitrace.py harvest &lt;your-package-name&gt;
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Stop MiniTracing, data will be copied to <code>/sdcard/</code> in your emulator.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 minitrace.py harvest &lt;your-package-name&gt;
+</pre></div>
+</td></tr></table>
+
+</li>
+</ol>
+</li>
+<li>
+<p>Parse coverage data</p>
+<ol>
+<li>Download <a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-parser</a></li>
+<li>Copy data from emulator via <code>adb pull</code></li>
+<li>Run <code>android-mt-parser/run.py</code><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python2 run.py -apk &lt;path-to-your-apk&gt; -cov &lt;path-to-mini_trace_xxxxx_coverage.dat&gt;
+</pre></div>
+</td></tr></table>
+
+</li>
+</ol>
+</li>
+</ol>
+    </div>
+
+    <footer class="footer" style="margin-top:50px;">
+      <div class="container">
+          <span class="text-muted">&copy; 2017 <a href="/">Tianxiao Gu</a>. All rights reserved.</span>
+      <!--
+      -->
+      <div style="width:70px;height:48px;">
+      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=I1T5oEaSW-FJIJ_bZCvK8XMDQ35ouGHQP_ixsLYwvOo'></script></div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51393322-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-51393322-1');
+    </script>
+
+  </body>
+</html>
