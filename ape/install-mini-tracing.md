@@ -68,7 +68,7 @@ MiniTracing: Collect method/coverage without bytecode instrumentation.
 
 5. Parse coverage data
 
-    1. Download [android-mt-parser](https://bitbucket.org/txgu/android-mt-cmd). Use maven to build the project.
+    1. Download [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser). Use maven to build the project.
 
             mvn package
 
