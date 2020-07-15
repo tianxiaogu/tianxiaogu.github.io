@@ -32,7 +32,7 @@
 <h2 id="download">Download</h2>
 <ul>
 <li>Binary:<ul>
-<li><a href="/ape-bin.zip">ape-bin.zip</a>, last updated: Oct 13, 2019</li>
+<li><a href="/ape-bin.zip">ape-bin.zip</a>, last updated: <strong>July 13, 2020</strong></li>
 </ul>
 </li>
 <li>Source:<ul>
@@ -121,8 +121,18 @@ A paper about Ape's main idea has been accepted to ICSE 2019.</p>
 <h3 id="mini-tracing">Mini Tracing</h3>
 <p>We provided a <code>libart.so</code> for x86 emulators to collect coverage without instrumentation.
 That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install and use MiniTracing, an emulator must be started with option <code>-writable-system</code>.
+No product build emulators such as those with builtin Google Play Store are supported.
+See <a href="./install-google-play-store-in-an-emulator">Install the Google Play Store in an Emulator</a> manually.</p>
+</div>
 <ul>
 <li>MiniTracing: Collect method/coverage without bytecode instrumentation.<ul>
+<li><a href="/art-mt-x86-api28.zip">Android 9 API 28 (binary for x86)</a>: Android ART with method/instruction coverage support.<ul>
+<li>Currently does not support of the <code>x86_arm</code> emulator.</li>
+</ul>
+</li>
 <li><a href="/art-mt-x86.zip">Android 6 (binary for x86)</a>: Android ART with method/instruction coverage support.</li>
 <li><a href="/dalvikvm-mt-x86.zip">Android 4.4 (binary for x86)</a>: Android Dalvik VM with method/instruction coverage support.</li>
 <li><a href="https://bitbucket.org/txgu/android-mt-cmd">android-mt-cmd</a>: Command line tools to collect coverage.</li>

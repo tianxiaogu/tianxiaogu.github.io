@@ -155,8 +155,8 @@ However, some tool may re-install the package, e..g, Sapienz. To use MiniTrace w
 <h2 id="coverage-parser">Coverage Parser</h2>
 <p>The explanation of column heads:</p>
 <ol>
-<li>Timestamp: The timestamp when the line of data were dumped.</li>
-<li>PID: The PID of the process in which the data were dumped. A package may have multiple running processes at the same time.</li>
+<li>Timestamp: The timestamp when the line of data is dumped.</li>
+<li>PID: The PID of the process in which the line of data is dumped. A package may have multiple running processes at the same time.</li>
 <li>Event: Two events: <code>Start</code> and <code>Dump</code>. MiniTracing will produce a Start event when a process is started. A <code>Dump</code> event is created when you run the harvest command.</li>
 <li>#Total Methods: The total number of methods defined in the APK. Methods in dynamically downloaded files are not included.</li>
 <li>#Total Concrete Methods: The total number of methods that have byte code instructions. Native and abstract methods are excluded. Even an empty method must  have a <code>return</code> instruction.</li>

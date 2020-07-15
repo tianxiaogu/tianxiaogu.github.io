@@ -5,7 +5,7 @@ title: Ape
 ## Download
 
 * Binary:
-    * [ape-bin.zip](/ape-bin.zip), last updated: Oct 13, 2019
+    * [ape-bin.zip](/ape-bin.zip), last updated: **July 13, 2020**
 * Source:
     * <https://github.com/tianxiaogu/ape>
 
@@ -68,7 +68,15 @@ In the ICSE paper, we evaluated Ape in two experiments.
 We provided a `libart.so` for x86 emulators to collect coverage without instrumentation.
 That means, you can use this tool to collect coverage for apps such as Google Doc to evaluate your tools.
 
+
+!!! note
+    To install and use MiniTracing, an emulator must be started with option `-writable-system`.
+    No product build emulators such as those with builtin Google Play Store are supported.
+    See [Install the Google Play Store in an Emulator](./install-google-play-store-in-an-emulator) manually.
+
 * MiniTracing: Collect method/coverage without bytecode instrumentation.
+    * [Android 9 API 28 (binary for x86)](/art-mt-x86-api28.zip): Android ART with method/instruction coverage support.
+        * Currently does not support of the `x86_arm` emulator.
     * [Android 6 (binary for x86)](/art-mt-x86.zip): Android ART with method/instruction coverage support.
     * [Android 4.4 (binary for x86)](/dalvikvm-mt-x86.zip): Android Dalvik VM with method/instruction coverage support.
     * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
