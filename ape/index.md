@@ -5,7 +5,7 @@ title: Ape
 ## Download
 
 * Binary:
-    * [ape-bin.zip](/ape-bin.zip), last updated: **July 22, 2020**
+    * Please build from the source code for the latest binary.
 * Source:
     * <https://github.com/tianxiaogu/ape>
 
