@@ -77,9 +77,9 @@ class MoonFencedCodeExtension(Extension):
         """ Add MoonFencedBlockPreprocessor to the Markdown instance. """
         md.registerExtension(self)
 
-        md.preprocessors.add('moon_fenced_code_block',
-                                 MoonFencedBlockPreprocessor(md),
-                                 ">normalize_whitespace")
+        md.preprocessors.register(
+                                 MoonFencedBlockPreprocessor(md), 'moon_fenced_code_block',
+                                 26)
 
 
 class MoonFencedBlockPreprocessor(Preprocessor):
@@ -105,7 +105,7 @@ class MoonFencedBlockPreprocessor(Preprocessor):
 
         # Check for code hilite extension
         if not self.checked_for_codehilite:
-            for ext in self.markdown.registeredExtensions:
+            for ext in self.md.registeredExtensions:
                 if isinstance(ext, CodeHiliteExtension):
                     self.codehilite_conf = ext.config
                     break
@@ -140,7 +140,7 @@ class MoonFencedBlockPreprocessor(Preprocessor):
                 else:
                     code = self.CODE_WRAP % (lang, self._escape(m.group('code')))
 
-                placeholder = self.markdown.htmlStash.store(code, safe=True)
+                placeholder = self.md.htmlStash.store(code)
                 text = '%s\n%s\n%s'% (text[:m.start()], placeholder, text[m.end():])
             else:
                 break
@@ -198,7 +198,7 @@ class JinjaExpressionPattern(Pattern):
             # render returns a unicode object
             # html = render_template_string(m.group(2))
             html = ENV.from_string(m.group(2)).render()
-            place_holder = self.markdown.htmlStash.store(html)
+            place_holder = self.md.htmlStash.store(html)
             return place_holder
         except Exception as e:
             traceback.print_exc()
@@ -211,7 +211,8 @@ class JinjaExpressionPattern(Pattern):
 
 
 def makeJinjaExpressionPattern(md):
-    md.inlinePatterns.add('jinja expression pattern', JinjaExpressionPattern(JINJA_EXPRESSION_RE, md), ">backtick") # after backtick
+    pass
+    md.inlinePatterns.register(JinjaExpressionPattern(JINJA_EXPRESSION_RE, md), 'jinja expression pattern', 189) # after backtick
 
 #------------------------
 # Bibtex
@@ -320,7 +321,7 @@ class Citations(object):
 
     def __init__(self, bibfile):
         with open(bibfile) as f:
-            bibtex_str = f.read().decode('utf-8')
+            bibtex_str = f.read()
 
         self.entries = parse_bibtex(bibtex_str)
 
@@ -362,9 +363,9 @@ def get_markdown_page(page_path):
     with open(page_path, 'r') as f:
         md = create_markdown()
         start_new_page()
-        page.html = md.convert(f.read().decode('utf-8'))
+        page.html = md.convert(f.read())
         page.meta = md.Meta # flask-pages naming convention
-        for key, value in page.meta.iteritems():
+        for key, value in page.meta.items():
             page.meta[key] = ''.join(value) # meta is a list
 
         return page
@@ -376,7 +377,7 @@ def gen():
                 mdpath = os.path.join(root, f)
                 page = get_markdown_page(mdpath)
                 with open(mdpath[:-2] + 'html', 'w') as htmlpath:
-                    htmlpath.write(main_tpl.render(page = page).encode('utf-8'))
+                    htmlpath.write(main_tpl.render(page = page))
                 if f != 'index.md':
                     # compatible with moon
                     folder = mdpath[:-3]
@@ -387,7 +388,7 @@ def gen():
 
                     target = '/' + os.path.relpath(root, DIR).replace('\\', '/') + '/' + f[:-2] + 'html'
                     with open(os.path.join(folder, 'index.html'), 'w') as rd:
-                        rd.write(redirect_tpl.render(target = target).encode('utf-8'))
+                        rd.write(redirect_tpl.render(target = target))
 
 
 

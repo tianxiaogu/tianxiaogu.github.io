@@ -220,6 +220,17 @@ title: Homepage
 
 --------------------
 
+# Activities
+
+* Reviewer (2020): TOSEM, TPDS, JCST, FCS
+* Program Committee (2020): ASE 2020, ASE Industry Showcase 2020, Graal Workshop@CGO 2020
+* Artifact Evaluation Committee (2019): ECOOP, ISSTA
+* Program Committee (2019): ASE Industry Showcase 2019
+* Reviewer (2019): TACAS, JCST, EMSE, JSS, JSME, STVR
+* Program Committee (2018): IEEE ATC 2018
+* Reviewer (2018): ACM Computing Surveys, JSS, JCST, ICECCS
+* Reviewer (2017): JCST, ICECCS
+
 ## Awards
 
 
