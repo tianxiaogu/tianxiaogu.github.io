@@ -29,10 +29,17 @@ title: Homepage
 ## Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{zhao_synthesizing_2021,
+  author    = {Zelin Zhao and Yanyan Jiang and Chang Xu and Tianxiao Gu and Xiaoxing Ma},
+  title     = {Synthesizing Object State Transformers for Dynamic Software Updates},
+  pages     = {to appear},
+  year      = {2021},
+  booktitle = {Proceedings of the 43rd ACM/IEEE International Conference on Software Engineering (ICSE 2021)},
+}
 @inproceedings{gu_practical_2019,
   author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Chun Cao and Chang Xu and Yuan Yao and Qirun Zhang and Jian Lu and Zhendong Su},
   title     = {Practical GUI Testing of Android Applications via Model Abstraction and Refinement},
-  pages     = {to appear},
+  pages     = {269 -- 280},
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
   pdf       = {/static/ape-icse-2019.pdf},
@@ -41,7 +48,7 @@ title: Homepage
 @inproceedings{tang_an_2019,
   author    = {Shijie Tang and Yuan Yao and Suwei Zhang and Feng Xu and Tianxiao Gu and Hanghang Tong and Xiaohui Yan, and Jian Lu},
   title     = {An Integral Tag Recommendation Model for Textual Content},
-  pages     = {to appear},
+  pages     = {5,109 -- 5,116},
   year      = {2019},
   booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
 }
@@ -222,6 +229,7 @@ title: Homepage
 
 # Activities
 
+* Program Committee (2021): ASE 2021, ASE Industry Showcase 2021, Graal Workshop@CGO 2021
 * Reviewer (2020): TOSEM, TPDS, JCST, FCS
 * Program Committee (2020): ASE 2020, ASE Industry Showcase 2020, Graal Workshop@CGO 2020
 * Artifact Evaluation Committee (2019): ECOOP, ISSTA
@@ -230,18 +238,5 @@ title: Homepage
 * Program Committee (2018): IEEE ATC 2018
 * Reviewer (2018): ACM Computing Surveys, JSS, JCST, ICECCS
 * Reviewer (2017): JCST, ICECCS
-
-## Awards
-
-
-* Supported by the Program B for Outstanding PhD candidate of Nanjing University, 2015
-* Tung OOCL Scholarship, Nanjing University, 2014
-* Outstanding Graduate Student Scholarship, Nanjing University, 2012
-* People Scholarship, Second Prize, Nanjing University, 2009
-* First Provincial-level in Mathematical Contest in Modeling for College Students, 2008
-* People Scholarship, Third Prize, Nanjing University, 2008
-* People Scholarship, Third Prize, Nanjing University, 2007
-
-
 
 

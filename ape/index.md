@@ -8,6 +8,8 @@ title: Ape
     * Please build from the source code for the latest binary.
 * Source:
     * <https://github.com/tianxiaogu/ape>
+* Ape is used by ByteDance to develop their FastBot <https://github.com/bytedance/Fastbot_Android>.
+
 
 ## Publication
 
@@ -18,7 +20,7 @@ A paper about Ape's main idea has been accepted to ICSE 2019.
 @inproceedings{gu_practical_2019,
   author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Chun Cao and Chang Xu and Yuan Yao and Qirun Zhang and Jian Lu and Zhendong Su},
   title     = {Practical GUI Testing of Android Applications via Model Abstraction and Refinement},
-  pages     = {to appear},
+  pages     = {269 -- 280},
   year      = {2019},
   booktitle = {Proceedings of the 41st ACM/IEEE International Conference on Software Engineering (ICSE 2019)},
   pdf       = {/static/ape-icse-2019.pdf},
