@@ -13,7 +13,7 @@
      <span class="bibtex author hl">{{ author }}</span>
   {%- else -%}
      {{ author }}
-  {%- endif%}
+  {%- endif %}
 {%- endmacro %}
 
 {% macro render_entry(entry, hl="") %}
@@ -41,6 +41,7 @@
 {% if entry.slides %}<span class="bibtex"><a href="{{ entry.slides }}" target="_blank" title="Slides of this paper"> <i class="fa fa-file-powerpoint" aria-hidden="true"></i></a></span>{% endif %}
 {% if entry.link %}<span class="bibtex"><a href="{{ entry.link }}" target="_blank" title="External link to this paper"> <i class="fa fa-external-link-square-alt" aria-hidden="true"></i></a></span>{% endif %}
 </div>
+{% if entry.award %}<div><span class="bibtex"><b>{{ entry.award }}</b></span></div>{% endif %}
 {%- endmacro %}
 
 {% macro render_entries_group_by_year(years, grouped_entries, years2, grouped_entries2, hl="") -%}

@@ -35,6 +35,7 @@ title: Homepage
   pages     = {to appear},
   year      = {2021},
   booktitle = {Proceedings of the 43rd ACM/IEEE International Conference on Software Engineering (ICSE 2021)},
+  award     = {ACM SIGSOFT Distinguished Paper Award and ACM Europe Council Best Paper Award}
 }
 @inproceedings{gu_practical_2019,
   author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Chun Cao and Chang Xu and Yuan Yao and Qirun Zhang and Jian Lu and Zhendong Su},
