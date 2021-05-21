@@ -230,14 +230,7 @@ title: Homepage
 
 # Activities
 
-* Program Committee (2021): ASE 2021, ASE Industry Showcase 2021, Graal Workshop@CGO 2021
-* Reviewer (2020): TOSEM, TPDS, JCST, FCS
-* Program Committee (2020): ASE 2020, ASE Industry Showcase 2020, Graal Workshop@CGO 2020
-* Artifact Evaluation Committee (2019): ECOOP, ISSTA
-* Program Committee (2019): ASE Industry Showcase 2019
-* Reviewer (2019): TACAS, JCST, EMSE, JSS, JSME, STVR
-* Program Committee (2018): IEEE ATC 2018
-* Reviewer (2018): ACM Computing Surveys, JSS, JCST, ICECCS
-* Reviewer (2017): JCST, ICECCS
-
+* Program Committee: ASE 2020, 2021; ASE Industry Showcase 2020, 2021; VIML 2021; Graal Workshop@CGO 2020, 2021; IEEE ATC 2018
+* Artifact Evaluation Committee: ECOOP 2019; ISSTA 2019
+* Reviewer: TOSEM, TSE, TPDS, JCST, FCS, CSUR, ICECCS, IEEE ATC, TACAS
 
