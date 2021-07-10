@@ -37,6 +37,13 @@ title: Homepage
   booktitle = {Proceedings of the 43rd ACM/IEEE International Conference on Software Engineering (ICSE 2021)},
   award     = {ACM SIGSOFT Distinguished Paper Award and ACM Europe Council Best Paper Award}
 }
+@inproceedings{xu_commit_2019,
+  title     = {Commit Message Generation for Source Code Changes},
+  author    = {Xu, Shengbin and Yao, Yuan and Xu, Feng and Gu, Tianxiao and Tong, Hanghang and Lu, Jian},
+  booktitle = {Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence, {IJCAI-19}},
+  pages     = {3975--3981},
+  year      = {2019},
+}
 @inproceedings{gu_practical_2019,
   author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Chun Cao and Chang Xu and Yuan Yao and Qirun Zhang and Jian Lu and Zhendong Su},
   title     = {Practical GUI Testing of Android Applications via Model Abstraction and Refinement},
