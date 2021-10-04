@@ -29,10 +29,24 @@ title: Homepage
 ## Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{yifei_towards_2021,
+  author    = {Yifei Zhang and Tianxiao Gu and Xiaolin Zheng and Lei Yu and Wei Kuai and Sanhong Li},
+  title     = {Towards a Serverless Java Runtime},
+  pages     = {to appear},
+  year      = {2021},
+  booktitle = {Proceedings of the 36th IEEE/ACM International Conference on Automated Software Engineering, Industry Showcase (ASE Industry Showcase 2021)},
+}
+@inproceedings{litong_JPDHeap_2021,
+  author    = {Litong You and Tianxiao Gu and Shengan Zheng and Jianmei Guo and Sanhong Li and Yuting Chen, and Linpeng Huang},
+  title     = {JPDHeap: A JVM Heap Design for PM-DRAM Memories},
+  pages     = {to appear},
+  year      = {2021},
+  booktitle = {Proceedings of the 59th Design Automation Conference (DAC 2021)},
+}
 @inproceedings{zhao_synthesizing_2021,
   author    = {Zelin Zhao and Yanyan Jiang and Chang Xu and Tianxiao Gu and Xiaoxing Ma},
   title     = {Synthesizing Object State Transformers for Dynamic Software Updates},
-  pages     = {to appear},
+  pages     = {1111--1122},
   year      = {2021},
   booktitle = {Proceedings of the 43rd ACM/IEEE International Conference on Software Engineering (ICSE 2021)},
   award     = {ACM SIGSOFT Distinguished Paper Award and ACM Europe Council Best Paper Award}
