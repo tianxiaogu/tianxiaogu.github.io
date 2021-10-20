@@ -26,7 +26,7 @@ title: Homepage
 * 2006.9 - 2010.6: B.S., Department of Computer Science and Technology, Nanjing University
 
 ----------------
-## Publications
+## Selected Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
 @inproceedings{yifei_towards_2021,
@@ -67,154 +67,26 @@ title: Homepage
   pdf       = {/static/ape-icse-2019.pdf},
   code      = {/ape},
 }
-@inproceedings{tang_an_2019,
-  author    = {Shijie Tang and Yuan Yao and Suwei Zhang and Feng Xu and Tianxiao Gu and Hanghang Tong and Xiaohui Yan, and Jian Lu},
-  title     = {An Integral Tag Recommendation Model for Textual Content},
-  pages     = {5,109 -- 5,116},
-  year      = {2019},
-  booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
-}
-@inproceedings{cao_accelerating_cao,
-  author    = {Chun Cao and Hongjun Ge and Tianxiao Gu and Jing Deng and Ping Yu and Jian Lu},
-  title     = {Accelerating Automated Android GUI Exploration with Widgets Grouping},
-  pages     = {268--277},
-  year      = {2018},
-  booktitle = {Proceedings of the 25th Asia-Pacific Software Engineering Conference (APSEC 2018)},
-}
-@inproceedings{gu_automating_2018,
-  author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian Lu},
-  title     = {Automating Object Transformations for Dynamic Software Updating via Online Execution Synthesis},
-  pages     = {19:1--19:28},
-  year      = {2018},
-  booktitle = {Proceedings of the 32nd European Conference on Object-Oriented Programming (ECOOP 2018)},
-}
-@inproceedings{wang_aatt_2018,
-  author  = {Jue Wang and Yanyan Jiang and Chang Xu and Qiwei Li and Tianxiao Gu and Jun Ma and Xiaoxing Ma and Jian Lu},
-  title   = {AATT+: Effectively Manifesting Concurrency Bugs in Android Apps},
-  journal = {Science of Computer Programming (SCP)},
-  year    = {2018},
-  volume  = {0},
-  number  = {0},
-  pages   = {1--18},
-}
-@inproceedings{sun_perses_2018,
-  title = {Perses: Syntax-Guided Program Reduction},
-  author = {Chengnian Sun and Yuanbo Li and Qirun Zhang and Tianxiao Gu and Zhendong Su},
-  booktitle = {Proceedings of the 40th International Conference on Software Engineering (ICSE 2018)},
-  year = {2018},
-  pages = {361--371},
-}
-@inproceedings{gu_AimDroid:_2017,
-  title = {AimDroid: Activity-Insulated Multi-level Automated Testing for Android Applications},
-  author = {Tianxiao Gu and Chun Cao and Tianchi Liu and Chengnian Sun and Jing Deng and Xiaoxing Ma and Jian L{\"u}},
-  booktitle = {Proceedings of the 2017 IEEE International Conference on Software Maintenance and Evolution (ICSME 2017)},
-  year = {2017},
-  pages = {103--114},
-}
-@inproceedings{gu_synthesize_2017,
-  author    = {Tianxiao Gu and Xiaoxing Ma and Chang Xu and Yanyan Jiang and Chun Cao and Jian L{\"u}},
-  title     = {Synthesizing Object Transformation for Dynamic Software Updating},
-  booktitle = {Proceedings of the 39th International Conference on Software Engineering Companion (ICSE-C 2017)},
-  pages     = {336--338},
-  year      = {2017},
-}
-@inproceedings{ma_software_2017,
-  author    = {Xiaoxing Ma and
-               Tianxiao Gu and
-               Wei Song},
-  title     = {Software Is Not Soft - Challenges and Approaches to Dynamic Software
-               Update},
-  booktitle = {Engineering Trustworthy Software Systems - Third International School,
-               SETSS 2017, Chongqing, China, April 17-22, 2017, Tutorial Lectures},
-  pages     = {143--175},
-  year      = {2017},
-}
-@inproceedings{gu_precise_2016,
-  author    = {Tianxiao Gu and Ruiqi Liu and Xiaoxing Ma and Zelin Zhao},
-  title     = {Precise Heap Differentiating Using Access Path and Execution Index},
-  booktitle = {Proceedings of the 15th National Software Application Conference (NASAC 2016)},
-  pages     = {133--148},
-  year      = {2016},
-  url       = {http://dx.doi.org/10.1007/978-981-10-3482-4_10},
-}
-@inproceedings{li_effectively_2016,
-  author    = {Qiwei Li and Yanyan Jiang and Tianxiao Gu and Chang Xu and Jun Ma and Xiaoxing Ma and Jian L{\"u}},
-  title     = {Effectively Manifesting Concurrency Bugs in Android Apps},
-  booktitle = {Proceedings of the 23rd Asia-Pacific Software Engineering Conference (APSEC 2016)},
-  pages     = {209--216},
-  year      = {2016},
-  url       = {https://doi.org/10.1109/APSEC.2016.038},
-}
-@inproceedings{gu_improving_2016,
-  author    = {Tianxiao Gu and Zelin Zhao and Xiaoxing Ma and Chang Xu and Chun Cao and Jian L{\"u}},
-  title     = {Improving Reliability of Dynamic Software Updating Using Runtime Recovery},
-  booktitle = {Proceedings of the 23rd Asia-Pacific Software Engineering Conference (APSEC 2016)},
-  pages     = {257--264},
-  year      = {2016},
-  url       = {https://doi.org/10.1109/APSEC.2016.044},
-}
-@inproceedings{zhao_cure_2016,
-  author    = {Zelin Zhao and Tianxiao Gu and Xiaoxing Ma and Chang Xu and Jian L{\"u}},
-  title     = {CURE: Automated Patch Generation for Dynamic Software Update},
-  booktitle = {Proceedings of the 23rd Asia-Pacific Software Engineering Conference (APSEC 2016)},
-  pages     = {249--256},
-  year      = {2016},
-  url       = {https://doi.org/10.1109/APSEC.2016.043},
-}
-@inproceedings{gu_automatic_2016,
-  author    = {Tianxiao Gu and Chengnian Sun and Xiaoxing Ma and Jian L{\"u} and Zhendong Su},
-  title     = {Automatic Runtime Recovery via Error Handler Synthesis},
-  booktitle = {Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering (ASE 2016)},
-  pages     = {684--695},
-  year      = {2016},
-  url       = {https://doi.org/10.1145/2970276.2970360},
-}
-@article{gu_low-disruptive_2014,
-  author    = {Tianxiao Gu and Chun Cao and Chang Xu and Xiaoxing Ma and Linghao Zhang and Jian L{\"u}},
-  title     = {Low-disruptive Dynamic Updating of Java Applications},
-  journal   = {Information & Software Technology},
-  volume    = {56},
-  number    = {9},
-  pages     = {1086--1098},
-  year      = {2014},
-  url       = {https://doi.org/10.1016/j.infsof.2014.04.003},
-}
-@inproceedings{jiang_care:_2014,
-  author    = {Yanyan Jiang and Tianxiao Gu and Chang Xu and Xiaoxing Ma and Jian L{\"u}},
-  title     = {CARE: Cache Guided Deterministic Replay for Concurrent Java Programs},
-  booktitle = {Proceedings of the 36th International Conference on Software Engineering (ICSE 2014)},
-  pages     = {457--467},
-  year      = {2014},
-  url       = {https://doi.org/10.1145/2568225.2568236},
-}
-@inproceedings{zhang_resynchronizing_2012,
-  author    = {Linghao Zhang and Chang Xu and Xiaoxing Ma and Tianxiao Gu and Xuezhi Hong and Chun Cao and Jian L{\"u}},
-  title     = {Resynchronizing Model-Based Self-Adaptive Systems with Environments},
-  booktitle = {Proceedings of the 19th Asia-Pacific Software Engineering Conference (APSEC 2012)},
-  pages     = {184--193},
-  year      = {2012},
-  url       = {https://doi.org/10.1109/APSEC.2012.62},
-}
-@inproceedings{gu_javelus_2012,
-  author    = {Tianxiao Gu and Chun Cao and Chang Xu and Xiaoxing Ma and Linghao Zhang and Jian L{\"u}},
-  title     = {Javelus: A Low Disruptive Approach to Dynamic Software Updates},
-  booktitle = {Proceedings of the 19th Asia-Pacific Software Engineering Conference (APSEC 2012)},
-  pages     = {527--536},
-  year      = {2012},
-  url       = {https://doi.org/10.1109/APSEC.2012.55},
-}
-
 ~~~
 
-----------------
-## Research Interests
+[More...](./publications)
 
-* Fuzz Testing
-* [Compiler Testing](./testing/compiler/)
-    * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
+----------------
+## Research Interests and Projects
+
+* Programming Languages
+    * [fastFFI](https://github.com/alibaba/fastffi): Modern and Efficient FFI for Java and C++.
+        * [llvm4jni](https://github.com/alibaba/fastFFI/tree/main/llvm4jni): A tool that can translate LLVM bitcode into Java bytecode.
+    * AOT & JWarmup: Towards a Serverless Java Runtime
 * Java Virtual Machine
     * [Bytecode generator](./testing/jvm/)
         * [Reported bugs](./testing/jvm/)
+    * <a href="https://bitbucket.org/txgu/ape"><i class="fab fa-bitbucket"></i></a> [Ape](./ape/): Automated Testing of Android Applications with Abstraction Refinement.
+    * <a href="https://bitbucket.org/txgu/javelus"><i class="fab fa-bitbucket"></i></a> [MiniTracing](./minitracing/)
+        * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving, and locking/unlocking events in the JVM.
+        * Checkout the branch `mini-tracing` of `javelus`
+        * Other tools based on this project:
+            * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.
 * Android Application Testing
     * [Ape](./ape): A framework for model-based testing for Android apps.
     * WGDroid: A fancy GUI exploration tool developed on top of Ape.
@@ -225,27 +97,12 @@ title: Homepage
         * [android-mt-cmd](https://bitbucket.org/txgu/android-mt-cmd): Command line tools to collect coverage.
         * [android-mt-parser](https://bitbucket.org/txgu/android-mt-parser): Parser for the coverage data.
 * Dynamic Software Updating
+    * <a href="https://bitbucket.org/txgu/javelus"><i class="fab fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
+        * A dynamic-updating-enabled JVM built on top the HotSpot JVM in OpenJDK 8
     * A [list](./javelus/literature) of practical DSU tools.
-* Program Analysis
-* Programming Languages
-
-
-
-----------------
-## Projects
-
-
-* <a href="https://bitbucket.org/txgu/javelus"><i class="fab fa-bitbucket"></i></a> [Javelus](./javelus/): Low-disruptive Dynamic Updating of Java Applications.
-    * A dynamic-updating-enabled JVM built on top the HotSpot JVM in OpenJDK 8
-* <a href="https://bitbucket.org/txgu/javelus"><i class="fab fa-bitbucket"></i></a> [MiniTracing](./minitracing/)
-    * A whole program tracing tool that can trace method entrance/exit, object allocation, GC moving, and locking/unlocking events in the JVM.
-    * Checkout the branch `mini-tracing` of `javelus`
-    * Other tools based on this project:
-        * [PHD](https://bitbucket.org/txgu/phd): Precise Heap Differentiating: An experimental tool aiming at precisely differentiating two heap snapshots.
-* <a href="https://bitbucket.org/txgu/ares"><i class="fab fa-bitbucket"></i></a> [Ares](./ares/): Automatic Runtime Recovery via Error Handler Synthesis.
-* <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fab fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
-* <a href="https://bitbucket.org/txgu/ape"><i class="fab fa-bitbucket"></i></a> [Ape](./ape/): Automated Testing of Android Applications with Abstraction Refinement.
-
+    * <a href="https://bitbucket.org/txgu/aotes-asm"><i class="fab fa-bitbucket"></i></a> AOTES: Automating Object Transformations for Dynamic Software Updating via Execution Synthesis 
+* [Compiler Testing](./testing/compiler/)
+    * `pytkfuzz`: A python implementation of [`tkfuzz`](https://chengniansun.bitbucket.io/papers/issta16.pdf).
 
 --------------------
 
