@@ -154,16 +154,13 @@ Checkout the output and try to understand Ares how to mitigate an unchecked exce
 
 ### ASE 2016
 
-Subjects are hosted in [git.njuics.cn](https://git.njuics.cn/ares).
-
 Every bug should have a `run.sh`.
 Otherwise, send an email to me.
 
-* [Tomcat](https://git.njuics.cn/ares/ares-tomcat)
-* [Jetty](https://git.njuics.cn/ares/ares-jetty)
-* [GanttProject](https://git.njuics.cn/ares/ares-ganttproject)
-* [JMeter](https://git.njuics.cn/ares/ares-jmeter)
-* If you cannot access this web site [git.njuics.cn](https://git.njuics.cn), send an email to me.
+* [Tomcat](https://github.com/tianxiaogu/ares-tomcat)
+* [Jetty](https://github.com/tianxiaogu/ares-jetty)
+* [GanttProject](https://github.com/tianxiaogu/ares-ganttproject)
+* [JMeter](https://github.com/tianxiaogu/ares-jmeter)
 
 
 !!! warnning
