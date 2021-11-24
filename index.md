@@ -5,7 +5,7 @@ title: Homepage
 
 ----------------
 
-* Senior JVM Engineer,  Alibaba Group, Sunnyvale, CA.
+* Programming Language Engineer, Tiktok, Mountain View, CA.
 * Email: tianxiao.gu (at) gmail dot com
 * <a href="http://www.linkedin.com/in/tianxiaogu"><i class="fab fa-linkedin-square"></i></a>
   <a href="https://twitter.com/Xiaotiangu"><i class="fab fa-twitter-square"></i></a>
@@ -18,11 +18,12 @@ title: Homepage
 
 ## Education and Work Experience
 
-* 2019.4 - present: Senior Engineer, Alibaba Group, Sunnyvale, CA, USA.
+* 2021.3 - present: Programming Language Engineer, Tiktok, Mountain View, CA, USA.
+* 2019.4 - 2021.11: Senior Engineer, Alibaba Group, Sunnyvale, CA, USA.
 * 2017.5 - 2019.3: Postdoc, University of California, Davis.
-* 2010.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](http://moon.nju.edu.cn/people/xiaoxingma "Xiaoxing Ma")
-* 2015.6 - 2015.7: Intern at the JVM Optimization Group in [Ant Financial](http://www.antgroup.com)
-* 2013.9 - 2014.9: Visiting Student, University of California, Davis, Prof. [Zhendong Su](http://www.cs.ucdavis.edu/~su/).
+* 2010.9 - 2017.3: Ph.D., Department of Computer Science and Technology, Nanjing University, supervised by Prof. [Xiaoxing Ma](https://cs.nju.edu.cn/ics/people/xiaoxingma/index.html)
+* 2015.6 - 2015.7: Intern at the JVM Optimization Group in Ant Financial
+* 2013.9 - 2014.9: Visiting Student, University of California, Davis, Prof. [Zhendong Su](https://people.inf.ethz.ch/suz/).
 * 2006.9 - 2010.6: B.S., Department of Computer Science and Technology, Nanjing University
 
 ----------------
