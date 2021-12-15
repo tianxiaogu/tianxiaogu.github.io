@@ -30,6 +30,13 @@ title: Homepage
 ## Selected Publications
 
 ~~~{.bibtexhtml hl_lines="Tianxiao Gu"}
+@inproceedings{yiwen_snr_2022,
+  author    = {Yiwen Dong and Tianxiao Gu and Yongqiang Tian and Chengnian Sun},
+  title     = {SnR: Constraint-Based Type Inference for Incomplete Java Code Snippets},
+  pages     = {to appear},
+  year      = {2022},
+  booktitle = {Proceedings of the 44th International Conference on Software Engineering (ICSE 2022)},
+}
 @inproceedings{yifei_towards_2021,
   author    = {Yifei Zhang and Tianxiao Gu and Xiaolin Zheng and Lei Yu and Wei Kuai and Sanhong Li},
   title     = {Towards a Serverless Java Runtime},

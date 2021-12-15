@@ -65,6 +65,7 @@ A paper about Ape's main idea has been accepted to ICSE 2019.</p>
 </li>
 
 </ul>
+
 <p>Slides:</p>
 <ul>
 <li><a href="./ICSE-2019.pptx">ICSE-2019.pptx</a> by <a href="https://ccao.cc/en/">Prof. Chun Cao</a></li>
@@ -147,29 +148,38 @@ See <a href="./install-google-play-store-in-an-emulator">Install the Google Play
 </ul>
 <h2 id="install">Install</h2>
 <p>Files inside <code>ape-bin.zip</code>:</p>
-<pre class="codehilite"><code class="linenums">ape-bin/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ape-bin/
 ape-bin/ape
 ape-bin/ape.jar
 ape-bin/ape.py
 ape-bin/install.py
 ape-bin/README.md
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p>Copy Just copy the <code>ape.jar</code> to the phone.</p>
-<pre class="codehilite"><code class="linenums">adb push ape.jar /data/local/tmp/
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb push ape.jar /data/local/tmp/
+</pre></div>
+</td></tr></table>
 
 <p>and run</p>
-<pre class="codehilite"><code class="linenums">adb shell CLASSPATH=/data/local/tmp/ape.jar /system/bin/app_process /data/local/tmp/ com.android.commands.monkey.Monkey
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>adb shell CLASSPATH=/data/local/tmp/ape.jar /system/bin/app_process /data/local/tmp/ com.android.commands.monkey.Monkey
+</pre></div>
+</td></tr></table>
 
 <p>More details can be found in <code>README.md</code>.</p>
 <h2 id="run">Run</h2>
 <p>We provide a python script (i.e., <code>ape.py</code>) to facilitate running ape on Android platform.</p>
 <p>The following command starts to run Ape to test the Calculator on a real device connected via <code>adb</code>.
 Make sure <code>adb</code> is available in your <code>PATH</code>.</p>
-<pre class="codehilite"><code class="linenums">./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --running-minutes 100 --ape sata
+</pre></div>
+</td></tr></table>
 
 <p>Check the <code>ape.py</code> if you want to run Ape with multiple devices via <code>adb -s</code>.</p>
 <p>Options:</p>
@@ -185,8 +195,9 @@ Make sure <code>adb</code> is available in your <code>PATH</code>.</p>
 </li>
 </ul>
 <p>You can also specify the total amount of Monkey events. In this mode, Ape will stop by default once there is a crash.</p>
-<pre class="codehilite"><code class="linenums">./ape.py -p com.google.android.calculator --ape sata 1000
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./ape.py -p com.google.android.calculator --ape sata 1000
+</pre></div>
+</td></tr></table>
 
 <h2 id="output">Output</h2>
 <p>Users should save everything that has been outputted into the console.
@@ -263,17 +274,27 @@ e.g., <code>/sdcard/sata-com.amaze.filemanager-ape-sata-running-minutes-10</code
 </ul>
 </li>
 </ol>
-<pre class="codehilite"><code class="linenums">[{
-    &quot;xpath&quot;: &quot;//*[@class='android.widget.EditText']&quot;,
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[{
+    &quot;xpath&quot;: &quot;//*[@class=&#39;android.widget.EditText&#39;]&quot;,
     &quot;actions&quot;: [&quot;MODEL_CLICK&quot;],
     &quot;text&quot;: &quot;San Francisco&quot;,
     &quot;throttle&quot;: 500
 },
 {
-    &quot;xpath&quot;: &quot;//*[@class='android.widget.ImageButton']&quot;,
+    &quot;xpath&quot;: &quot;//*[@class=&#39;android.widget.ImageButton&#39;]&quot;,
     &quot;actions&quot;: []
 }]
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p>The above example will do the following patch to every GUI tree.</p>
 <ol>
@@ -281,9 +302,11 @@ e.g., <code>/sdcard/sata-com.amaze.filemanager-ape-sata-running-minutes-10</code
 <li>Disable all <code>ImageButton</code> (no actions).</li>
 </ol>
 <p>Ape will output the following messages if it can successfully parse file <code>ape.xpath</code>.</p>
-<pre class="codehilite"><code class="linenums">[APE] *** INFO *** Select 1 nodes by //*[@class='android.widget.EditText']
-[APE] *** INFO *** Select 0 nodes by //*[@class='android.widget.ImageButton']
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">[APE] *** INFO *** Select 1 nodes by //*[@class=&#39;android.widget.EditText&#39;]</span>
+<span class="k">[APE] *** INFO *** Select 0 nodes by //*[@class=&#39;android.widget.ImageButton&#39;]</span>
+</pre></div>
+</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
